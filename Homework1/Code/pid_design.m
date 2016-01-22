@@ -23,7 +23,7 @@ lowertank=tf([Gamma],[Gamma*Tau 1]); % Transfer function for upper tank
 G=lowertank*uppertank; % Transfer function from input to lower tank level
 
 % CalculatePID paramaeters
-chi = -0.5;
+chi = 0.5;
 omega0 = 0.1;
 zeta = 0.7;
 
@@ -44,15 +44,19 @@ pzmap(Gc)
 
 sim('tanks')
 figure
-subplot(3,1,1)
+subplot(4,1,1)
 plot(ref.Time, ref.Data)
 title('Ref')
-subplot(3,1,2)
+subplot(4,1,2)
 plot(h1.Time, h1.Data)
 title('h1')
-subplot(3,1,3)
+subplot(4,1,3)
 plot(h2.Time, h2.Data)
 title('h2')
+subplot(4,1,4)
+plot(pump.Time, pump.Data)
+title('Pump')
+
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
