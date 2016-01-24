@@ -3,6 +3,16 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
+% Define question and answer command
+\newcounter{qcounter}
+\newcommand{\q}[2]
+{
+    \textbf{Q\refstepcounter{qcounter} \arabic{qcounter}: #1} \par
+    \textbf{A:} #2
+       \par
+       \vspace{0.5cm}
+} 
+
 \begin{document}
 
 \begin{titlepage}
@@ -12,12 +22,40 @@
 EL2450 Homework 1
 }
 \vfill
-Andreas Froderberg
+Andreas Froderberg - 19880730-4577
 \par
-Martin Favre
+Martin Favre - 19920130-0010
 \end{titlepage}
 
-\section*{Task 1}
+
+\q
+{
+    A gain named Tap exists in the Tank 1 model, what is its function?}
+{
+    The gain Tap models the openable tap on the upper tank. The value 0 means that it is currently closed. A value of 1 means fully opened.
+}
+\q
+{
+    Place the poles to give a following step resonse:
+    \begin{itemize}
+        \item Rise time less than 6s
+        \item Overshoot less than 35\%
+        \item Settling-time less than 30s
+    \end{itemize}
+}
+{
+    With the parameters set to $\chi=0.5$, $\omega_0=0.2$ and $\xi=0.7$ yields
+    a system with risetime of 3.31 s and a settling time 18.8 s and an overshoot
+    of 22.6\%.
+}
+\q
+{
+    What does the reference signal look like?
+}
+{
+    The signal starts at 40 and recieves a step by 10 at 100 s which sets it to
+    50.
+}
 
 
 \end{document}
