@@ -30,19 +30,32 @@ Martin Favre - 19920130-0010
 
 \q
 {
-A gain named Tap exists in the Tank 1 model, what is its function?}
+    A gain named Tap exists in the Tank 1 model, what is its function?}
 {
-The gain Tap models the openable tap on the upper tank. The value 0 means that it is currently closed. A value of 1 means fully opened.
+    The gain Tap models the openable tap on the upper tank. The value 0 means that it is currently closed. A value of 1 means fully opened.
 }
 \q
-{Place the poles to give a following step resonse:
-\begin{itemize}
-\item Rise time less than 6s
-\item Overshoot less than 35
-\item Settling-time less than 30s
-\end{itemize}
+{
+    Place the poles to give a following step resonse:
+    \begin{itemize}
+        \item Rise time less than 6s
+        \item Overshoot less than 35\%
+        \item Settling-time less than 30s
+    \end{itemize}
 }
 {
-    Done.
+    With the parameters set to $\chi=0.5$, $\omega_0=0.2$ and $\xi=0.7$ yields
+    a system with risetime of 3.31 s and a settling time 18.8 s and an overshoot
+    of 22.6\%.
 }
+\q
+{
+    What does the reference signal look like?
+}
+{
+    The signal starts at 40 and recieves a step by 10 at 100 s which sets it to
+    50.
+}
+
+
 \end{document}
