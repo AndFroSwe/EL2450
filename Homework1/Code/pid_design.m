@@ -5,7 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initialization
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%
 clear all, close all, clc
 init_tanks;
 g = 9.82;
@@ -24,7 +24,7 @@ G=lowertank*uppertank; % Transfer function from input to lower tank level
 
 % CalculatePID paramaeters
 chi = 0.5;
-omega0 = 0.1;
+omega0 = 0.2;
 zeta = 0.7;
 
 [K_pid, Ti, Td, N] = polePlacePID(chi, omega0, zeta, Tau, Gamma, K)
@@ -41,6 +41,7 @@ figure
 bode(Gc)
 figure
 pzmap(Gc)
+stepinfo(Gc)
 
 sim('tanks')
 figure
