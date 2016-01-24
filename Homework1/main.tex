@@ -2,6 +2,7 @@
 
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
+\usepackage{float}
 
 % Define question and answer command
 \newcounter{qcounter}
@@ -56,6 +57,37 @@ Martin Favre - 19920130-0010
     The signal starts at 40 and recieves a step by 10 at 100 s which sets it to
     50.
 }
-
+\q
+{
+    Use the parameter generator to get values.
+}
+{
+    Done.
+}
+\q
+{
+    Use the parameters to get different responses. WHich is best?
+}
+{
+    The parameters are:
+    \begin{table}[H]
+        \centering
+        \caption{Parameter values and performance.}
+        \label{tab:pvals}
+        \begin{tabular}{|c|c|c|c|c|c|}
+            \hline
+            $\chi$ & $\zeta$ & $\omega_0$ & $T_r$ & $M$ & $T_s$ \\
+            \hline
+            0.5 & 0.7 & 0.1 & 6.38 & 6.67 & 38.1 \\
+            \hline
+            0.5 & 0.7 & 0.2 & 3.31 & 22.6 & 18.8 \\
+            \hline
+            0.5 & 0.8 & 0.2 & 3.19 & 20.9 & 18.4 \\
+            \hline
+        \end{tabular}
+    \end{table}
+    The last parameter configuration works best. It is the fastest though it has
+    quite significant overshoot, which is still within the given tolerance.
+}
 
 \end{document}
