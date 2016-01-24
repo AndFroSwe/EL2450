@@ -3,6 +3,16 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 
+% Define question and answer command
+\newcounter{qcounter}
+\newcommand{\q}[2]
+{
+    \textbf{Q\refstepcounter{qcounter} \arabic{qcounter}: #1} \par
+    \textbf{A:} #2
+       \par
+       \vspace{0.5cm}
+} 
+
 \begin{document}
 
 \begin{titlepage}
@@ -18,18 +28,21 @@ Martin Favre - 19920130-0010
 \end{titlepage}
 
 
-\subsection{A gain named Tap exists in the Tank 1 model, what is its function?}
-
+\q
+{
+A gain named Tap exists in the Tank 1 model, what is its function?}
+{
 The gain Tap models the openable tap on the upper tank. The value 0 means that it is currently closed. A value of 1 means fully opened.
-
-\subsection{Place the poles to give a following step resonse:
 }
+\q
+{Place the poles to give a following step resonse:
 \begin{itemize}
 \item Rise time less than 6s
 \item Overshoot less than 35
 \item Settling-time less than 30s
 \end{itemize}
-done.
-\subsection{ helo }
-lele
+}
+{
+    Done.
+}
 \end{document}
