@@ -34,7 +34,7 @@ F = K_pid*(1 + 1/(Ti*s) + Td*N*s/(N + s)); % Transfer function for the controlle
 
 Go = F*G;
 Gc = F*G/(1 + F*G); % Closed system
-ZOH = 1;
+ZOH = 0.92*4;
 
 figure
 step(Gc)
@@ -65,12 +65,12 @@ title('Pump')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Ts = ZOH; % Sampling time
+Ts = 4; % Sampling time
 
 % Discretize the continous controller, save it in state space form
 % [Aa,Ba,Ca,Da] = ; 
-F_d = c2d(F, Ts, 'zoh');
-[Ad,Bd,Cd,Dd] = tf2ss(F_d.num{1}, F_d.den{1});
+F_dg = c2d(F, Ts, 'zoh');
+[Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
 % Plot 
 sim('tanks_discrete')
 figure
@@ -87,7 +87,7 @@ subplot(4,1,4)
 plot(pump_d.Time, pump_d.Data)
 title('Pump_d')
 
-%%%% Plot both in same plot
+%%%% Plot both discrete and continuous h2 in same plot
 figure
 plot(h2.Time, h2.Data);
 hold on
@@ -99,5 +99,8 @@ legend('Continuous', 'Discrete')
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-Gd = 1; % Sampled system model
-Fd = 1; % Transfer function for discrete designed controller
+Ts = 4;
+sim('tanks_discrete')
+G_d = c2d(G, Ts, 'zoh')
+[Ad,Bd,Cd,Dd] = tf2ss(G_d.num{1}, G_d.den{1});
+
