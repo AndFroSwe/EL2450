@@ -68,7 +68,6 @@ Ts = 1; % Sampling time
 
 % Discretize the continous controller, save it in state space form
 % [Aa,Ba,Ca,Da] = ; 
-F_d = c2d(F, Ts, 'zoh');
 
 
 
