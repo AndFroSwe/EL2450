@@ -12,7 +12,7 @@ g = 9.82;
 Tau = 1/alpha1*sqrt(2*tank_h10/g);
 K = 60*beta*Tau;
 Gamma = alpha1^2/alpha2^2;
-ZOH = 50;
+simtime = 200;
 
 s = tf('s');
 
@@ -34,6 +34,7 @@ F = K_pid*(1 + 1/(Ti*s) + Td*N*s/(N + s)); % Transfer function for the controlle
 
 Go = F*G;
 Gc = F*G/(1 + F*G); % Closed system
+ZOH = 1;
 
 figure
 step(Gc)
@@ -64,13 +65,34 @@ title('Pump')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Ts = 1; % Sampling time
+Ts = ZOH; % Sampling time
 
 % Discretize the continous controller, save it in state space form
 % [Aa,Ba,Ca,Da] = ; 
 F_d = c2d(F, Ts, 'zoh');
+[Ad,Bd,Cd,Dd] = tf2ss(F_d.num{1}, F_d.den{1});
+% Plot 
+sim('tanks_discrete')
+figure
+subplot(4,1,1)
+plot(ref_d.Time, ref_d.Data)
+title('Ref_d')
+subplot(4,1,2)
+plot(h1_d.Time, h1_d.Data)
+title('h1_d')
+subplot(4,1,3)
+plot(h2_d.Time, h2_d.Data)
+title('h2_d')
+subplot(4,1,4)
+plot(pump_d.Time, pump_d.Data)
+title('Pump_d')
 
-
+%%%% Plot both in same plot
+figure
+plot(h2.Time, h2.Data);
+hold on
+plot(h2_d.Time, h2_d.Data);
+legend('Continuous', 'Discrete')
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%

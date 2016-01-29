@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.85"
+    ComputedModelVersion    "1.86"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-10.0, 0.0, 1100.0, 1390.0]
+      Location		      [-11.0, -11.0, 2182.0, 1402.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,9 +53,9 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[1044.0, 1155.0]
-	ZoomFactor		[1.5277748937996651]
-	Offset			[-28.346846694305952, -191.72386520518606]
+	Extents			[2126.0, 1167.0]
+	ZoomFactor		[1.5722490905499726]
+	Offset			[-114.31735821908626, -149.86021467913491]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Andreas"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jan 29 12:44:13 2016"
-  RTWModifiedTimeStamp	  375972252
-  ModelVersionFormat	  "1.%<AutoIncrement:85>"
+  LastModifiedDate	  "Fri Jan 29 13:08:11 2016"
+  RTWModifiedTimeStamp	  375973691
+  ModelVersionFormat	  "1.%<AutoIncrement:86>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -181,7 +181,7 @@ Model {
 	  $ObjectID		  8
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
-	  StopTime		  "200"
+	  StopTime		  "simtime"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -919,7 +919,7 @@ Model {
   }
   System {
     Name		    "tanks"
-    Location		    [-10, 0, 1090, 1390]
+    Location		    [-11, -11, 2171, 1391]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -931,7 +931,7 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "153"
+    ZoomFactor		    "157"
     ReportName		    "simulink-default.rpt"
     SIDHighWatermark	    "53"
     Block {
@@ -1126,7 +1126,7 @@ Model {
       }
       System {
 	Name			"Two tanks"
-	Location		[-11, -11, 2171, 1391]
+	Location		[-10, 0, 1090, 1390]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1192,7 +1192,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Tank 1"
-	    Location		    [-11, -11, 2171, 1391]
+	    Location		    [-10, 0, 1090, 1390]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1204,7 +1204,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "275"
+	    ZoomFactor		    "224"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "u"
