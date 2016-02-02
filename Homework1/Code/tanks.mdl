@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.82"
+    ComputedModelVersion    "1.86"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -38,7 +38,7 @@ Model {
 	DockPosition		"Left"
 	Width			[50]
 	Height			[50]
-	Filter			[8]
+	Filter			[9]
       }
       Object {
 	$PropName		"ExplorerBarInfo"
@@ -54,8 +54,8 @@ Model {
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
 	Extents			[2126.0, 1167.0]
-	ZoomFactor		[2.1875771479073669]
-	Offset			[-105.33754431129933, 10.22116966030012]
+	ZoomFactor		[1.5722490905499726]
+	Offset			[-114.31735821908626, -149.86021467913491]
       }
     }
   }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Andreas"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jan 22 15:03:47 2016"
-  RTWModifiedTimeStamp	  375375819
-  ModelVersionFormat	  "1.%<AutoIncrement:82>"
+  LastModifiedDate	  "Fri Jan 29 13:08:11 2016"
+  RTWModifiedTimeStamp	  375973691
+  ModelVersionFormat	  "1.%<AutoIncrement:86>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -181,7 +181,7 @@ Model {
 	  $ObjectID		  8
 	  Version		  "1.15.0"
 	  StartTime		  "0.0"
-	  StopTime		  "200"
+	  StopTime		  "simtime"
 	  AbsTol		  "auto"
 	  FixedStep		  "auto"
 	  InitialStep		  "auto"
@@ -912,6 +912,10 @@ Model {
       ContinuousStateAttributes	"''"
       Realization	      "auto"
     }
+    Block {
+      BlockType		      ZeroOrderHold
+      SampleTime	      "1"
+    }
   }
   System {
     Name		    "tanks"
@@ -927,9 +931,9 @@ Model {
     TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
     TiledPageScale	    1
     ShowPageBoundaries	    off
-    ZoomFactor		    "219"
+    ZoomFactor		    "157"
     ReportName		    "simulink-default.rpt"
-    SIDHighWatermark	    "52"
+    SIDHighWatermark	    "53"
     Block {
       BlockType		      SubSystem
       Name		      "Reference signal"
@@ -1095,7 +1099,7 @@ Model {
       BlockType		      TransferFcn
       Name		      "Transfer Fcn"
       SID		      "48"
-      Position		      [215, 117, 315, 173]
+      Position		      [160, 117, 260, 173]
       ZOrder		      1
       Numerator		      "F.num{1}"
       Denominator	      "F.den{1}"
@@ -1122,7 +1126,7 @@ Model {
       }
       System {
 	Name			"Two tanks"
-	Location		[-11, -11, 2171, 1391]
+	Location		[-10, 0, 1090, 1390]
 	Open			off
 	ModelBrowserVisibility	off
 	ModelBrowserWidth	200
@@ -1188,7 +1192,7 @@ Model {
 	  RequestExecContextInheritance	off
 	  System {
 	    Name		    "Tank 1"
-	    Location		    [-11, -11, 2171, 1391]
+	    Location		    [-10, 0, 1090, 1390]
 	    Open		    off
 	    ModelBrowserVisibility  off
 	    ModelBrowserWidth	    200
@@ -1200,7 +1204,7 @@ Model {
 	    TiledPaperMargins	    [0.500000, 0.500000, 0.500000, 0.500000]
 	    TiledPageScale	    1
 	    ShowPageBoundaries	    off
-	    ZoomFactor		    "275"
+	    ZoomFactor		    "224"
 	    Block {
 	      BlockType		      Inport
 	      Name		      "u"
@@ -1741,6 +1745,14 @@ Model {
 	}
       }
     }
+    Block {
+      BlockType		      ZeroOrderHold
+      Name		      "Zero-Order\nHold"
+      SID		      "53"
+      Position		      [290, 130, 325, 160]
+      ZOrder		      6
+      SampleTime	      "ZOH"
+    }
     Line {
       Name		      "upper"
       ZOrder		      18
@@ -1774,18 +1786,8 @@ Model {
       ZOrder		      8
       SrcBlock		      "Transfer Fcn"
       SrcPort		      1
-      Points		      [29, 0]
-      Branch {
-	ZOrder			23
-	Points			[0, 145]
-	DstBlock		"To Workspace3"
-	DstPort			1
-      }
-      Branch {
-	ZOrder			21
-	DstBlock		"Two tanks"
-	DstPort			1
-      }
+      DstBlock		      "Zero-Order\nHold"
+      DstPort		      1
     }
     Line {
       Name		      "ref"
@@ -1812,6 +1814,23 @@ Model {
       SrcPort		      1
       DstBlock		      "Transfer Fcn"
       DstPort		      1
+    }
+    Line {
+      ZOrder		      29
+      SrcBlock		      "Zero-Order\nHold"
+      SrcPort		      1
+      Points		      [19, 0]
+      Branch {
+	ZOrder			23
+	Points			[0, 145]
+	DstBlock		"To Workspace3"
+	DstPort			1
+      }
+      Branch {
+	ZOrder			21
+	DstBlock		"Two tanks"
+	DstPort			1
+      }
     }
   }
 }

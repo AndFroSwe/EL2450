@@ -3,6 +3,7 @@
 \usepackage[english]{babel}
 \usepackage[utf8]{inputenc}
 \usepackage{float}
+\usepackage[]{amsmath} 
 
 % Define question and answer command
 \newcounter{qcounter}
@@ -88,6 +89,16 @@ Martin Favre - 19920130-0010
     \end{table}
     The last parameter configuration works best. It is the fastest though it has
     quite significant overshoot, which is still within the given tolerance.
+}
+\q
+{
+    What is the cutoff frequency for the open loop system? How was this derived?
+}
+{
+    The open loop system $G_o=F \cdot G$ and the cutoff frequency is the
+    frequency when the amplitude gain is 0 dB. Using the bode plots this
+frequency is found to be $\omega_c=0.343 \text{rad/s}$. This is confirmed by the
+MatLab command \textit{allmargin(Go)}.
 }
 
 \end{document}
