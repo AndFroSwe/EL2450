@@ -63,7 +63,7 @@ title('Pump')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Ts = 1; % Sampling time
+Ts = 4; % Sampling time
 
 % Discretize the continous controller, save it in state space form
 % [Aa,Ba,Ca,Da] = ; 
@@ -71,6 +71,40 @@ Ts = 1; % Sampling time
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% Discrete experimental corner - Want to avoid the simulations
+clc; close all;
 
-Gd = 1; % Sampled system model
-Fd = 1; % Transfer function for discrete designed controller
+
+Gd = c2d(G, Ts, 'zoh'); % Sampled system model
+Fd = 1;% c2d(F, Ts, 'zoh'); % Transfer function for discrete designed controller
+
+%Gets and prints ai and bi for q 12
+fprintf('Question 12\n\n')
+counter = 1;
+for i = Gd.num{1}
+    fprintf('a%d = %d\n',counter,i)
+    counter = counter +1;
+end
+counter = 1;
+for i = Gd.den{1}
+    fprintf('b%d = %d\n',counter,i)
+    counter = counter +1;
+end
+fprintf('Question 13\n\n')
+fprintf('Somewhere\n\n')
+
+
+%Gpoles = pole(G);
+Gdpoles = pole(Gd); %Using built in function to calculate poles
+%exp(Ts*Gpoles(1)) %Numerically calculate poles. The build-in gives the same results. 
+Gdc = Fd*Gd/(1 + Fd*Gd); % Closed system
+fprintf('Question 14\n\n')
+
+counter = -1;
+for i = Gdc.den{1}
+    fprintf('d%d = %d\n',counter,i)
+    counter = counter +1;
+end
+fprintf('\nQuestion 15\n\n')
+%Next step is to symbolically set Gc = Gdc
+%And solve so Gdc gets the same poles as Gc. 
