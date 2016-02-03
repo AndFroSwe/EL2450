@@ -19,7 +19,7 @@ s = tf('s');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuous Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-uppertank=tf([K],[Tau 1]); % Transfer function for upper tank
+uppertank=tf([K],[Tau 1]);          % Transfer function for upper tank
 lowertank=tf([Gamma],[Gamma*Tau 1]); % Transfer function for upper tank
 G=lowertank*uppertank; % Transfer function from input to lower tank level
 
