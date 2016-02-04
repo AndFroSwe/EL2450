@@ -7,7 +7,7 @@ Model {
     NumRootInports	    0
     NumRootOutports	    0
     ParameterArgumentNames  ""
-    ComputedModelVersion    "1.86"
+    ComputedModelVersion    "1.87"
     NumModelReferences	    0
     NumTestPointedSignals   0
   }
@@ -29,7 +29,7 @@ Model {
       $ObjectID		      2
       $ClassName	      "Simulink.WindowInfo"
       IsActive		      [1]
-      Location		      [-11.0, -11.0, 2182.0, 1402.0]
+      Location		      [-11.0, 0.0, 2174.0, 1402.0]
       Object {
 	$PropName		"ModelBrowserInfo"
 	$ObjectID		3
@@ -53,7 +53,7 @@ Model {
 	IsActive		[1]
 	ViewObjType		"SimulinkTopLevel"
 	LoadSaveID		"0"
-	Extents			[2126.0, 1167.0]
+	Extents			[2118.0, 1167.0]
 	ZoomFactor		[1.5722490905499726]
 	Offset			[-114.31735821908626, -149.86021467913491]
       }
@@ -65,9 +65,9 @@ Model {
   ModifiedByFormat	  "%<Auto>"
   LastModifiedBy	  "Andreas"
   ModifiedDateFormat	  "%<Auto>"
-  LastModifiedDate	  "Fri Jan 29 13:08:11 2016"
-  RTWModifiedTimeStamp	  375973691
-  ModelVersionFormat	  "1.%<AutoIncrement:86>"
+  LastModifiedDate	  "Wed Feb 03 18:50:49 2016"
+  RTWModifiedTimeStamp	  376426246
+  ModelVersionFormat	  "1.%<AutoIncrement:87>"
   ConfigurationManager	  "none"
   SampleTimeColors	  off
   SampleTimeAnnotations	  off
@@ -919,7 +919,7 @@ Model {
   }
   System {
     Name		    "tanks"
-    Location		    [-11, -11, 2171, 1391]
+    Location		    [-11, 0, 2163, 1402]
     Open		    on
     ModelBrowserVisibility  off
     ModelBrowserWidth	    200
@@ -1756,10 +1756,9 @@ Model {
     Line {
       Name		      "upper"
       ZOrder		      18
-      Labels		      [2, 0]
+      Labels		      [1, 0]
       SrcBlock		      "Two tanks"
       SrcPort		      1
-      Points		      [0, -25; 45, 0; 0, 25]
       DstBlock		      "To Workspace1"
       DstPort		      1
     }

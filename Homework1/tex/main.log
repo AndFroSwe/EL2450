@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.27)  3 FEB 2016 18:45
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2015.11.27)  4 FEB 2016 08:20
 entering extended mode
 **main.tex
 (main.tex
@@ -394,31 +394,35 @@ File: ../images/q2_tfs.png Graphic file (type png)
 <use ../images/q2_tfs.png>
 Package pdftex.def Info: ../images/q2_tfs.png used on input line 53.
 (pdftex.def)             Requested size: 345.0pt x 20.57587pt.
- [1 <../images/q2_tfs.png>] [2] (main.aux)
 
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
+<../images/q7_tanks_ZOH.png, id=9, 520.94624pt x 274.52562pt>
+File: ../images/q7_tanks_ZOH.png Graphic file (type png)
 
- ) 
+<use ../images/q7_tanks_ZOH.png>
+Package pdftex.def Info: ../images/q7_tanks_ZOH.png used on input line 121.
+(pdftex.def)             Requested size: 345.0pt x 181.80742pt.
+ [1 <../images/q2_tfs.png>] [2 <../images/q7_tanks_ZOH.png>] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 2401 strings out of 493673
- 29536 string characters out of 3141523
- 97580 words of memory out of 3000000
- 5745 multiletter control sequences out of 15000+200000
+ 2406 strings out of 493673
+ 29675 string characters out of 3141523
+ 97588 words of memory out of 3000000
+ 5749 multiletter control sequences out of 15000+200000
  5709 words of font info for 21 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,9n,23p,221b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb>
-<C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><
-C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:
-/Program Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Pr
-ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Progr
-am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program File
-s (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (3 pages, 119096 bytes).
+<C:/Pr
+ogram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Prog
+ram Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Progr
+am Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Program
+ Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Program Fi
+les (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Program Files
+ (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Program Files (x
+86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Program Files (x86)/
+MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (3 pages, 139597 bytes).
 PDF statistics:
- 51 PDF objects out of 1000 (max. 8388607)
+ 53 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 11 words of extra memory for PDF output out of 10000 (max. 10000000)
 

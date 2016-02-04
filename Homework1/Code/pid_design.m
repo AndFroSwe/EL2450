@@ -36,17 +36,17 @@ Go = F*G;
 Gc = F*G/(1 + F*G); % Closed system
 ZOH = 0.92*4;
 
-figure
+figure(1)
 step(Gc)
 title('Step function of closed system')
-figure
+figure(2)
 bode(Gc)
-figure
+figure(3)
 pzmap(Gc)
 stepinfo(Gc)
 
 sim('tanks')
-figure
+figure(4)
 subplot(4,1,1)
 plot(ref.Time, ref.Data)
 title('Ref')
@@ -65,27 +65,34 @@ title('Pump')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-Ts = 4; % Sampling time
+Ts = 4  ; % Sampling time
 
 % Discretize the continous controller, save it in state space form
 % [Aa,Ba,Ca,Da] = ; 
-F_dg = c2d(F, Ts, 'zoh');
-[Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
-% Plot 
-sim('tanks_discrete')
-figure
-subplot(4,1,1)
-plot(ref_d.Time, ref_d.Data)
-title('Ref_d')
-subplot(4,1,2)
-plot(h1_d.Time, h1_d.Data)
-title('h1_d')
-subplot(4,1,3)
-plot(h2_d.Time, h2_d.Data)
-title('h2_d')
-subplot(4,1,4)
-plot(pump_d.Time, pump_d.Data)
-title('Pump_d')
+% Run several times over different sampling frequencies
+% Figure 5 contains all h1 data
+% Figure 6 contains all h2 data
+% Figure 7 contains all pump data
+% Loop over different sampling times and print performance
+for i = 1:length(Ts)
+    F_dg = c2d(F, Ts, 'zoh');
+    [Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
+    % Simulate system
+    sim('tanks_discrete')
+    % Plot the simulated data
+    figure(5)
+    subplot(length(Ts),1,i)
+    title('
+    subplot(4,1,2)
+    plot(h1_d.Time, h1_d.Data)
+    title('h1_d')
+    subplot(4,1,3)
+    plot(h2_d.Time, h2_d.Data)
+    title('h2_d')
+    subplot(4,1,4)
+    plot(pump_d.Time, pump_d.Data)
+    title('Pump_d')
+end
 
 %%%% Plot both discrete and continuous h2 in same plot
 figure
