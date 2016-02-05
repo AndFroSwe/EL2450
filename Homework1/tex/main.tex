@@ -46,10 +46,10 @@ Martin Favre - 19920130-0010
 }
 {
     The figure below shows the result.
-    \begin{figure}[H]
-        \centering
-        \includegraphics[width=\textwidth]{../images/q2_tfs.png}
-    \end{figure}
+    %\begin{figure}[H]
+        %\centering
+        %\includegraphics[width=\textwidth]{../images/q2_tfs.png}
+    %\end{figure}
 }
 \q %3
 {
@@ -109,19 +109,32 @@ Martin Favre - 19920130-0010
     A ZOH block is placed after the controller. What is the effect?
 }
 {
-    The system is connected as follows:
+    The effect of the system for different sampling times is shown below.
     \begin{figure}[H]
         \centering
-        \includegraphics[width=\textwidth]{../images/q7_tanks_ZOH.png}
+        \includegraphics[width=\textwidth]{../Code/images/h1_samplings.png}
+        \caption{Upper tank level for different sampling times.}
     \end{figure}
-    With a ZOH time at h = 1 the systems shows no difference. \\
-    With a ZOH time at h = 5 the system starts oscillating. \\
-    With a ZOH time at h = 10 the system is severely affected by the few updates and oscillates strongly to compensate. \\
-    With a ZOH time at h = 50 is unstable.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{../Code/images/h2_samplings.png}
+        \caption{Lower tank level for different sampling times.}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{../Code/images/pump_samplings.png}
+        \caption{Pump input for different sampling times.}
+    \end{figure}
+    From the figures it can be seen that the stabilility and performance of the
+    system decreases with higher samplnig time. For a sampling time of about 1
+    second, the system is stable and the performance is smooth. At 3 second
+    sampling time, it is oscillating and is on the verge of becoming unstable.
 }
 \q
 {
-    Discretize the continuous controller into state space form. Replace the simulink controller block with this new discrete controller. What differences can be seen?
+    Discretize the continuous controller into state space form. Replace the
+    simulink controller block with this new discrete controller. What differences
+    can be seen? 
 }
 {
     Show images here Andreas. Not of yourself please.
