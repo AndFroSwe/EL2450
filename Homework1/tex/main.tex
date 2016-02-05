@@ -109,7 +109,7 @@ Martin Favre - 19920130-0010
     A ZOH block is placed after the controller. What is the effect?
 }
 {
-    The effect of the system for different sampling times is shown below.
+    The effect of the system for different ZOH times is shown below.
     \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{../Code/images/h1_samplings.png}
@@ -130,16 +130,33 @@ Martin Favre - 19920130-0010
     second, the system is stable and the performance is smooth. At 3 second
     sampling time, it is oscillating and is on the verge of becoming unstable.
 }
-\q
+\q %8
 {
     Discretize the continuous controller into state space form. Replace the
     simulink controller block with this new discrete controller. What differences
     can be seen? 
 }
 {
-    Show images here Andreas. Not of yourself please.
+    The performance of the sampled system is displayed below.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{../Code/images/h1_samplings_ss.png}
+        \caption{Upper tank level for different sampling times.}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{../Code/images/h2_samplings_ss.png}
+        \caption{Lower tank level for different sampling times.}
+    \end{figure}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{../Code/images/pump_samplings_ss.png}
+        \caption{Pump input for different sampling times.}
+    \end{figure}
 
-    Comparison shows that ZOH method yields overall better results. This may be due to that the continuous system on which the ZOH method is based is more precise. 
+    Comparison shows that ZOH method yields overall better results. This may be
+    due to that the continuous system on which the ZOH method is based is more
+    precise.
 }
 
 \q
@@ -155,12 +172,15 @@ Martin Favre - 19920130-0010
     How long can the samplingtime be without affecting the performance?
 }
 {
-    With manual checks the maximum samplingtime before the systems starts to strongly oscillate is around 2 to 3 times the recommended sampling time from question 9.
+    With manual checks the maximum samplingtime before the systems starts to
+    strongly oscillate is around 2 to 3 times the recommended sampling time from
+    question 9.
 }
 
 \q
 {
-    Simulate system with samplingtime at 4 seconds and estimate the control performance.
+    Simulate system with samplingtime at 4 seconds and estimate the control
+    performance.
 }
 {
     The system is asymptotically stable but oscillating.
