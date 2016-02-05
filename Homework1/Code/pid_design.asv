@@ -19,7 +19,7 @@ s = tf('s');
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Continuous Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-uppertank=tf([K],[Tau 1]);          % Transfer function for upper tank
+uppertank=tf([K],[Tau 1]); % Transfer function for upper tank
 lowertank=tf([Gamma],[Gamma*Tau 1]); % Transfer function for upper tank
 G=lowertank*uppertank; % Transfer function from input to lower tank level
 
@@ -36,17 +36,17 @@ Go = F*G;
 Gc = F*G/(1 + F*G); % Closed system
 ZOH = 0.92*4;
 
-figure(1)
+figure
 step(Gc)
 title('Step function of closed system')
-figure(2)
+figure
 bode(Gc)
-figure(3)
+figure
 pzmap(Gc)
 stepinfo(Gc)
 
 sim('tanks')
-figure(4)
+figure
 subplot(4,1,1)
 plot(ref.Time, ref.Data)
 title('Ref')
@@ -65,43 +65,6 @@ title('Pump')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-<<<<<<< HEAD
-Ts = 4  ; % Sampling time
-
-% Discretize the continous controller, save it in state space form
-% [Aa,Ba,Ca,Da] = ; 
-% Run several times over different sampling frequencies
-% Figure 5 contains all h1 data
-% Figure 6 contains all h2 data
-% Figure 7 contains all pump data
-% Loop over different sampling times and print performance
-for i = 1:length(Ts)
-    F_dg = c2d(F, Ts, 'zoh');
-    [Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
-    % Simulate system
-    sim('tanks_discrete')
-    % Plot the simulated data
-    figure(5)
-    subplot(length(Ts),1,i)
-    title('
-    subplot(4,1,2)
-    plot(h1_d.Time, h1_d.Data)
-    title('h1_d')
-    subplot(4,1,3)
-    plot(h2_d.Time, h2_d.Data)
-    title('h2_d')
-    subplot(4,1,4)
-    plot(pump_d.Time, pump_d.Data)
-    title('Pump_d')
-end
-
-%%%% Plot both discrete and continuous h2 in same plot
-figure
-plot(h2.Time, h2.Data);
-hold on
-plot(h2_d.Time, h2_d.Data);
-legend('Continuous', 'Discrete')
-=======
  Ts = 4; % Sampling time
 % 
 % % Discretize the continous controller, save it in state space form
@@ -130,7 +93,6 @@ legend('Continuous', 'Discrete')
 % hold on
 % plot(h2_d.Time, h2_d.Data);
 % legend('Continuous', 'Discrete')
->>>>>>> 630c07ab90f7c7568bdd7ffd396fa293fb894a23
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -189,39 +151,5 @@ d0 = polyied(2);
 d1 = polyied(3);
 d2 = polyied(4);
 d3 = polyied(5);
-
-A = [1 a1 0 0;
-     b1-1 a2 a1 0;
-     b2-b1 0 a2 a1;
-     -b2 0 0 a2];
- B = [d0-b1+1;
-     d1-b2+b1;
-     d2+b2;
-     d3];
-C = A\B;
-r = C(1);
-c0 = C(2);
-c1 = C(3);
-c2 = C(4);
-fprintf('Constants for Fd are:\n')
-fprintf('r = %d\n', r);
-fprintf('c0 = %d\n', c0);
-fprintf('c1 = %d\n', c1);
-fprintf('c2 = %d\n', c2);
-fprintf('\n');
-
-fprintf('Question 16\n\n');
-Fd = filt([c0 c1 c2], [1 r-1 r], Ts);
-Gdo = Gd*Fd;
-Gdc = Gd*Fd/(1+ Gd*Fd);
-figure
-step(Gdc)
-figure;
-step(Gc)
-figure
-pzmap(Gdc)
-figure
-pzmap(Gc)
-pole(minreal(Gdc))
-pole(minreal(Gc))
-exp(Ts*pole(minreal(Gc)))
+syms r c0 c1 c2
+A = [r a1*c0 
