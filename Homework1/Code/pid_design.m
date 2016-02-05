@@ -32,10 +32,11 @@ zeta = 0.8;
 
 F = K_pid*(1 + 1/(Ti*s) + Td*N*s/(N + s)); % Transfer function for the controller
 
+% Define closed and open system equations
 Go = F*G;
 Gc = F*G/(1 + F*G); % Closed system
-ZOH = 0.92*4;
 
+% Info for continuous system
 figure
 step(Gc)
 title('Step function of closed system')
@@ -45,37 +46,52 @@ figure
 pzmap(Gc)
 stepinfo(Gc)
 
-sim('tanks')
-figure
-subplot(4,1,1)
-plot(ref.Time, ref.Data)
-title('Ref')
-subplot(4,1,2)
-plot(h1.Time, h1.Data)
-title('h1')
-subplot(4,1,3)
-plot(h2.Time, h2.Data)
-title('h2')
-subplot(4,1,4)
-plot(pump.Time, pump.Data)
-title('Pump')
+% Simulate the continuous system with ZOH for q7
+% Figure 200: h1
+% Figure 201: h2
+% Figure 202: pump
+ZOH_all = 1:0.5:2.5;
 
-%%
-close all
+for i = 1:length(ZOH_all)
+    ZOH = ZOH_all(i);
+    % Simulate system
+    sim('tanks')
+    % h1
+    figure(200)
+    subplot(length(ZOH_all), 1, i)
+    plot(h1.Time, h1.Data)
+    title(sprintf('h1 for ZOH=%1.1f', ZOH))
+    % h2
+    figure(201)
+    subplot(length(ZOH_all), 1, i)
+    plot(h2.Time, h2.Data)
+    title(sprintf('h2 for ZOH=%1.1f', ZOH))
+    % pump
+    figure(202)
+    subplot(length(ZOH_all),1,i)
+    plot(pump.Time, pump.Data)
+    title(sprintf('Pump for ZOH=%1.1f', ZOH))
+end
+% Send figures to images folder
+print(200, '-dpng', '.\images\h1_samplings')
+print(201, '-dpng', '.\images\h2_samplings')
+print(202, '-dpng', '.\images\pump_samplings')
+
+% close all
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  Ts_all = [1:0.5:3]; % Sampling time
-% Simulate and plot for several sampling times. 
+% Simulate and plot for several sampling times for q8 
 % Figure 100: h1
 % Figure 101: h2
-% Figure 102: h3
+% Figure 102: pump
 
 % % Discretize the continous controller, save it in state space form
 for i = 1:length(Ts_all)
-    Ts = Ts_all(i)
-    F_dg = c2d(F, Ts, 'zoh')
-    [Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1})
+    Ts = Ts_all(i);
+    F_dg = c2d(F, Ts, 'zoh');
+    [Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
     % Simulate system
     sim('tanks_discrete')
     % h1
@@ -96,20 +112,17 @@ for i = 1:length(Ts_all)
     
 end
 % Send figures to images folder
-print(100, '-dpng', '.\images\h1_samplings')
-print(101, '-dpng', '.\images\h2_samplings')
-print(102, '-dpng', '.\images\pump_samplings')
+print(100, '-dpng', '.\images\h1_samplings_ss')
+print(101, '-dpng', '.\images\h2_samplings_ss')
+print(102, '-dpng', '.\images\pump_samplings_ss')
 
-
-%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-clc; %Remove this
-
 Gd = c2d(G, Ts, 'zoh') % Sampled system model
 Fd = 1;% c2d(F, Ts, 'zoh'); % Transfer function for discrete designed controller
+
 
 %Gets and prints ai and bi for q 12
 fprintf('Question 12\n\n')
