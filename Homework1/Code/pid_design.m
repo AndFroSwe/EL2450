@@ -5,7 +5,7 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Initialization
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% %%%%%%%%%%%%%%%%%%%
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 clear all, close all, clc
 init_tanks;
 g = 9.82;
@@ -60,41 +60,48 @@ subplot(4,1,4)
 plot(pump.Time, pump.Data)
 title('Pump')
 
-
-
+%%
+close all
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- Ts = 4; % Sampling time
-% 
+ Ts_all = [1:0.5:3]; % Sampling time
+% Simulate and plot for several sampling times. 
+% Figure 100: h1
+% Figure 101: h2
+% Figure 102: h3
+
 % % Discretize the continous controller, save it in state space form
-% % [Aa,Ba,Ca,Da] = ; 
-% F_dg = c2d(F, Ts, 'zoh');
-% [Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
-% % Plot 
-% sim('tanks_discrete')
-% figure
-% subplot(4,1,1)
-% plot(ref_d.Time, ref_d.Data)
-% title('Ref_d')
-% subplot(4,1,2)
-% plot(h1_d.Time, h1_d.Data)
-% title('h1_d')
-% subplot(4,1,3)
-% plot(h2_d.Time, h2_d.Data)
-% title('h2_d')
-% subplot(4,1,4)
-% plot(pump_d.Time, pump_d.Data)
-% title('Pump_d')
-% 
-% %%%% Plot both discrete and continuous h2 in same plot
-% figure
-% plot(h2.Time, h2.Data);
-% hold on
-% plot(h2_d.Time, h2_d.Data);
-% legend('Continuous', 'Discrete')
+for i = 1:length(Ts_all)
+    Ts = Ts_all(i)
+    F_dg = c2d(F, Ts, 'zoh')
+    [Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1})
+    % Simulate system
+    sim('tanks_discrete')
+    % h1
+    figure(100)
+    subplot(length(Ts_all), 1, i)
+    plot(h1_d.Time, h1_d.Data)
+    title(sprintf('h1 for Ts=%1.1f', Ts))
+    % h2
+    figure(101)
+    subplot(length(Ts_all), 1, i)
+    plot(h2_d.Time, h2_d.Data)
+    title(sprintf('h2 for Ts=%1.1f', Ts))
+    % pump
+    figure(102)
+    subplot(length(Ts_all),1,i)
+    plot(pump_d.Time, pump_d.Data)
+    title(sprintf('Pump for Ts=%1.1f', Ts))
+    
+end
+% Send figures to images folder
+print(100, '-dpng', '.\images\h1_samplings')
+print(101, '-dpng', '.\images\h2_samplings')
+print(102, '-dpng', '.\images\pump_samplings')
 
 
+%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -173,7 +180,7 @@ fprintf('c2 = %d\n', c2);
 fprintf('\n');
 
 fprintf('Question 16\n\n');
-Fd = filt([c0 c1 c2], [1 r-1 r], Ts);
+Fd = filt([c0 c1 c2], [1 r-1 -r], Ts);
 Gdo = Gd*Fd;
 Gdc = Gd*Fd/(1+ Gd*Fd);
 figure
