@@ -129,7 +129,6 @@ fprintf('Sampling time 2*pi/(20Wc)=%f s\n', 2*pi/(20*Wc))
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%%
 
 % Q11, set sampling time to 4s
 Ts = 4;
@@ -152,12 +151,7 @@ title(sprintf('Pump for Ts=%1.1f', Ts))
 
 print(103, '-dpng', '.\images\4s_samplings')
 
-%%
-
-
 Gd = c2d(G, Ts, 'zoh') % Sampled system model
-Fd = 1;% c2d(F, Ts, 'zoh'); % Transfer function for discrete designed controller
-
 
 %Gets and prints ai and bi for q 12
 fprintf('Question 12\n\n')
@@ -189,7 +183,10 @@ end
 %Gcpoles = pole(minimized);
 % minimized.den{1}(2);
 Gcdiscretepoles
-A = [Gcdiscretepoles(1) 0 0 0; 0 Gcdiscretepoles(2) 0 0; 0 0 Gcdiscretepoles(3) 0; 0 0 0 Gcdiscretepoles(4)]; %prepare matrix
+A = [Gcdiscretepoles(1) 0 0 0; 
+    0 Gcdiscretepoles(2) 0 0;
+    0 0 Gcdiscretepoles(3) 0; 
+    0 0 0 Gcdiscretepoles(4)]; %prepare matrix
 polyied = poly(A); %Create polynomial which is our d-values in q14
 for i = 1:length(polyied)
     fprintf('d%d: %d\n', i-2, polyied(i))
