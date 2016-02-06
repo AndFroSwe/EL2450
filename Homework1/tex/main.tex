@@ -187,22 +187,67 @@ Martin Favre - 19920130-0010
 {
     As can be seen below, the system is asymptotically stable but oscillating
     heavily. Controller performance is not good.
-    %\begin{figure}
-        %\centering
-        %\includegraphics[width=\textwidth]{../Code/images/4s_samplings.png}
-    %\end{something}
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{../Code/images/4s_samplings.png}
+    \end{figure}
 }
 \q %12
 {
     Sample G, make Gd
 }
 {
-    \begin{tabular}{|c|c|}
-    \hline 
-    $a_1$ &  = 0.092 \\
-    \hline
-    $a_2$ & = 0.074 \\
-    \hline
-    \end{tabular}
+    The coefficients are shown in the table below.
+    \begin{table}[H]
+        \centering
+            \begin{tabular}{|c|c|}
+            \hline 
+            $a_1$ &  0.092 \\
+            \hline
+            $a_2$ & 0.074 \\
+            \hline
+            $b_1$ & -1.4 \\
+            \hline
+            $b_2$ & 0.52 \\
+            \hline
+            \end{tabular}
+    \end{table}
 }
+\q %13
+{
+    Where should discrete poles be placed?
+}
+{
+    For a stable discrete system, the poles should be located within the unit
+    circle.
+}
+\q %14
+{
+    What are the poles corresponding to the continuous poles in the discrete
+    case? Also, what is the pole polynomial for discrete?
+}
+{
+    After removing pole/zero pairs that cancel out, the continuous system
+    contains one double pole on the real axis at -0.5 and a pair of complex
+    conjugate poles at $0.16\pm0.12i$. Remapping to discrete poles $z_i=e^{T_s
+    p_i}$ where $T_s$ is the sampling time of 4 s, the poles in the discrete
+    case are as displayed in the table below.
+    \begin{table}[htpb]
+        \centering
+        \begin{tabular}{c|c}
+            Poles & Comment \\
+            \hline
+            $0.13$ & Real, double \\
+            \hline
+            $0.47+0.24i$ & Complex \\
+            \hline
+            $0.47-0.24i$ & Complex \\
+        \end{tabular}
+    \end{table}
+    Using matlabs \textit{poly} command, the pole polynomial becomes
+    \begin{equation}
+        0=z^4 - 1.2z^3 + 0.55z^2 - 0.094z + 0.0051
+    \end{equation}
+}
+
 \end{document}

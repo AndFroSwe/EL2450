@@ -105,6 +105,9 @@ INPUT ../Code/images/h2_samplings_ss.png
 INPUT ../Code/images/pump_samplings_ss.png
 INPUT ../Code/images/pump_samplings_ss.png
 INPUT ../Code/images/pump_samplings_ss.png
+INPUT ../Code/images/4s_samplings.png
+INPUT ../Code/images/4s_samplings.png
+INPUT ../Code/images/4s_samplings.png
 INPUT main.aux
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb
@@ -114,4 +117,5 @@ INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb
+INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb
 INPUT /usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb
