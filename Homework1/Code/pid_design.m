@@ -77,7 +77,6 @@ print(200, '-dpng', '.\images\h1_samplings')
 print(201, '-dpng', '.\images\h2_samplings')
 print(202, '-dpng', '.\images\pump_samplings')
 
-% close all
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -116,9 +115,45 @@ print(100, '-dpng', '.\images\h1_samplings_ss')
 print(101, '-dpng', '.\images\h2_samplings_ss')
 print(102, '-dpng', '.\images\pump_samplings_ss')
 
+close all
+
+% Calculate Ts for q10
+disp('Question 10')
+[Gm,Pm,Wcg,Wc] = margin(Go);
+fprintf('The crossover frequency Wc=%f rad/sec\n', Wc)
+fprintf('Sampling at 20*Wc=%f rad/sec\n', 20*Wc)
+fprintf('Sampling time 2*pi/(20Wc)=%f s\n', 2*pi/(20*Wc))
+
+
+
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%
+
+% Q11, set sampling time to 4s
+Ts = 4;
+F_d4s = c2d(F, Ts, 'zoh');  % Discrete controller with 4s sampling
+[Ad4,Bd4,Cd4,Dd4] = tf2ss(F_dg.num{1}, F_dg.den{1});    % ss representation
+sim('tanks_discrete')   % Simulate the system
+figure(103)
+% h1
+subplot(3, 1, 1)
+plot(h1_d.Time, h1_d.Data)
+title(sprintf('h1 for Ts=%1.1f', Ts))
+% h2
+subplot(3, 1, 2)
+plot(h2_d.Time, h2_d.Data)
+title(sprintf('h2 for Ts=%1.1f', Ts))
+% pump
+subplot(3,1,3)
+plot(pump_d.Time, pump_d.Data)
+title(sprintf('Pump for Ts=%1.1f', Ts))
+
+print(103, '-dpng', '.\images\4s_samplings')
+
+%%
+
 
 Gd = c2d(G, Ts, 'zoh') % Sampled system model
 Fd = 1;% c2d(F, Ts, 'zoh'); % Transfer function for discrete designed controller
