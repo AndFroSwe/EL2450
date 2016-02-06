@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1454690174 "main.tex" "main.pdf" "main" 1454690174
+["pdflatex"] 1454748432 "main.tex" "main.pdf" "main" 1454748433
   "../Code/images/h1_samplings.png" 1454689199 41111 b9650fa2c2b8b453d3dd58631a5fa0d1 ""
   "../Code/images/h1_samplings_ss.png" 1454689199 53299 c8374ef515854615d22b941195f0b463 ""
   "../Code/images/h2_samplings.png" 1454689199 42103 0c1e672ce0998441137c5e419e74c08b ""
@@ -61,9 +61,9 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1453627736 125797 10ae33d9b592499963eb2e83203bb65c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1453627732 722335 33856e3469ca1e481db8d2d3f936cc9b ""
-  "main.aux" 1454690174 1030 5a3597f3773291094a8509c1b7dd3091 ""
-  "main.tex" 1454690173 5649 7ffa42116c3bcd4e820767034138661b ""
+  "main.aux" 1454748433 1030 5a3597f3773291094a8509c1b7dd3091 ""
+  "main.tex" 1454748432 5892 e111d452f861b8b45c86d12353834164 ""
   (generated)
+  "main.log"
   "main.aux"
   "main.pdf"
-  "main.log"

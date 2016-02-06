@@ -164,30 +164,35 @@ Martin Favre - 19920130-0010
      What sampling time should be chosen?
 }
 {
-    The crossover frequency of the open-loop system is $\omega_c = 0.34
+    The crossover frequency of the open-loop system is $\omega_c = 0.36 
     \text{rad/s}$. The thumbrule states that the sampling frequency should be
-    approximately $20\omega_c  = 6.8 rad/s$. This gives a samplingtime of
-    $\frac{2\pi}{20\omega_c} = 0.92 $ seconds
+    approximately $20\omega_c  = 7.2 rad/s$. This gives a samplingtime of
+    $\frac{2\pi}{20\omega_c} = 0.87 $ seconds
 }
 \q %10
 {
     How long can the samplingtime be without affecting the performance?
 }
 {
-    With manual checks the maximum samplingtime before the systems starts to
-    strongly oscillate is around 2 to 3 times the recommended sampling time from
-    question 9.
+    From question 8 it can be seen that the system is performing well up until a
+    sampling time of about 2 seconds which is a little more than twice as fast
+    as the rule of thumb in question 9.
 }
 
-\q
+\q %11
 {
     Simulate system with samplingtime at 4 seconds and estimate the control
     performance.
 }
 {
-    The system is asymptotically stable but oscillating.
+    As can be seen below, the system is asymptotically stable but oscillating
+    heavily. Controller performance is not good.
+    %\begin{figure}
+        %\centering
+        %\includegraphics[width=\textwidth]{../Code/images/4s_samplings.png}
+    %\end{something}
 }
-\q
+\q %12
 {
     Sample G, make Gd
 }
