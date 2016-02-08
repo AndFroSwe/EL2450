@@ -81,6 +81,8 @@ print(202, '-dpng', '.\images\pump_samplings')
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
  Ts_all = [1:0.5:3]; % Sampling time
+ quant = 200/(2^60);
+
 % Simulate and plot for several sampling times for q8 
 % Figure 100: h1
 % Figure 101: h2
@@ -129,27 +131,35 @@ fprintf('Sampling time 2*pi/(20Wc)=%f s\n', 2*pi/(20*Wc))
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Discrete Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
+%%
 % Q11, set sampling time to 4s
-Ts = 4;
+Ts = 1;
+quant = 200/(2^6);
+all_quants = [4, 6, 8, 10]
+for i = 1:length(all_quants)
+quant = 200/2^all_quants(i);
 F_d4s = c2d(F, Ts, 'zoh');  % Discrete controller with 4s sampling
 [Ad4,Bd4,Cd4,Dd4] = tf2ss(F_dg.num{1}, F_dg.den{1});    % ss representation
 sim('tanks_discrete')   % Simulate the system
-figure(103)
 % h1
-subplot(3, 1, 1)
+figure(300)
+subplot(length(all_quants), 1, i)
 plot(h1_d.Time, h1_d.Data)
-title(sprintf('h1 for Ts=%1.1f', Ts))
+title(sprintf('h1 for bit = %d', all_quants(i)))
 % h2
-subplot(3, 1, 2)
+figure(301)
+subplot(length(all_quants), 1, i)
 plot(h2_d.Time, h2_d.Data)
-title(sprintf('h2 for Ts=%1.1f', Ts))
+title(sprintf('h2 for bit = %d', all_quants(i)))
 % pump
-subplot(3,1,3)
+figure(302)
+subplot(length(all_quants),1,i)
 plot(pump_d.Time, pump_d.Data)
-title(sprintf('Pump for Ts=%1.1f', Ts))
-
-print(103, '-dpng', '.\images\4s_samplings')
+title(sprintf('Pump for bit = %d', all_quants(i)))
+end
+print(300, '-dpng', '.\images\h1_quant_samplings')
+print(301, '-dpng', '.\images\h2_quant_samplings')
+print(302, '-dpng', '.\images\pump_quant_samplings')
 
 Gd = c2d(G, Ts, 'zoh') % Sampled system model
 
@@ -228,14 +238,16 @@ fprintf('Question 16\n\n');
 Fd = filt([c0 c1 c2], [1 r-1 -r], Ts);
 Gdo = Gd*Fd;
 Gdc = Gd*Fd/(1+ Gd*Fd);
-figure
-step(Gdc)
-figure;
-step(Gc)
-figure
-pzmap(Gdc)
-figure
-pzmap(Gc)
-pole(minreal(Gdc))
-pole(minreal(Gc))
 exp(Ts*pole(minreal(Gc)))
+
+fprintf('Question 17\n')
+fprintf('Done\n')
+fprintf('Question 18\n')
+quantlevel = 100/1024;
+fprintf('%d\n', quantlevel)
+fprintf('Question 19\n')
+fprintf('done\n')
+
+fprintf('Question 20\n')
+fprintf('The performance degrades around %d\n', quantlevel)
+
