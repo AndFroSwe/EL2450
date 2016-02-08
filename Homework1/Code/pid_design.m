@@ -136,30 +136,7 @@ fprintf('Sampling time 2*pi/(20Wc)=%f s\n', 2*pi/(20*Wc))
 Ts = 1;
 quant = 200/(2^6);
 all_quants = [4, 6, 8, 10]
-for i = 1:length(all_quants)
-quant = 200/2^all_quants(i);
-F_d4s = c2d(F, Ts, 'zoh');  % Discrete controller with 4s sampling
-[Ad4,Bd4,Cd4,Dd4] = tf2ss(F_dg.num{1}, F_dg.den{1});    % ss representation
-sim('tanks_discrete')   % Simulate the system
-% h1
-figure(300)
-subplot(length(all_quants), 1, i)
-plot(h1_d.Time, h1_d.Data)
-title(sprintf('h1 for bit = %d', all_quants(i)))
-% h2
-figure(301)
-subplot(length(all_quants), 1, i)
-plot(h2_d.Time, h2_d.Data)
-title(sprintf('h2 for bit = %d', all_quants(i)))
-% pump
-figure(302)
-subplot(length(all_quants),1,i)
-plot(pump_d.Time, pump_d.Data)
-title(sprintf('Pump for bit = %d', all_quants(i)))
-end
-print(300, '-dpng', '.\images\h1_quant_samplings')
-print(301, '-dpng', '.\images\h2_quant_samplings')
-print(302, '-dpng', '.\images\pump_quant_samplings')
+
 
 Gd = c2d(G, Ts, 'zoh') % Sampled system model
 
@@ -238,8 +215,36 @@ fprintf('Question 16\n\n');
 Fd = filt([c0 c1 c2], [1 r-1 -r], Ts);
 Gdo = Gd*Fd;
 Gdc = Gd*Fd/(1+ Gd*Fd);
-exp(Ts*pole(minreal(Gc)))
-
+fprintf('Gc:\n')
+exp(Ts*pole((Gc)))
+fprintf('Gdc:\n')
+pole(Gdc)
+[Ad, Bd, Cd, Dd] = tf2ss(Gdc.num{1}, Gdc.den{1})
+sim('tanks_discrete')
+for i = 1:length(all_quants)
+quant = 200/2^all_quants(i);
+F_d4s = c2d(F, Ts, 'zoh');  % Discrete controller with 4s sampling
+[Ad4,Bd4,Cd4,Dd4] = tf2ss(F_dg.num{1}, F_dg.den{1});    % ss representation
+sim('tanks_discrete')   % Simulate the system
+% h1
+figure(300)
+subplot(length(all_quants), 1, i)
+plot(h1_d.Time, h1_d.Data)
+title(sprintf('h1 for bit = %d', all_quants(i)))
+% h2
+figure(301)
+subplot(length(all_quants), 1, i)
+plot(h2_d.Time, h2_d.Data)
+title(sprintf('h2 for bit = %d', all_quants(i)))
+% pump
+figure(302)
+subplot(length(all_quants),1,i)
+plot(pump_d.Time, pump_d.Data)
+title(sprintf('Pump for bit = %d', all_quants(i)))
+end
+print(300, '-dpng', '.\images\h1_quant_samplings')
+print(301, '-dpng', '.\images\h2_quant_samplings')
+print(302, '-dpng', '.\images\pump_quant_samplings')
 fprintf('Question 17\n')
 fprintf('Done\n')
 fprintf('Question 18\n')

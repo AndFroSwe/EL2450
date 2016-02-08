@@ -281,4 +281,39 @@ Martin Favre - 19920130-0010
     task 15.
 }
 
+\q %16
+{
+	Solve the equation to get a discrete controller.
+}
+{
+	Solving the linear equation system gives \\
+	\begin{equation}
+		F_d = \frac{20.4 - 35.7*z^{-1} + 15.7*z^{-2}}{1 - 1.20z^{-1} + 0.197z^{-2}}
+	\end{equation}
+	%Det är svårt att jämföra bilder på Gdc och Gc pzmap då den ena visar kontinuerliga poler och den andra diskreta. Visar värden istället.
+    \begin{table}[H]
+        \centering
+            \begin{tabular}{|c|c|c|}
+            \hline 
+            $Poles$ &  Gc &  Gdc\\
+            \hline
+            1  & 1.0000 + 0.0000i  &    1.0000 + 0.0000i\\ %Repear ad absurdum. Väntar tills vi är säkra på att det är rätt
+            \hline
+            2   \\
+            \hline
+            3  \\
+           \hline
+	   \hline
+	   \hline
+	   \hline
+            \end{tabular}
+    \end{table}
+    Comparing the two sets poles leads to the conclusion that they are equal.
+}
+
+\q %17
+{
+
+}
+	
 \end{document}
