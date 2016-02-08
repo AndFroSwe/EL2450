@@ -249,5 +249,36 @@ Martin Favre - 19920130-0010
         0=z^4 - 1.2z^3 + 0.55z^2 - 0.094z + 0.0051
     \end{equation}
 }
+\q %15
+{
+    Show that the closed system equations turn into the equation system.
+}
+{
+    For the system
+    \begin{equation}
+        \label{eq:G}
+        G= \frac{a_1z + a_2}{z^2 + b_1z + b_2}
+    \end{equation}
+    and the desired regulator
+    \begin{equation}
+        \label{eq:F}
+        F = \frac{c_0z^2 + c_1 z + c_2}{(z-1)(z + r)}.
+    \end{equation}
+    The closed loop system has the equation
+    \begin{equation}
+        \label{eq:Gc}
+       \frac{FG}{1+FG}.
+    \end{equation}
+    Using \ref{eq:F}, \ref{eq:G} and \ref{eq:Gc} and looking only at the
+    denominator yields the pole equation
+    \begin{equation}
+        \label{eq:roots}
+        z^4 + (b_1 + r -1 + c_0a_1)z^3 + (b_2 + b_13 - b_1 - r + c_0a_2 +
+        c_1a_1)z^2 + (b_2r - b_2 -b_1r + c_1a_2 - c_2a_1)z + c_2a_2 -rb_2 = 0.
+    \end{equation}
+    Setting \ref{eq:roots} equal to the pole polynomial calculated in task 14
+    and solving for each power of $z$ separately yields the equation system in
+    task 15.
+}
 
 \end{document}

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  6 FEB 2016 11:41
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  8 FEB 2016 09:26
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -436,17 +436,22 @@ File: ../Code/images/4s_samplings.png Graphic file (type png)
  <use ../Code/images/4s_samplings.png>
 Package pdftex.def Info: ../Code/images/4s_samplings.png used on input line 194.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [5 <../Code/images/pump_samplings_ss.png (PNG copy)>] [6 <../Code/images/4s_samplings.png (PNG copy)>] [7] (./main.aux) ) 
+ [5 <../Code/images/pump_samplings_ss.png (PNG copy)>] [6 <../Code/images/4s_samplings.png (PNG copy)>]
+Overfull \hbox (81.17006pt too wide) detected at line 282
+\OML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1 + \OML/cmm/m/it/10 c[]a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 3 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 r \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 b[]r \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[]r \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 rb[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :
+ []
+
+[7] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2769 strings out of 495028
- 36565 string characters out of 6181497
- 101171 words of memory out of 5000000
- 5939 multiletter control sequences out of 15000+600000
+ 2773 strings out of 495028
+ 36594 string characters out of 6181497
+ 101203 words of memory out of 5000000
+ 5943 multiletter control sequences out of 15000+600000
  5709 words of font info for 21 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,9n,23p,230b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (8 pages, 461245 bytes).
+Output written on main.pdf (8 pages, 462722 bytes).
 PDF statistics:
  78 PDF objects out of 1000 (max. 8388607)
  50 compressed objects within 1 object stream
