@@ -76,11 +76,10 @@ end
 print(200, '-dpng', '.\images\h1_samplings')
 print(201, '-dpng', '.\images\h2_samplings')
 print(202, '-dpng', '.\images\pump_samplings')
-
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- Ts_all = [1:0.5:3]; % Sampling time
+ Ts_all = [1 2 3 4]; % Sampling time
  quant = 200/(2^60);
 
 % Simulate and plot for several sampling times for q8 
@@ -116,9 +115,26 @@ end
 print(100, '-dpng', '.\images\h1_samplings_ss')
 print(101, '-dpng', '.\images\h2_samplings_ss')
 print(102, '-dpng', '.\images\pump_samplings_ss')
-
 close all
+Ts = 4
+F_dg = c2d(F, Ts, 'zoh');
+[Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
+sim('tanks_discrete')
+% h1
+figure(600)
+subplot(3, 1, 1)
+plot(h1_d.Time, h1_d.Data)
+title(sprintf('h1 for Ts=%1.1f', Ts))
+% h2
+subplot(3, 1, 2)
+plot(h2_d.Time, h2_d.Data)
+title(sprintf('h2 for Ts=%1.1f', Ts))
+% pump
+subplot(3,1,3)
+plot(pump_d.Time, pump_d.Data)
+title(sprintf('Pump for Ts=%1.1f', Ts))
 
+print(600, '-dpng', '.\images\all_q11')
 % Calculate Ts for q10
 disp('Question 10')
 [Gm,Pm,Wcg,Wc] = margin(Go);
@@ -133,9 +149,39 @@ fprintf('Sampling time 2*pi/(20Wc)=%f s\n', 2*pi/(20*Wc))
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%
 % Q11, set sampling time to 4s
-Ts = 1;
+Ts = 4;
+%Gdcshit = c2d(Gc, Ts, 'zoh') %It is really bad tbh
+%[Ad, Bd, Cd, Dd] = tf2ss(Gdcshit.num{1}, Gdcshit.den{1})
+%sim('tanks_discrete')
+for i = 1:length(Ts_all)
+    Ts = Ts_all(i);
+    F_dg = c2d(Gc, Ts, 'zoh');
+    [Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
+    % Simulate system
+    %sim('tanks_discrete')
+    % h1
+    figure(420)
+    subplot(length(Ts_all), 1, i)
+    plot(h1_d.Time, h1_d.Data)
+    title(sprintf('h1 for Ts=%1.1f', Ts))
+    % h2
+    figure(421)
+    subplot(length(Ts_all), 1, i)
+    plot(h2_d.Time, h2_d.Data)
+    title(sprintf('h2 for Ts=%1.1f', Ts))
+    % pump
+    figure(422)
+    subplot(length(Ts_all),1,i)
+    plot(pump_d.Time, pump_d.Data)
+    title(sprintf('Pump for Ts=%1.1f', Ts))
+    
+end
+print(420, '-dpng', '.\images\h1_Gdc_c2d')
+print(421, '-dpng', '.\images\h2_Gdc_c2d')
+print(422, '-dpng', '.\images\pump_Gdc_c2d')
+
 quant = 200/(2^6);
-all_quants = [4, 6, 8, 10]
+all_quants = [3, 4, 6, 10]
 
 
 Gd = c2d(G, Ts, 'zoh') % Sampled system model
@@ -216,15 +262,15 @@ Fd = filt([c0 c1 c2], [1 r-1 -r], Ts);
 Gdo = Gd*Fd;
 Gdc = Gd*Fd/(1+ Gd*Fd);
 fprintf('Gc:\n')
-exp(Ts*pole((Gc)))
+exp(Ts*pole(minreal((Gc))))
 fprintf('Gdc:\n')
-pole(Gdc)
+pole(minreal(Gdc))
 [Ad, Bd, Cd, Dd] = tf2ss(Gdc.num{1}, Gdc.den{1})
 sim('tanks_discrete')
 for i = 1:length(all_quants)
 quant = 200/2^all_quants(i);
-F_d4s = c2d(F, Ts, 'zoh');  % Discrete controller with 4s sampling
-[Ad4,Bd4,Cd4,Dd4] = tf2ss(F_dg.num{1}, F_dg.den{1});    % ss representation
+%F_d4s = c2d(F, Ts, 'zoh');  % Discrete controller with 4s sampling
+%[Ad4,Bd4,Cd4,Dd4] = tf2ss(F_dg.num{1}, F_dg.den{1});    % ss representation
 sim('tanks_discrete')   % Simulate the system
 % h1
 figure(300)
@@ -246,7 +292,26 @@ print(300, '-dpng', '.\images\h1_quant_samplings')
 print(301, '-dpng', '.\images\h2_quant_samplings')
 print(302, '-dpng', '.\images\pump_quant_samplings')
 fprintf('Question 17\n')
-fprintf('Done\n')
+% Compare with Q 11
+% Simulate system
+quant = 1/2^10
+sim('tanks_discrete')
+% h1
+figure(500)
+subplot(3, 1, 1)
+plot(h1_d.Time, h1_d.Data)
+title(sprintf('h1 for Ts=%1.1f', Ts))
+% h2
+subplot(3, 1, 2)
+plot(h2_d.Time, h2_d.Data)
+title(sprintf('h2 for Ts=%1.1f', Ts))
+% pump
+subplot(3,1,3)
+plot(pump_d.Time, pump_d.Data)
+title(sprintf('Pump for Ts=%1.1f', Ts))
+
+print(500, '-dpng', '.\images\all_q17')
+
 fprintf('Question 18\n')
 quantlevel = 100/1024;
 fprintf('%d\n', quantlevel)

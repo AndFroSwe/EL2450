@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  8 FEB 2016 20:03
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  9 FEB 2016 09:06
 entering extended mode
 **C:/Users/Martin/matlab/el2450/Homework1/tex/main.tex
 (C:/Users/Martin/matlab/el2450/Homework1/tex/main.tex
@@ -503,36 +503,92 @@ ML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 b[]r \OMS/cmsy/m/n/10  
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 312--312
+Underfull \hbox (badness 10000) in paragraph at lines 315--315
 
  []
 
-[7] (main.aux) ) 
+<../Code/images/all_q11.png, id=41, 578.16pt x 433.62pt>
+File: ../Code/images/all_q11.png Graphic file (type png)
+
+<use ../Code/images/all_q11.png>
+Package pdftex.def Info: ../Code/images/all_q11.png used on input line 334.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+ [7]
+<../Code/images/all_q17.png, id=46, 578.16pt x 433.62pt>
+File: ../Code/images/all_q17.png Graphic file (type png)
+
+<use ../Code/images/all_q17.png>
+Package pdftex.def Info: ../Code/images/all_q17.png used on input line 334.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+ [8 <../Code/images/all_q11.png (PNG copy)> <../Code/images/all_q17.png (PNG co
+py)>]
+<../images/q19.png, id=50, 508.299pt x 178.86826pt>
+File: ../images/q19.png Graphic file (type png)
+ <use ../images/q19.png>
+Package pdftex.def Info: ../images/q19.png used on input line 353.
+(pdftex.def)             Requested size: 345.0pt x 121.40771pt.
+
+<../Code/images/h1_quant_samplings.png, id=51, 578.16pt x 433.62pt>
+File: ../Code/images/h1_quant_samplings.png Graphic file (type png)
+
+<use ../Code/images/h1_quant_samplings.png>
+Package pdftex.def Info: ../Code/images/h1_quant_samplings.png used on input li
+ne 375.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+
+<../Code/images/h2_quant_samplings.png, id=52, 578.16pt x 433.62pt>
+File: ../Code/images/h2_quant_samplings.png Graphic file (type png)
+
+<use ../Code/images/h2_quant_samplings.png>
+Package pdftex.def Info: ../Code/images/h2_quant_samplings.png used on input li
+ne 375.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+
+<../Code/images/pump_quant_samplings.png, id=53, 578.16pt x 433.62pt>
+File: ../Code/images/pump_quant_samplings.png Graphic file (type png)
+
+<use ../Code/images/pump_quant_samplings.png>
+Package pdftex.def Info: ../Code/images/pump_quant_samplings.png used on input 
+line 375.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+ [9 <../images/q19.png> <../Code/images/h1_quant_samplings.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 375.
+
+
+("C:\Users\Martin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\omscmr.fd"
+File: omscmr.fd 2014/09/29 v2.5h Standard LaTeX font definitions
+)
+LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 375.
+
+[10 <../Code/images/h2_quant_samplings.png (PNG copy)> <../Code/images/pump_qua
+nt_samplings.png (PNG copy)>] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 2453 strings out of 493634
- 31875 string characters out of 3134831
+ 2501 strings out of 493634
+ 33159 string characters out of 3134831
  98069 words of memory out of 3000000
- 5827 multiletter control sequences out of 15000+200000
+ 5865 multiletter control sequences out of 15000+200000
  5709 words of font info for 21 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,9n,23p,265b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/
-public/amsfonts/cm/cmbx10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Users/Martin/AppData/Local/Pr
-ograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Martin/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/
-Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/c
-mmi5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/
-amsfonts/cm/cmmi7.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/
-type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKT
-eX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Martin/AppData/Local/P
-rograms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Martin/A
-ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb><C:/U
-sers/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cm
-ti10.pfb>
-Output written on main.pdf (8 pages, 520769 bytes).
+ 27i,10n,23p,265b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
+<C:/Users/Martin/AppData/Local/Progra
+ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Martin/AppDat
+a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbxti10.pfb><C:/Use
+rs/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcs
+c10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Martin/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Martin/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Us
+ers/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+7.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/ty
+pe1/public/amsfonts/cm/cmsy7.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX
+ 2.9/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (11 pages, 809130 bytes).
 PDF statistics:
- 80 PDF objects out of 1000 (max. 8388607)
+ 99 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 36 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
 
