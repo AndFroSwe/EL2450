@@ -159,12 +159,10 @@ Martin Favre - 19920130-0010
         \includegraphics[width=\textwidth]{../Code/images/pump_samplings_ss.png}
         \caption{Pump input for different sampling times.}
     \end{figure}
-
     Comparison shows that ZOH method yields overall better results. This may be
     due to that the continuous system on which the ZOH method is based is more
     precise.
 }
-
 \q %9
 {
      What sampling time should be chosen?
@@ -296,16 +294,14 @@ Martin Favre - 19920130-0010
 	\begin{equation}
 		F_d = \frac{20.4 - 35.7*z^{-1} + 15.7*z^{-2}}{1 - 1.20z^{-1} + 0.197z^{-2}}
 	\end{equation}
-    %Det är svårt att jämföra bilder på Gdc och Gc pzmap då den ena visar
-    %kontinuerliga poler och den andra diskreta. Visar värden istället.
-    The two systems poles after minimal realization is as follows:
+    After transforming the continuous poles to discrete for comparison, the two
+    systems poles after minimal realization is as follows : 
     \begin{table}[H]
         \centering
          \begin{tabular}{c|c|c}
          Poles &  $G_c$ &  $G_{dc}$\\
          \hline
          1  & 0.61 $\pm$ 0i  &    0.61 $\pm$ 0i \\ 
-         %Repeat ad absurdum. Väntar tills vi är säkra på att det är rätt
          \hline
          2  & 0.85 $\pm$ 0.10i & 0.85 $\pm$ 0.10i\\
          \hline
@@ -341,7 +337,7 @@ Martin Favre - 19920130-0010
 	With a signal between 0 and 100 and a 10 bit A/D converter, what is the quantization level?
 }
 {
-Quantization with 10 bits is $\text{abs}(\frac{0-100}{2^{10}}) = 9.77\cdot10^{-4}$
+    Quantization with 10 bits is $\text{abs}(\frac{0-100}{2^{10}}) = 9.77\cdot10^{-4}$
 }
 \q % 19
 {
@@ -357,23 +353,24 @@ Quantization with 10 bits is $\text{abs}(\frac{0-100}{2^{10}}) = 9.77\cdot10^{-4
 
 \q % 20
 {
-	Connect above model before and after the discrete designed controller. Simulate for different values of quantization and determine at which level the control performance starts to degrade.
-}
+    Connect above model before and after the discrete designed controller.
+    Simulate for different values of quantization and determine at which level the
+    control performance starts to degrade.  }
 {
     The system was tested with multiple quantizationlevels determined by
-    $\frac{100-(-100)}{s^n} = quantization$ \begin{figure}[H]
+    $\frac{100-(-100)}{s^n} = quantization$ 
+    \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{../Code/images/h1_quant_samplings.png}
-    	\end{figure}
+    \end{figure}
         \begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{../Code/images/h2_quant_samplings.png}
-    	\end{figure}
+    \end{figure}
 	\begin{figure}[H]
         \centering
         \includegraphics[width=\textwidth]{../Code/images/pump_quant_samplings.png}
    	\end{figure}
-   	
     Exactly when the system performance starts to degrade is subjective, but it
 is clear that when the system goes below a 4-bit A{\textbackslash}D converter
 the performance is seriously hampered. 
