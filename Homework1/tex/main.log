@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  9 FEB 2016 11:47
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.19)  9 FEB 2016 20:20
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -406,102 +406,118 @@ File: ../images/q2_tfs.png Graphic file (type png)
  <use ../images/q2_tfs.png>
 Package pdftex.def Info: ../images/q2_tfs.png used on input line 53.
 (pdftex.def)             Requested size: 345.0pt x 20.57587pt.
- <../Code/images/h1_samplings.png, id=10, 578.16pt x 433.62pt>
+ <../Code/images/crossover.png, id=10, 1626.075pt x 956.82469pt>
+File: ../Code/images/crossover.png Graphic file (type png)
+ <use ../Code/images/crossover.png>
+Package pdftex.def Info: ../Code/images/crossover.png used on input line 111.
+(pdftex.def)             Requested size: 345.0pt x 202.99771pt.
+ [1 <../images/q2_tfs.png>] <../Code/images/h1_samplings.png, id=19, 578.16pt x 433.62pt>
 File: ../Code/images/h1_samplings.png Graphic file (type png)
  <use ../Code/images/h1_samplings.png>
-Package pdftex.def Info: ../Code/images/h1_samplings.png used on input line 132.
+Package pdftex.def Info: ../Code/images/h1_samplings.png used on input line 138.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- <../Code/images/h2_samplings.png, id=11, 578.16pt x 433.62pt>
+ <../Code/images/h2_samplings.png, id=20, 578.16pt x 433.62pt>
 File: ../Code/images/h2_samplings.png Graphic file (type png)
  <use ../Code/images/h2_samplings.png>
-Package pdftex.def Info: ../Code/images/h2_samplings.png used on input line 132.
+Package pdftex.def Info: ../Code/images/h2_samplings.png used on input line 138.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [1 <../images/q2_tfs.png>] <../Code/images/pump_samplings.png, id=22, 578.16pt x 433.62pt>
+ <../Code/images/pump_samplings.png, id=21, 578.16pt x 433.62pt>
 File: ../Code/images/pump_samplings.png Graphic file (type png)
  <use ../Code/images/pump_samplings.png>
-Package pdftex.def Info: ../Code/images/pump_samplings.png used on input line 132.
+Package pdftex.def Info: ../Code/images/pump_samplings.png used on input line 138.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [2 <../Code/images/h1_samplings.png (PNG copy)> <../Code/images/h2_samplings.png (PNG copy)>] <../Code/images/h1_samplings_ss.png, id=26, 578.16pt x 433.62pt>
+ [2 <../Code/images/crossover.png (PNG copy)> <../Code/images/h1_samplings.png (PNG copy)>] [3 <../Code/images/h2_samplings.png (PNG copy)> <../Code/images/pump_samplings.png (PNG copy)>] <../Code/images/h1_samplings_ss.png, id=29, 578.16pt x 433.62pt>
 File: ../Code/images/h1_samplings_ss.png Graphic file (type png)
  <use ../Code/images/h1_samplings_ss.png>
-Package pdftex.def Info: ../Code/images/h1_samplings_ss.png used on input line 160.
+Package pdftex.def Info: ../Code/images/h1_samplings_ss.png used on input line 166.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- <../Code/images/h2_samplings_ss.png, id=27, 578.16pt x 433.62pt>
+ <../Code/images/h2_samplings_ss.png, id=30, 578.16pt x 433.62pt>
 File: ../Code/images/h2_samplings_ss.png Graphic file (type png)
  <use ../Code/images/h2_samplings_ss.png>
-Package pdftex.def Info: ../Code/images/h2_samplings_ss.png used on input line 160.
+Package pdftex.def Info: ../Code/images/h2_samplings_ss.png used on input line 166.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [3 <../Code/images/pump_samplings.png (PNG copy)>] <../Code/images/pump_samplings_ss.png, id=31, 578.16pt x 433.62pt>
+ <../Code/images/pump_samplings_ss.png, id=31, 578.16pt x 433.62pt>
 File: ../Code/images/pump_samplings_ss.png Graphic file (type png)
  <use ../Code/images/pump_samplings_ss.png>
-Package pdftex.def Info: ../Code/images/pump_samplings_ss.png used on input line 160.
+Package pdftex.def Info: ../Code/images/pump_samplings_ss.png used on input line 166.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [4 <../Code/images/h1_samplings_ss.png (PNG copy)> <../Code/images/h2_samplings_ss.png (PNG copy)>] <../Code/images/4s_samplings.png, id=35, 578.16pt x 433.62pt>
+ [4 <../Code/images/h1_samplings_ss.png (PNG copy)>] [5 <../Code/images/h2_samplings_ss.png (PNG copy)> <../Code/images/pump_samplings_ss.png (PNG copy)>] <../Code/images/4s_samplings.png, id=38, 578.16pt x 433.62pt>
 File: ../Code/images/4s_samplings.png Graphic file (type png)
  <use ../Code/images/4s_samplings.png>
-Package pdftex.def Info: ../Code/images/4s_samplings.png used on input line 194.
+Package pdftex.def Info: ../Code/images/4s_samplings.png used on input line 200.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [5 <../Code/images/pump_samplings_ss.png (PNG copy)>] [6 <../Code/images/4s_samplings.png (PNG copy)>]
-Overfull \hbox (81.17006pt too wide) detected at line 282
+
+[6 <../Code/images/4s_samplings.png (PNG copy)>]
+Overfull \hbox (81.17006pt too wide) detected at line 288
 \OML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 r \OMS/cmsy/m/n/10 ^^@ \OT1/cmr/m/n/10 1 + \OML/cmm/m/it/10 c[]a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 b[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 b[]\OT1/cmr/m/n/10 3 \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 r \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[] \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 z[] \OT1/cmr/m/n/10 + (\OML/cmm/m/it/10 b[]r \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 b[]r \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 c[]a[]\OT1/cmr/m/n/10 )\OML/cmm/m/it/10 z \OT1/cmr/m/n/10 + \OML/cmm/m/it/10 c[]a[] \OMS/cmsy/m/n/10 ^^@ \OML/cmm/m/it/10 rb[] \OT1/cmr/m/n/10 = 0\OML/cmm/m/it/10 :
  []
 
 
-Underfull \hbox (badness 10000) in paragraph at lines 315--315
+Underfull \hbox (badness 10000) in paragraph at lines 321--321
 
  []
 
-<../Code/images/all_q11.png, id=45, 578.16pt x 433.62pt>
+<../Code/images/all_q11.png, id=44, 578.16pt x 433.62pt>
 File: ../Code/images/all_q11.png Graphic file (type png)
  <use ../Code/images/all_q11.png>
-Package pdftex.def Info: ../Code/images/all_q11.png used on input line 334.
+Package pdftex.def Info: ../Code/images/all_q11.png used on input line 340.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
  [7] <../Code/images/all_q17.png, id=50, 578.16pt x 433.62pt>
 File: ../Code/images/all_q17.png Graphic file (type png)
  <use ../Code/images/all_q17.png>
-Package pdftex.def Info: ../Code/images/all_q17.png used on input line 334.
+Package pdftex.def Info: ../Code/images/all_q17.png used on input line 340.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [8 <../Code/images/all_q11.png (PNG copy)> <../Code/images/all_q17.png (PNG copy)>] <../images/q19.png, id=54, 508.299pt x 178.86826pt>
+ [8 <../Code/images/all_q11.png (PNG copy)>] <../images/q19.png, id=54, 508.299pt x 178.86826pt>
 File: ../images/q19.png Graphic file (type png)
  <use ../images/q19.png>
-Package pdftex.def Info: ../images/q19.png used on input line 353.
+Package pdftex.def Info: ../images/q19.png used on input line 359.
 (pdftex.def)             Requested size: 345.0pt x 121.40771pt.
- <../Code/images/h1_quant_samplings.png, id=55, 578.16pt x 433.62pt>
+
+Underfull \hbox (badness 10000) in paragraph at lines 359--359
+
+ []
+
+<../Code/images/h1_quant_samplings.png, id=55, 578.16pt x 433.62pt>
 File: ../Code/images/h1_quant_samplings.png Graphic file (type png)
  <use ../Code/images/h1_quant_samplings.png>
-Package pdftex.def Info: ../Code/images/h1_quant_samplings.png used on input line 375.
+Package pdftex.def Info: ../Code/images/h1_quant_samplings.png used on input line 381.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- <../Code/images/h2_quant_samplings.png, id=56, 578.16pt x 433.62pt>
+
+Overfull \hbox (12.31726pt too wide) in paragraph at lines 381--381
+\OT1/cmr/m/n/10 The sys-tem was tested with mul-ti-ple quan-ti-za-tion-levels de-ter-mined by $[] =
+ []
+
+<../Code/images/h2_quant_samplings.png, id=56, 578.16pt x 433.62pt>
 File: ../Code/images/h2_quant_samplings.png Graphic file (type png)
  <use ../Code/images/h2_quant_samplings.png>
-Package pdftex.def Info: ../Code/images/h2_quant_samplings.png used on input line 375.
+Package pdftex.def Info: ../Code/images/h2_quant_samplings.png used on input line 381.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- <../Code/images/pump_quant_samplings.png, id=57, 578.16pt x 433.62pt>
+ [9 <../Code/images/all_q17.png (PNG copy)> <../images/q19.png>] <../Code/images/pump_quant_samplings.png, id=61, 578.16pt x 433.62pt>
 File: ../Code/images/pump_quant_samplings.png Graphic file (type png)
  <use ../Code/images/pump_quant_samplings.png>
-Package pdftex.def Info: ../Code/images/pump_quant_samplings.png used on input line 375.
+Package pdftex.def Info: ../Code/images/pump_quant_samplings.png used on input line 381.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [9 <../images/q19.png> <../Code/images/h1_quant_samplings.png (PNG copy)>]
-LaTeX Font Info:    Try loading font information for OMS+cmr on input line 375.
+ [10 <../Code/images/h1_quant_samplings.png (PNG copy)> <../Code/images/h2_quant_samplings.png (PNG copy)>]
+LaTeX Font Info:    Try loading font information for OMS+cmr on input line 381.
  (/usr/share/texlive/texmf-dist/tex/latex/base/omscmr.fd
 File: omscmr.fd 1999/05/25 v2.5h Standard LaTeX font definitions
 )
 LaTeX Font Info:    Font shape `OMS/cmr/m/n' in size <10> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 375.
- [10 <../Code/images/h2_quant_samplings.png (PNG copy)> <../Code/images/pump_quant_samplings.png (PNG copy)>] (./main.aux) ) 
+(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 381.
+ [11 <../Code/images/pump_quant_samplings.png (PNG copy)>] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2826 strings out of 495028
- 37947 string characters out of 6181497
- 101203 words of memory out of 5000000
- 5985 multiletter control sequences out of 15000+600000
- 5709 words of font info for 21 fonts, out of 8000000 for 9000
+ 2828 strings out of 495028
+ 38049 string characters out of 6181497
+ 102199 words of memory out of 5000000
+ 5987 multiletter control sequences out of 15000+600000
+ 5350 words of font info for 20 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,10n,23p,230b,225s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbxti10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
-Output written on main.pdf (11 pages, 801795 bytes).
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmti10.pfb>
+Output written on main.pdf (12 pages, 850757 bytes).
 PDF statistics:
  104 PDF objects out of 1000 (max. 8388607)
- 63 compressed objects within 1 object stream
+ 62 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
