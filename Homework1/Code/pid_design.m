@@ -79,8 +79,8 @@ print(202, '-dpng', '.\images\pump_samplings')
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Digital Control design
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
- Ts_all = [1 2 3 4]; % Sampling time
- quant = 200/(2^60);
+ Ts_all = [0.1 2 3 4]; % Sampling time
+ quant = 200/(2^60); % quantization level
 
 % Simulate and plot for several sampling times for q8 
 % Figure 100: h1
@@ -116,26 +116,12 @@ print(100, '-dpng', '.\images\h1_samplings_ss')
 print(101, '-dpng', '.\images\h2_samplings_ss')
 print(102, '-dpng', '.\images\pump_samplings_ss')
 close all
-Ts = 4
-F_dg = c2d(F, Ts, 'zoh');
-[Ad,Bd,Cd,Dd] = tf2ss(F_dg.num{1}, F_dg.den{1});
-sim('tanks_discrete')
-% h1
-figure(600)
-subplot(3, 1, 1)
-plot(h1_d.Time, h1_d.Data)
-title(sprintf('h1 for Ts=%1.1f', Ts))
-% h2
-subplot(3, 1, 2)
-plot(h2_d.Time, h2_d.Data)
-title(sprintf('h2 for Ts=%1.1f', Ts))
-% pump
-subplot(3,1,3)
-plot(pump_d.Time, pump_d.Data)
-title(sprintf('Pump for Ts=%1.1f', Ts))
 
-print(600, '-dpng', '.\images\all_q11')
-% Calculate Ts for q10
+%Create a picture with all three h1, h2, and pump
+%For comparison with Q17
+Ts = 4
+
+
 disp('Question 10')
 [Gm,Pm,Wcg,Wc] = margin(Go);
 fprintf('The crossover frequency Wc=%f rad/sec\n', Wc)
@@ -180,6 +166,21 @@ print(420, '-dpng', '.\images\h1_Gdc_c2d')
 print(421, '-dpng', '.\images\h2_Gdc_c2d')
 print(422, '-dpng', '.\images\pump_Gdc_c2d')
 
+% h1
+figure(600)
+subplot(3, 1, 1)
+plot(h1_d.Time, h1_d.Data)
+title(sprintf('h1 for Ts=%1.1f', Ts))
+% h2
+subplot(3, 1, 2)
+plot(h2_d.Time, h2_d.Data)
+title(sprintf('h2 for Ts=%1.1f', Ts))
+% pump
+subplot(3,1,3)
+plot(pump_d.Time, pump_d.Data)
+title(sprintf('Pump for Ts=%1.1f', Ts))
+
+print(600, '-dpng', '.\images\all_q11')
 quant = 200/(2^6);
 all_quants = [3, 4, 6, 10]
 
@@ -319,5 +320,5 @@ fprintf('Question 19\n')
 fprintf('done\n')
 
 fprintf('Question 20\n')
-fprintf('The performance degrades around %d\n', quantlevel)
+fprintf('The performance degrades around %d\n', 6)
 
