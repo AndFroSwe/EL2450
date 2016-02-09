@@ -10,10 +10,10 @@
 \newcounter{qcounter}
 \newcommand{\q}[2]
 {
-    \textbf{Q\refstepcounter{qcounter} \arabic{qcounter}: #1} \par
-    \textbf{A:} #2
-       \par
-       \vspace{0.5cm}
+    \textbf{Task \refstepcounter{qcounter} \arabic{qcounter}} \\
+    #2
+    \par
+    \vspace{0.5cm}
 } 
 
 \begin{document}
@@ -100,8 +100,14 @@ Martin Favre - 19920130-0010
 {
     The open loop system is $G_o=FG$ and the cutoff frequency is the
     frequency when the amplitude gain is 0 dB. Using the bode plots this
-    frequency is found to be around $\omega_c=0.35 \text{rad/s}$. This is confirmed by the
-    MatLab command \textit{allmargin(Go)} which gives $\omega_c = 0.343 \text{rad/s}$.
+    frequency is found to be around $\omega_c=0.35 \text{rad/s}$, see figure
+    below.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=\textwidth]{../Code/images/crossover.png}
+    \end{figure}
+    This is confirmed by the MatLab command \textit{allmargin(Go)} which gives
+    $\omega_c = 0.343 \text{rad/s}$.
 }
 %%%%%% Part 2 %%%%%%%
 \q %7
@@ -290,27 +296,27 @@ Martin Favre - 19920130-0010
 	\begin{equation}
 		F_d = \frac{20.4 - 35.7*z^{-1} + 15.7*z^{-2}}{1 - 1.20z^{-1} + 0.197z^{-2}}
 	\end{equation}
-	%Det är svårt att jämföra bilder på Gdc och Gc pzmap då den ena visar kontinuerliga poler och den andra diskreta. Visar värden istället.
-	The two systems poles after minimal realization is as follows:
+    %Det är svårt att jämföra bilder på Gdc och Gc pzmap då den ena visar
+    %kontinuerliga poler och den andra diskreta. Visar värden istället.
+    The two systems poles after minimal realization is as follows:
     \begin{table}[H]
         \centering
          \begin{tabular}{|c|c|c|}
          \hline 
          $Poles$ &  $G_c$ &  $G_{dc}$\\
          \hline
-         1  & 0.61 $\pm$ 0i  &    0.61 $\pm$ 0i \\ %Repeat ad absurdum. Väntar tills vi är säkra på att det är rätt
+         1  & 0.61 $\pm$ 0i  &    0.61 $\pm$ 0i \\ 
+         %Repeat ad absurdum. Väntar tills vi är säkra på att det är rätt
          \hline
          2  & 0.85 $\pm$ 0.10i & 0.85 $\pm$ 0.10i\\
          \hline
          3  & - & 0.92 $\pm$ 0i\\
          \hline
-	 \hline
-	 \hline
-	 \hline
          \end{tabular}
     \end{table}
-    Four poles are exactly equal whilst $G_{dc}$ has an additional real pole. This is since AAAAAAAAAA. 
-    We thus conclude that their performance are equal.
+    Four poles are exactly equal whilst $G_{dc}$ has an additional real pole.
+    This is since AAAAAAAAAA.  We thus conclude that their performance are
+    equal.
     
 }
 
