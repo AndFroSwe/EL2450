@@ -65,6 +65,9 @@ for i = 1:length(ZOH_all)
     figure(201)
     subplot(length(ZOH_all), 1, i)
     plot(h2.Time, h2.Data)
+    hold on
+    plot(ref.Time, ref.Data)
+    hold off
     title(sprintf('h2 for ZOH=%1.1f', ZOH))
     % pump
     figure(202)
@@ -103,6 +106,9 @@ for i = 1:length(Ts_all)
     figure(101)
     subplot(length(Ts_all), 1, i)
     plot(h2_d.Time, h2_d.Data)
+    hold on
+    plot(ref.Time, ref.Data)
+    hold off
     title(sprintf('h2 for Ts=%1.1f', Ts))
     % pump
     figure(102)
@@ -115,7 +121,7 @@ end
 print(100, '-dpng', '.\images\h1_samplings_ss')
 print(101, '-dpng', '.\images\h2_samplings_ss')
 print(102, '-dpng', '.\images\pump_samplings_ss')
-close all
+%close all
 
 %Create a picture with all three h1, h2, and pump
 %For comparison with Q17
@@ -154,6 +160,9 @@ for i = 1:length(Ts_all)
     figure(421)
     subplot(length(Ts_all), 1, i)
     plot(h2_d.Time, h2_d.Data)
+    hold on
+    plot(ref.Time, ref.Data)
+    hold off
     title(sprintf('h2 for Ts=%1.1f', Ts))
     % pump
     figure(422)
@@ -174,6 +183,9 @@ title(sprintf('h1 for Ts=%1.1f', Ts))
 % h2
 subplot(3, 1, 2)
 plot(h2_d.Time, h2_d.Data)
+hold on
+plot(ref.Time, ref.Data)
+hold off
 title(sprintf('h2 for Ts=%1.1f', Ts))
 % pump
 subplot(3,1,3)
