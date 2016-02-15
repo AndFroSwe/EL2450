@@ -3,7 +3,7 @@
 global executionTime
 executionTime = 0.010; %executiontime for the controller
 
-schedulingPolicy = 'prioEDF'; %the scheduling policy used in the simulation
+schedulingPolicy = 'prioDM';%'prioEDF'; %the scheduling policy used in the simulation
 ttInitKernel(schedulingPolicy);
 
 T = [0.02 0.029 0.035]; % Task periods
