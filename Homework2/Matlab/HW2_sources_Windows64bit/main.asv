@@ -31,6 +31,7 @@ sch_med = Schedule.signals.values(:,2)';
 sch_big = Schedule.signals.values(:,3)';
 sch = [sch_small; sch_med; sch_big];
 
+
 % Plot all in same plot
 figure
 hold on
