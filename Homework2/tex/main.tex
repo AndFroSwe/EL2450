@@ -90,13 +90,24 @@ Martin Favre - 19920130-0010
     
 \q %5
 {
-	Setting the execution time for all three processes to 10ms, what are the differences with respect to control performance?
+    Setting the execution time for all three processes to 10ms, what are the
+differences with respect to control performance?
 }
 {
+    For this execution time, the CPU utilization factor becomes
+    \begin{equation}
+		U = \sum\limits_{i=1}^n \frac{C_i}{T_i}=\frac{10}{20} + \frac{10}{29} +
+        \frac{10}{35} = 1.1.
+    \end{equation}
+    The utilization factor is thus larger than one which means that the
+    processes is not schedulable. This is seen in
+    Figure~\ref{fig:Task_5_dm_performance} where the small pendulum is no
+    longer stable because of the fact that the deadlines are missed.
 	\begin{figure}[H]
        		\centering
         	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png}
-        	\caption{Performance of pendulums under rate monotonic scheduling.}
+        	\caption{Performance of pendulums under rate monotonic schedulingi
+            with computation time 10 ms for each task.}
         	\label{fig:T5_dmperformance}
     	\end{figure}
 }

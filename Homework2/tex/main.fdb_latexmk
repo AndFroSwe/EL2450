@@ -1,7 +1,8 @@
 # Fdb version 3
-["pdflatex"] 1455630434 "main.tex" "main.pdf" "main" 1455630434
-  "../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png" 1455630355 38593 ca6f93ddfb2b9501e04ab4b642a4eb7f ""
+["pdflatex"] 1455631746 "main.tex" "main.pdf" "main" 1455631746
+  "../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png" 1455631142 38594 68512f09b0b91ee3c27a5bbb5589928b ""
   "../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png" 1455630355 17286 87327b9eeeffdecde27e527bb6b00014 ""
+  "../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png" 1455631142 40926 e84f7ae472e9de82db4ab1237842141a ""
   "/etc/texmf/web2c/texmf.cnf" 1453627724 475 c0e671620eb5563b2130f56340a5fde8 ""
   "/usr/share/texlive/texmf-dist/fonts/map/fontname/texfonts.map" 1272929888 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texlive/texmf-dist/fonts/tfm/public/amsfonts/cmextra/cmex7.tfm" 1246382020 1004 54797486969f23fa377b128694d548df ""
@@ -56,8 +57,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1453627736 125797 10ae33d9b592499963eb2e83203bb65c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1453627732 722335 33856e3469ca1e481db8d2d3f936cc9b ""
-  "main.aux" 1455630434 708 4f8853e0189bce1deff7c7df552ed71a ""
-  "main.tex" 1455630434 2395 e934d133e1be057133edb502ab084a67 ""
+  "main.aux" 1455631746 925 58944a72c54cc1328e894bf4dca0385e ""
+  "main.tex" 1455631745 3343 4a773f5ed2c6e1a7cd78ae24f57b76c6 ""
   (generated)
   "main.log"
   "main.pdf"
