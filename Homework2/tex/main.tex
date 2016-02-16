@@ -30,6 +30,9 @@ Andreas Fr\"{o}derberg - 19880730-7577
 Martin Favre - 19920130-0010
 \end{titlepage}
 
+\section{Rate Monotonic scheduling}
+\label{sec:rate_monotonic_scheduling}
+
 \q %1
 {
     Explain what Rate Monotonic scheduling means.
@@ -49,9 +52,28 @@ Martin Favre - 19920130-0010
 {
 	Calculating the utilization factor U from 
 	\begin{equation}
-		U = \sum\limits_{i=1}^n \frac{C_i}{T_i}
+		U = \sum\limits_{i=1}^n \frac{C_i}{T_i}=\frac{6}{20} + \frac{6}{29} +
+        \frac{6}{35} = 0.75
 	\end{equation}	
-	which gives U = 0.75. The rules states that if U $<$ 1 the set is schedulable.
+	The rules states that if U $<$ 1 the set is schedulable.
 }
+\q %3
+{
+    What are the differences in control performance between the different
+    pendulums?
+}
+{
+    When using rate monotonic scheduling, the small and medium pendulums are
+    asymptotically stable while the large pendulum is not. The control
+    performance is shown in Figure~\ref{fig:T3_dmperformance}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{../Matlab/images/Task_3_dmperformance.png}
+        \caption{Performance of pendulums under rate monotonic scheduling.}
+        \label{fig:T3_dmperformance}
+    \end{figure}
+}
+    
+    
 
 \end{document}
