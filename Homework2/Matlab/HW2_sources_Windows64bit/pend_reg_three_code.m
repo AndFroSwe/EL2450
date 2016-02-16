@@ -8,6 +8,7 @@ switch segment,
   
   data.u = data.C*data.state+ data.D*inp(1); 
   data.state = data.A*data.state + data.B*inp(1);
+  data
   exectime = executionTime; 
   
  case 2,
