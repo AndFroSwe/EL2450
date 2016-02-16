@@ -38,11 +38,8 @@ Martin Favre - 19920130-0010
     Explain what Rate Monotonic scheduling means.
 }
 {
-    Rate Monotonic scheduling means that all tasks are given a priority. At te
-    beginning of each cycle, the task with the highest priority is run until
-    Rate Monotonic scheduling means that all tasks are given a priority. At te
-    beginning of each cycle, the task with the highest priority is run until
-    completion.
+    In Rate Monotonic scheduling, each task is given a fixed priority based on
+    its task rate. The task with the highest priority is then run at all times.
 }
 
 \q %2
@@ -53,9 +50,18 @@ Martin Favre - 19920130-0010
 	Calculating the utilization factor U from 
 	\begin{equation}
 		U = \sum\limits_{i=1}^n \frac{C_i}{T_i}=\frac{6}{20} + \frac{6}{29} +
-        \frac{6}{35} = 0.75
+        \frac{6}{35} = 0.68
 	\end{equation}	
-	The rules states that if $U<1$ the set is schedulable.
+    To be schedulable, the condition 
+    \begin{equation}
+        U \leq n(2^{\frac{1}{n}} - 1),
+    \end{equation}
+    where $n$ is the number of processes. Calculating for this example with 3
+    tasks, the condition becomes
+    \begin{equation}
+        0.68 \leq 3(2^{\frac{1}{3}} - 1)=0.78
+    \end{equation}
+    which holds, therefore the taskset is schedulable with RM scheduling.
 }
 \q %3
 {
@@ -111,5 +117,37 @@ differences with respect to control performance?
         	\label{fig:T5_dmperformance}
     	\end{figure}
 }
+%% Earliest deadline first
+\section{Earliest Deadline First, EDF}
+\label{sec:earliest_deadline_first_edf}
+% Reset the task counter
+\setcounter{qcounter}{0}
+\q %1
+{
+    Explain how EDF works. What are the advantages and disadvantages of the
+    approach compared to RM?
+}
+{
+    In EDF, the task that has the closest deadline to the current time is always
+    run. The advantage of this is that the processor can be fully utilized if
+    the the scheme is schedulable. Another advantage is that tasks will not get
+    starved if the processor is overloaded and deadlines are missed since the
+    dynamic prioritization will handle allow all tasks to get processing time.
+    One Advantage is that it can be difficult to predict which tasks are run
+    when since there is no fixed priority.
+}
+\q %2
+{
+    Assume the execition time is changed back to 6 ms. Are the tasks schedulable
+    with the EDF? Please motivate your answer and costruct part of the
+    corresponding schedule manually.
+}
+{
+    EDF is schedulable as long as CPU utilization is lower than 100 \%. The
+    utilization factor is the same as the answer q2 from RM, 0.68. Since
+    $U=0.68 \leq 1$ holds, the task set is schedulable with EDF.
+}
+
+
 
 \end{document}
