@@ -28,7 +28,8 @@ ylabel('\theta [rad]')
 grid on;
 print('.\images\Task_3_dm_performance',  '-dpng')
 
-%% Task 4
+%%Task 4
+=======
 % Plot the schedule
 sch = []; % Schedules
 sch_small = Schedule.signals.values(:,1)';
@@ -46,8 +47,10 @@ end
 title('Schedule for pendulums with 6 ms computation time')
 xlabel('t [s]')
 legend('Small pendulum', 'Medium pendulum', 'Big pendulum')
+>>>>>>> 7a3b66f380a60a06b00a0fb8b91064936ea88824
 
 %% Task 5
+<<<<<<< HEAD
 % Sätt init_pend_three rätt
 % executionTime = 0.01;
 clear all, clc, close all
