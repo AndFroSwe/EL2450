@@ -114,7 +114,7 @@ differences with respect to control performance?
         	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png}
         	\caption{Performance of pendulums under rate monotonic schedulingi
             with computation time 10 ms for each task.}
-        	\label{fig:T5_dmperformance}
+        	\label{fig:Task_5_dm_performance}
     	\end{figure}
 }
 %% Earliest deadline first
@@ -133,7 +133,7 @@ differences with respect to control performance?
     the the scheme is schedulable. Another advantage is that tasks will not get
     starved if the processor is overloaded and deadlines are missed since the
     dynamic prioritization will handle allow all tasks to get processing time.
-    One Advantage is that it can be difficult to predict which tasks are run
+    One disadvantage is that it can be difficult to predict which tasks are run
     when since there is no fixed priority.
 }
 \q %2
@@ -143,11 +143,83 @@ differences with respect to control performance?
     corresponding schedule manually.
 }
 {
-    EDF is schedulable as long as CPU utilization is lower than 100 \%. The
+   	EDF is schedulable as long as CPU utilization is lower than 100 \%. The
     utilization factor is the same as the answer q2 from RM, 0.68. Since
     $U=0.68 \leq 1$ holds, the task set is schedulable with EDF.
 }
 
+\q %3
+{
+	Using EDF - what are the differences in control performance between the different
+    	pendulums?
+}
+{
+ 		All pendulums are asymptotically stable and have similar control
+    	performance. The performance is shown in Figure~\ref{fig:T3_dmperformance}.
+		\begin{figure}[H]
+    		\centering
+        	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png}
+        	\caption{Performance of pendulums under earliest deadline first scheduling
+           	 with computation time 6 ms for each task.}
+        	\label{fig:Task_3_edf_performance}
+    	\end{figure}
+}
 
+\q % 4
+{
+	Compare against the schedule in the model. Does it match?
+}
+{
+	Andreas says yes.
+}
+\q %5
+{
+	 Setting the execution time for all three processes to 10ms, what are the
+differences with respect to control performance?
+}
+{
+	For this execution time, the CPU utilization factor becomes
+    \begin{equation}
+		U = \sum\limits_{i=1}^n \frac{C_i}{T_i}=\frac{10}{20} + \frac{10}{29} +
+        \frac{10}{35} = 1.1.
+    \end{equation}
+    The utilization factor is thus larger than one which means that the
+    processes is not schedulable. 
+	
+	However looking at Figure~\ref{fig:Task_5_edf_performance} the system is still stable although with deteriorated 
+	control performace for all three pendulums. This is a result of the disability to meet all the deadlines but still meeting enough for the system to stabilize. 
+
+
+	\begin{figure}[H]
+    		\centering
+        	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png}
+        	\caption{Performance of pendulums under earliest deadline first scheduling
+           	 with computation time 10 ms for each task.}
+        	\label{fig:Task_5_edf_performance}
+    	\end{figure}
+}
+
+\q % 6
+{
+	Does the controllers perform better with EDF compared to RM-scheduling?
+}
+{
+	Comparing the systems with 6 $ms$ execution time in Figure~\ref{fig:T3_dmperformance} and Figure~\ref{fig:Task_3_edf_performance} little difference can
+ 	be seen. However with execution time of 10 $ms$ in Figure~\ref{fig:Task_5_dm_performance} and Figure~\ref{fig:Task_5_edf_performance} the control 
+	performance is much better with EDF-scheduling.
+	
+	%Osäker på det här svaret - Vill dra en relation med U
+	A relation can be drawn with the different utilization factors of EDF and RM, where RM is limited to a factor of 0.68 from Q2 whilst EDF can handle 1.0 and is 		 	therefore better. 
+}
+
+%% NETWORKED CONTROL SYSTEMS %% SKYNET HERE WE GO %%
+
+\q % 1
+{
+	Do analytical calculations of the closed-loop equations.
+}
+{
+	Mathmagic
+}
 
 \end{document}
