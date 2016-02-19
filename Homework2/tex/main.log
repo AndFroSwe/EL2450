@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  18 FEB 2016 18:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  19 FEB 2016 13:47
 entering extended mode
 **C:/Users/Martin/matlab/el2450/Homework2/tex/main.tex
 (C:/Users/Martin/matlab/el2450/Homework2/tex/main.tex
@@ -485,7 +485,7 @@ erformance.png used on input line 200.
 
 [4 <../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png (PNG c
 opy)>] [5 <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png
- (PNG copy)>] (main.aux) ) 
+ (PNG copy)>] [6] (main.aux) ) 
 Here is how much of TeX's memory you used:
  2446 strings out of 493634
  32412 string characters out of 3134831
@@ -494,23 +494,23 @@ Here is how much of TeX's memory you used:
  5609 words of font info for 21 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,6n,23p,270b,222s stack positions out of 5000i,500n,10000p,200000b,50000s
-<C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fo
-nts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Martin/AppData/Local/Programs
-/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Martin/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/
-Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.
-pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type
-1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2
-.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Martin/AppData/Local/Prog
-rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Martin/AppDa
-ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/
-Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pf
-b><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfont
-s/cm/cmsy10.pfb>
-Output written on main.pdf (6 pages, 309911 bytes).
+<C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.
+9/fonts/type1/public/amsfonts/cm/cmbx10.pfb><C:/Users/Martin/AppData/Local/Prog
+rams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx12.pfb><C:/Users/Martin/AppD
+ata/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Us
+ers/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cme
+x10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/a
+msfonts/cm/cmmi10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/
+type1/public/amsfonts/cm/cmmi5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKT
+eX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.pfb><C:/Users/Martin/AppData/Local/
+Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr10.pfb><C:/Users/Martin/A
+ppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Us
+ers/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr
+7.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/ams
+fonts/cm/cmsy10.pfb>
+Output written on main.pdf (7 pages, 314616 bytes).
 PDF statistics:
- 70 PDF objects out of 1000 (max. 8388607)
+ 75 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  26 words of extra memory for PDF output out of 10000 (max. 10000000)
 
