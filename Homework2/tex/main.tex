@@ -213,12 +213,15 @@ differences with respect to control performance?
 }
 
 %% NETWORKED CONTROL SYSTEMS %% SKYNET HERE WE GO %%
-
+\section{Networked Control Systems}
+\label{sec:networked_control_systems}
+% Reset the task counter
+\setcounter{qcounter}{0}
 \q % 1
 {
 	Do analytical calculations of the closed-loop equations.
 }
-{
+{ %% Haveriet
 	With
 	\begin{equation}
 		\dot{x}(t) = Iu(t) 
@@ -228,12 +231,46 @@ differences with respect to control performance?
 	\end{equation}
 	and
 	\begin{equation}
-		u(kh) = -Kx(kh)
+		u(kh) = -Kx(kh).
 	\end{equation}
-	this gives the closed loop system:
+	Sampling the system with a period h gives:
 	\begin{equation}
-		\dot{x}(kh) = -IKx(kh)
+		\Phi = e^{Ah}
 	\end{equation}
+	\begin{equation}
+		\Gamma_0(\tau_A) = I\int_0^{h-\tau_k} \! \, \mathrm{d}s = (h-\tau_k)I
+	\end{equation}
+	\begin{equation}
+		\Gamma_1(\tau_A) = I\int_{h-\tau_k}^{h} \! \, \mathrm{d}s = -\tau_kI
+	\end{equation}
+	Defining $z(kh) = [x^T(kh), u^T((k-1)h]^T$ as the augumented state vector, the augmented closed-loop system is
+	\begin{equation}
+		z((k+1)h) = \widetilde{\phi}(k)z(kh)
+	\end{equation}	
+	where
+	\begin{equation}
+		\widetilde{\phi}(k) = 
+		\begin{bmatrix}
+			\Phi-\Gamma_0(\tau_k)K & \Gamma_1(\tau_k) \\
+			-K & 0
+		\end{bmatrix}
+		=
+	\begin{bmatrix}
+		1-(h-\tau_A)I & -\tau_AI \\
+		-K & 0
+	\end{bmatrix}
+	.
+	\end{equation}
+	Which results in:
+	\begin{equation}
+		z((k+1)h) = 
+	\begin{bmatrix}
+		1-(h-\tau_A)I & -\tau_AI \\
+		-K & 0
+	\end{bmatrix}
+		z(kh).
+	\end{equation}
+
 }
 \q % 2
 {
@@ -246,6 +283,14 @@ differences with respect to control performance?
 %% DISCRETE EVENT SYSTEMS %% SEXUAL DELAYS %%
 
 \q % 1
+{
+	Construct and draw the DES that models $M_1$, $M_2$ and $B$
+}
+{
+	Easy
+}
+
+\q % 2
 {
 	Construct and draw the DES that models $M_1$, $M_2$ and $B$
 }
