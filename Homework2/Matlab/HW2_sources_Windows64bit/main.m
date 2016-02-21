@@ -35,21 +35,21 @@ filename = strcat('.\images\',filename)
 %% Plotta stability area
 
 
-x1 = [];
-x2 = [];
-c = 1;
+syms K t h
 %max{0.5-1/klh} < t/h < min{1/klh}
 K = 0:0.1:2;
 for K = 0:0.1:2
-    x1(c) = 1/(K*h)
-    x2(c) = 1/2-1/(K*h)
-    c = c+1;
+    x1 = 1/(K*h);
+    x2 = 1/2-1/(K*h);
+    
 end
-plot([0:0.1:2], x1)
+ezplot(x1)
 hold on
-plot([0:0.1:2],x2)
-
-
+ezplot(x2)
+title ('Regions of stability')
+xlabel('h')
+ylabel('\tau/h')
+print ('.\images\NET_stabilityarea', '-dpng');
 %% Hitta instabil delay
 close all; clear all;clc;
 sim('inv_pend_delay');

@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  21 FEB 2016 18:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  21 FEB 2016 20:25
 entering extended mode
 **C:/Users/Martin/matlab/el2450/Homework2/tex/main.tex
 (C:/Users/Martin/matlab/el2450/Homework2/tex/main.tex
@@ -539,106 +539,118 @@ erformance.png used on input line 249.
 
 [6 <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png (PNG c
 opy)>] [7]
-<../Matlab/HW2_sources_Windows64bit/images/NET_timedelays.png, id=53, 578.16pt 
+<../Matlab/HW2_sources_Windows64bit/images/NET_stabilityarea.png, id=53, 578.16
+pt x 433.62pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/NET_stabilityarea.png Graphic f
+ile (type png)
+
+<use ../Matlab/HW2_sources_Windows64bit/images/NET_stabilityarea.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/NET_stabilit
+yarea.png used on input line 395.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+
+<../Matlab/HW2_sources_Windows64bit/images/NET_timedelays.png, id=54, 578.16pt 
 x 433.62pt>
 File: ../Matlab/HW2_sources_Windows64bit/images/NET_timedelays.png Graphic file
  (type png)
  <use ../Matlab/HW2_sources_Windows64bit/images/NET_timedelays.png>
 Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/NET_timedela
-ys.png used on input line 401.
+ys.png used on input line 410.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 423--423
+[8 <../Matlab/HW2_sources_Windows64bit/images/NET_stabilityarea.png (PNG copy)>
+]
+Underfull \hbox (badness 10000) in paragraph at lines 432--432
 
  []
 
-[8 <../Matlab/HW2_sources_Windows64bit/images/NET_timedelays.png (PNG copy)>]
-<../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png, id=57, 1131.62775p
+
+<../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png, id=58, 1131.62775p
 t x 504.08325pt>
 File: ../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png Graphic file (
 type png)
 
 <use ../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png>
 Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/task41_Chart
-.png used on input line 423.
+.png used on input line 432.
 (pdftex.def)             Requested size: 345.0pt x 153.67978pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 439--439
+Underfull \hbox (badness 10000) in paragraph at lines 448--448
 
  []
 
-
-<../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png, id=58, 1131.62775p
+[9 <../Matlab/HW2_sources_Windows64bit/images/NET_timedelays.png (PNG copy)> <.
+./Matlab/HW2_sources_Windows64bit/images/task41_Chart.png>]
+<../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png, id=63, 1131.62775p
 t x 504.08325pt>
 File: ../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png Graphic file (
 type png)
 
 <use ../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png>
 Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/task42_Chart
-.png used on input line 439.
+.png used on input line 448.
 (pdftex.def)             Requested size: 345.0pt x 153.67978pt.
 
-Underfull \hbox (badness 10000) in paragraph at lines 455--455
+Underfull \hbox (badness 10000) in paragraph at lines 464--464
 
  []
 
 
-<../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png, id=59, 1131.62775p
+<../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png, id=64, 1131.62775p
 t x 504.08325pt>
 File: ../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png Graphic file (
 type png)
 
 <use ../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png>
 Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/task43_Chart
-.png used on input line 455.
+.png used on input line 464.
 (pdftex.def)             Requested size: 345.0pt x 153.67978pt.
- [9 <../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png> <../Matlab/HW2
-_sources_Windows64bit/images/task42_Chart.png>]
-Underfull \hbox (badness 10000) in paragraph at lines 466--466
+
+Underfull \hbox (badness 10000) in paragraph at lines 475--475
 
  []
 
 
-Overfull \hbox (5.94623pt too wide) in paragraph at lines 466--466
+Overfull \hbox (5.94623pt too wide) in paragraph at lines 475--475
 []\OT1/cmr/m/n/10 Add two ad-di-tional par-al-lel pair of states with the state
 s $\OML/cmm/m/it/10 START$ $ENABLED$
  []
 
 
-Overfull \hbox (7.98697pt too wide) in paragraph at lines 466--466
+Overfull \hbox (7.98697pt too wide) in paragraph at lines 475--475
 \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 START$ $DISABLED$ \OT1/cmr/m/n/10 for the
  first and $\OML/cmm/m/it/10 REPAIR$ $ENABLED$ \OT1/cmr/m/n/10 and $\OML/cmm/m/
 it/10 REPAIR$
  []
 
-[10 <../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png>] (main.aux) ) 
+[10 <../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png> <../Matlab/HW2
+_sources_Windows64bit/images/task43_Chart.png>] [11] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 2514 strings out of 493634
- 35247 string characters out of 3134831
- 98273 words of memory out of 3000000
- 5880 multiletter control sequences out of 15000+200000
+ 2520 strings out of 493634
+ 35562 string characters out of 3134831
+ 98283 words of memory out of 3000000
+ 5885 multiletter control sequences out of 15000+200000
  5609 words of font info for 21 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
  27i,7n,23p,313b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
-<
-C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/c
-m/cmbx10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pub
-lic/amsfonts/cm/cmbx12.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/f
-onts/type1/public/amsfonts/cm/cmcsc10.pfb><C:/Users/Martin/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Martin/AppDat
-a/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users
-/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.
+<C:/Users/Mart
+in/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
+<C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
+cm/cmbx12.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/pu
+blic/amsfonts/cm/cmcsc10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmex10.pfb><C:/Users/Martin/AppData/Local/Progr
+ams/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi10.pfb><C:/Users/Martin/AppDa
+ta/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi5.pfb><C:/Users
+/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmmi7.
 pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/cm/cmmi7.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
-/public/amsfonts/cm/cmr10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.
-9/fonts/type1/public/amsfonts/cm/cmr5.pfb><C:/Users/Martin/AppData/Local/Progra
-ms/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Martin/AppData/
-Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/M
-artin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pf
-b>
-Output written on main.pdf (11 pages, 848208 bytes).
+nts/cm/cmr10.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1
+/public/amsfonts/cm/cmr5.pfb><C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9
+/fonts/type1/public/amsfonts/cm/cmr7.pfb><C:/Users/Martin/AppData/Local/Program
+s/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Users/Martin/AppData
+/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (12 pages, 878663 bytes).
 PDF statistics:
- 107 PDF objects out of 1000 (max. 8388607)
+ 111 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
- 71 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 76 words of extra memory for PDF output out of 10000 (max. 10000000)
 
