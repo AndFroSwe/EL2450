@@ -1,8 +1,10 @@
 # Fdb version 3
-["pdflatex"] 1456050613 "main.tex" "main.pdf" "main" 1456050613
+["pdflatex"] 1456052341 "main.tex" "main.pdf" "main" 1456052342
   "../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png" 1455631142 38594 68512f09b0b91ee3c27a5bbb5589928b ""
-  "../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png" 1456045296 38641 3cb06057635929450bcf12e4c63c161c ""
+  "../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png" 1456051805 38651 da0139dd699d2f25e5be65b3de500a7b ""
+  "../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png" 1456051805 13876 f4ee6118d1ce88b2ba3b44d852376ae4 ""
   "../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png" 1456050334 13937 f619d175d5d997c13936cc5fc95dcb5c ""
+  "../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png" 1456051805 48837 d1ecbe43b35597c58b62a1a7a7db3b0c ""
   "../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png" 1455631142 40926 e84f7ae472e9de82db4ab1237842141a ""
   "../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png" 1456050334 38651 a40ad13a318a3c904508e2a6a48bd903 ""
   "../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png" 1456050334 14560 aaae562378f023420c64867ff34230d5 ""
@@ -66,8 +68,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1453627736 125797 10ae33d9b592499963eb2e83203bb65c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1453627732 722335 33856e3469ca1e481db8d2d3f936cc9b ""
-  "main.aux" 1456050613 2403 b43d7ac5fab74767cdef9511d41c5084 ""
-  "main.tex" 1456050612 10205 ea957b74724a812faa8982451ed58724 ""
+  "main.aux" 1456052342 2871 5866d98151c13a22df594e863cecb96d ""
+  "main.tex" 1456052340 11122 520a673ca9b944b88152da7999d93658 ""
   (generated)
   "main.pdf"
   "main.log"

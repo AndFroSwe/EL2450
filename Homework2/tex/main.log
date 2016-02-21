@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  21 FEB 2016 11:30
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  21 FEB 2016 11:59
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -431,30 +431,40 @@ File: ../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG Graphic file (
  <use ../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG>
 Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG used on input line 150.
 (pdftex.def)             Requested size: 345.0pt x 120.62859pt.
- [3 <../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png (PNG copy)> <../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png (PNG copy)>] <../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png, id=34, 578.16pt x 433.62pt>
+ [3 <../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png (PNG copy)> <../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png (PNG copy)>] <../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png, id=34, 834.11626pt x 302.63063pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png used on input line 190.
+(pdftex.def)             Requested size: 345.0pt x 125.17377pt.
+ [4 <../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG>] <../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png, id=39, 578.16pt x 433.62pt>
 File: ../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png Graphic file (type png)
  <use ../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png>
-Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png used on input line 197.
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png used on input line 207.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [4 <../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG>] <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png, id=39, 578.16pt x 433.62pt>
+ <../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png, id=40, 999.735pt x 363.60844pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png used on input line 223.
+(pdftex.def)             Requested size: 345.0pt x 125.47833pt.
+ [5 <../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png> <../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png (PNG copy)>] <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png, id=45, 578.16pt x 433.62pt>
 File: ../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png Graphic file (type png)
  <use ../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png>
-Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png used on input line 231.
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png used on input line 249.
 (pdftex.def)             Requested size: 345.0pt x 258.74484pt.
- [5 <../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png (PNG copy)>] [6 <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png (PNG copy)>] [7] (./main.aux) ) 
+ [6 <../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png (PNG copy)>] [7 <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png (PNG copy)>] [8] (./main.aux) ) 
 Here is how much of TeX's memory you used:
- 2787 strings out of 495028
- 38056 string characters out of 6181497
- 99258 words of memory out of 5000000
- 5955 multiletter control sequences out of 15000+600000
+ 2799 strings out of 495028
+ 38689 string characters out of 6181497
+ 99275 words of memory out of 5000000
+ 5965 multiletter control sequences out of 15000+600000
  5609 words of font info for 21 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
  37i,7n,23p,269b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
-Output written on main.pdf (8 pages, 412871 bytes).
+Output written on main.pdf (9 pages, 472985 bytes).
 PDF statistics:
- 90 PDF objects out of 1000 (max. 8388607)
- 57 compressed objects within 1 object stream
+ 96 PDF objects out of 1000 (max. 8388607)
+ 59 compressed objects within 1 object stream
  0 named destinations out of 1000 (max. 500000)
- 41 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 51 words of extra memory for PDF output out of 10000 (max. 10000000)
 

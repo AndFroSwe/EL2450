@@ -164,8 +164,8 @@ differences with respect to control performance?
     the the scheme is schedulable. Another advantage is that tasks will not get
     starved if the processor is overloaded and deadlines are missed since the
     dynamic prioritization will handle allow all tasks to get processing time.
-    One disadvantage is that it can be difficult to predict which tasks are run
-    when since there is no fixed priority.
+    One disadvantage is that tasks can not be given predefined priorities which
+    might be important depending on the implementation.
 }
 \q %2
 {
@@ -177,6 +177,16 @@ differences with respect to control performance?
    	EDF is schedulable as long as CPU utilization is lower than 100 \%. The
     utilization factor is the same as the answer q2 from RM, 0.68. Since
     $U=0.68 \leq 1$ holds, the task set is schedulable with EDF.
+    The hand calculated schedule is shown below in
+    Figure~\ref{fig:6ms_sch_edf_hand}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png}
+        \caption{Schdule for EDF with 6 ms calculation time. Task $J_1$
+        represents the smallest pendulum, higher index represents larger
+        pendulums.}
+        \label{fig:6ms_sch_edf_hand}
+    \end{figure}
 }
 
 \q %3
@@ -201,7 +211,15 @@ differences with respect to control performance?
 	Compare against the schedule in the model. Does it match?
 }
 {
-	Andreas says yes.
+	The schedule in the model is shown in Figure~\ref{fig:6ms_sch_edf}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png}
+        \caption{Performance of pendulums under earliest deadline first
+        scheduling with computation time 6 ms for each task.}
+        \label{fig:6ms_sch_edf}
+    \end{figure}
+    It is consistent with the schedule presented in task 2.
 }
 \q %5
 {
