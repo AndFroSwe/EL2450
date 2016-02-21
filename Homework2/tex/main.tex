@@ -39,7 +39,8 @@ Martin Favre - 19920130-0010
 }
 {
     In Rate Monotonic scheduling, each task is given a fixed priority based on
-    its task rate. The task with the highest priority is then run at all times.
+    its task rate, shorter task rate equals higher priority. The task with the
+    highest priority is then run at all times.
 }
 
 \q %2
@@ -59,6 +60,7 @@ Martin Favre - 19920130-0010
     where $n$ is the number of processes. Calculating for this example with 3
     tasks, the condition becomes
     \begin{equation}
+        \label{eq:ut_rm}
         0.68 \leq 3(2^{\frac{1}{3}} - 1)=0.78
     \end{equation}
     which holds, therefore the taskset is schedulable with RM scheduling.
@@ -83,8 +85,8 @@ Martin Favre - 19920130-0010
     Compare against the schedule in the model. Does it match?
 }
 {
-    As can be seen below in Figure~\ref{fig:Task_4_sch_6ms}, the schedules
-    match. The tasks are schedulable as stated in q2.
+    In Figure~\ref{fig:Task_4_sch_6ms}, the execution of tasks in Matlab is
+    shown.
     \begin{figure}[H]
         \centering
         \includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png}
@@ -92,6 +94,17 @@ Martin Favre - 19920130-0010
         Yellow is small pendulum, blue is medium and red is big.}
         \label{fig:Task_4_sch_6ms}
     \end{figure}
+    In the figure below, Figure~\ref{fig:Task_4_sch_6ms_drawn}, the execution
+    order as calculated by hand is shown.
+    \begin{figure}[htpb]
+        \centering
+        \includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/rm_tasks.PNG}
+        \caption{Hand drawn and calculated execution order with Rate Monotonic
+        scheduling. Task $J_1$ represents the small pendulum and rising index
+        represents bigger pendulums.}
+        \label{fig:Task_4_sch_6ms_drawn}
+    \end{figure}
+    It can be seen that the schedules both are consistent.
 }
     
 \q %5
@@ -105,17 +118,35 @@ differences with respect to control performance?
 		U = \sum\limits_{i=1}^n \frac{C_i}{T_i}=\frac{10}{20} + \frac{10}{29} +
         \frac{10}{35} = 1.1.
     \end{equation}
-    The utilization factor is thus larger than one which means that the
-    processes is not schedulable. This is seen in
+    The utilization factor is thus larger than Equation~\ref{eq:ut_rm} which
+    means that the processes is not schedulable. This is seen in
     Figure~\ref{fig:Task_5_dm_performance} where the small pendulum is no
     longer stable because of the fact that the deadlines are missed.
 	\begin{figure}[H]
-       		\centering
-        	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png}
-        	\caption{Performance of pendulums under rate monotonic schedulingi
-            with computation time 10 ms for each task.}
-        	\label{fig:Task_5_dm_performance}
-    	\end{figure}
+        \centering
+        \includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png}
+        \caption{Performance of pendulums under rate monotonic schedulingi
+        with computation time 10 ms for each task.}
+        \label{fig:Task_5_dm_performance}
+    \end{figure}
+    The schedule in the simulations is shown in
+    Figure~\ref{fig:Task_5_sch_10ms}.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png}
+        \caption{Schedule for Rate Monotonic scheduling when computation time is
+        10 ms}
+        \label{fig:Task_5_sch_10ms}
+    \end{figure}
+    When viewing the hand-drawn and the real schedule, the following are shown.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG}
+        \caption{Schedule when computation time is 10 ms. Task $J_1$ is smallest
+        pendulum, higher index represents larger pendulum.}
+        \label{fig:Task_5_rm_performance_hand}
+    \end{figure}
+
 }
 %% Earliest deadline first
 \section{Earliest Deadline First, EDF}
@@ -150,8 +181,8 @@ differences with respect to control performance?
 
 \q %3
 {
-	Using EDF - what are the differences in control performance between the different
-    	pendulums?
+    Using EDF - what are the differences in control performance between the
+    different pendulums?
 }
 {
  		All pendulums are asymptotically stable and have similar control
@@ -159,8 +190,8 @@ differences with respect to control performance?
 		\begin{figure}[H]
     		\centering
         	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png}
-        	\caption{Performance of pendulums under earliest deadline first scheduling
-           	 with computation time 6 ms for each task.}
+            \caption{Performance of pendulums under earliest deadline first
+            scheduling with computation time 6 ms for each task.}
         	\label{fig:Task_3_edf_performance}
     	\end{figure}
 }
