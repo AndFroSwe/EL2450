@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  21 FEB 2016 16:09
+This is pdfTeX, Version 3.1415926-2.5-1.40.14 (TeX Live 2013/Debian) (format=pdflatex 2016.1.24)  21 FEB 2016 16:16
 entering extended mode
  restricted \write18 enabled.
  file:line:error style messages enabled.
@@ -336,32 +336,188 @@ Package: ltxcmds 2011/11/09 v1.22 LaTeX kernel commands for general use (HO)
 \Gin@req@width=\dimen114
 )
 \c@qcounter=\count102
- (./main.aux
+ (./main.aux)
+\openout1 = `main.aux'.
 
-./main.aux:33: LaTeX Error: Missing \begin{document}.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 19.
+LaTeX Font Info:    ... okay on input line 19.
+ (/usr/share/texlive/texmf-dist/tex/context/base/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count103
+\scratchdimen=\dimen115
+\scratchbox=\box30
+\nofMPsegments=\count104
+\nofMParguments=\count105
+\everyMPshowfont=\toks24
+\MPscratchCnt=\count106
+\MPscratchDim=\dimen116
+\MPnumerator=\count107
+\makeMPintoPDFobject=\count108
+\everyMPtoPDFconversion=\toks25
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/pdftexcmds.sty
+Package: pdftexcmds 2011/11/29 v0.20 Utility functions of pdfTeX for LuaTeX (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifluatex.sty
+Package: ifluatex 2010/03/01 v1.3 Provides the ifluatex switch (HO)
+Package ifluatex Info: LuaTeX not detected.
+) (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/ifpdf.sty
+Package: ifpdf 2011/01/30 v2.3 Provides the ifpdf switch (HO)
+Package ifpdf Info: pdfTeX in PDF mode is detected.
+)
+Package pdftexcmds Info: LuaTeX not detected.
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
+Package: epstopdf-base 2010/02/09 v2.5 Base part for package epstopdf
+ (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/grfext.sty
+Package: grfext 2010/08/19 v1.1 Manage graphics extensions (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvdefinekeys.sty
+Package: kvdefinekeys 2011/04/07 v1.3 Define keys (HO)
+)) (/usr/share/texlive/texmf-dist/tex/latex/oberdiek/kvoptions.sty
+Package: kvoptions 2011/06/30 v3.11 Key value format for package options (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/kvsetkeys.sty
+Package: kvsetkeys 2012/04/25 v1.16 Key value parser (HO)
+ (/usr/share/texlive/texmf-dist/tex/generic/oberdiek/etexcmds.sty
+Package: etexcmds 2011/02/16 v1.5 Avoid name clashes with e-TeX commands (HO)
+Package etexcmds Info: Could not find \expanded.
+(etexcmds)             That can mean that you are not using pdfTeX 1.50 or
+(etexcmds)             that some package has redefined \expanded.
+(etexcmds)             In the latter case, load this package earlier.
+)))
+Package grfext Info: Graphics extension search list:
+(grfext)             [.png,.pdf,.jpg,.mps,.jpeg,.jbig2,.jb2,.PNG,.PDF,.JPG,.JPEG,.JBIG2,.JB2,.eps]
+(grfext)             \AppendGraphicsExtensions on input line 452.
+ (/usr/share/texlive/texmf-dist/tex/latex/latexconfig/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Live
+)) [1
 
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.33 <
-      <<<<<< HEAD
-? 
-./main.aux:33: Emergency stop.
- ...                                              
-                                                  
-l.33 <
-      <<<<<< HEAD
-You're in trouble here.  Try typing  <return>  to proceed.
-If that doesn't work, type  X <return>  to quit.
+{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}] <../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png, id=8, 578.16pt x 433.62pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png used on input line 82.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+ <../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png, id=9, 999.735pt x 357.58594pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png used on input line 108.
+(pdftex.def)             Requested size: 345.0pt x 123.40001pt.
+ [1 <../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png (PNG copy)>] <../Matlab/HW2_sources_Windows64bit/images/rm_tasks.PNG, id=22, 844.15375pt x 284.56313pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/rm_tasks.PNG Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/rm_tasks.PNG>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/rm_tasks.PNG used on input line 108.
+(pdftex.def)             Requested size: 345.0pt x 116.30255pt.
+ <../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png, id=24, 578.16pt x 433.62pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png used on input line 150.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+ [2 <../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms.png (PNG copy)> <../Matlab/HW2_sources_Windows64bit/images/rm_tasks.PNG>] <../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png, id=29, 999.735pt x 360.59718pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png used on input line 150.
+(pdftex.def)             Requested size: 345.0pt x 124.43916pt.
+ <../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG, id=30, 789.44937pt x 276.03125pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG used on input line 150.
+(pdftex.def)             Requested size: 345.0pt x 120.62859pt.
+ [3 <../Matlab/HW2_sources_Windows64bit/images/Task_5_dm_performance.png (PNG copy)> <../Matlab/HW2_sources_Windows64bit/images/Task_5_sch_10ms.png (PNG copy)>] <../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png, id=34, 834.11626pt x 302.63063pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png used on input line 190.
+(pdftex.def)             Requested size: 345.0pt x 125.17377pt.
+ <../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png, id=35, 578.16pt x 433.62pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png used on input line 207.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+ [4 <../Matlab/HW2_sources_Windows64bit/images/rm_tasks_10ms.PNG> <../Matlab/HW2_sources_Windows64bit/images/Task_4_sch_6ms_edf.png>] <../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png, id=41, 999.735pt x 363.60844pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png used on input line 223.
+(pdftex.def)             Requested size: 345.0pt x 125.47833pt.
+ [5 <../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png (PNG copy)> <../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png (PNG copy)>] <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png, id=45, 578.16pt x 433.62pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png used on input line 249.
+(pdftex.def)             Requested size: 345.0pt x 258.74484pt.
+ [6 <../Matlab/HW2_sources_Windows64bit/images/Task_5_edf_performance.png (PNG copy)>]
 
- 
+LaTeX Warning: Reference `eq:eigen' on page 7 undefined on input line 386.
+
+[7]
+Underfull \hbox (badness 10000) in paragraph at lines 407--407
+
+ []
+
+<../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png, id=54, 1131.62775pt x 504.08325pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png used on input line 407.
+(pdftex.def)             Requested size: 345.0pt x 153.67978pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 423--423
+
+ []
+
+<../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png, id=55, 1131.62775pt x 504.08325pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png used on input line 423.
+(pdftex.def)             Requested size: 345.0pt x 153.67978pt.
+ [8 <../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 439--439
+
+ []
+
+<../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png, id=60, 1131.62775pt x 504.08325pt>
+File: ../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png Graphic file (type png)
+ <use ../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png>
+Package pdftex.def Info: ../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png used on input line 439.
+(pdftex.def)             Requested size: 345.0pt x 153.67978pt.
+
+Underfull \hbox (badness 10000) in paragraph at lines 450--450
+
+ []
+
+
+Overfull \hbox (5.94623pt too wide) in paragraph at lines 450--450
+[]\OT1/cmr/m/n/10 Add two ad-di-tional par-al-lel pair of states with the states $\OML/cmm/m/it/10 START$ $ENABLED$
+ []
+
+
+Overfull \hbox (7.98697pt too wide) in paragraph at lines 450--450
+\OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 START$ $DISABLED$ \OT1/cmr/m/n/10 for the first and $\OML/cmm/m/it/10 REPAIR$ $ENABLED$ \OT1/cmr/m/n/10 and $\OML/cmm/m/it/10 REPAIR$
+ []
+
+[9 <../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png> <../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png>] (./main.aux)
+
+LaTeX Warning: There were undefined references.
+
+ ) 
 Here is how much of TeX's memory you used:
- 2051 strings out of 495028
- 24981 string characters out of 6181497
- 84464 words of memory out of 5000000
- 5275 multiletter control sequences out of 15000+600000
- 3640 words of font info for 14 fonts, out of 8000000 for 9000
+ 2829 strings out of 495028
+ 39679 string characters out of 6181497
+ 101397 words of memory out of 5000000
+ 5992 multiletter control sequences out of 15000+600000
+ 5609 words of font info for 21 fonts, out of 8000000 for 9000
  14 hyphenation exceptions out of 8191
- 27i,0n,23p,264b,86s stack positions out of 5000i,500n,10000p,200000b,80000s
-./main.aux:33:  ==> Fatal error occurred, no output PDF file produced!
+ 37i,7n,23p,269b,233s stack positions out of 5000i,500n,10000p,200000b,80000s
+</usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmcsc10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr5.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmr7.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texlive/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy7.pfb>
+Output written on main.pdf (10 pages, 788079 bytes).
+PDF statistics:
+ 105 PDF objects out of 1000 (max. 8388607)
+ 61 compressed objects within 1 object stream
+ 0 named destinations out of 1000 (max. 500000)
+ 66 words of extra memory for PDF output out of 10000 (max. 10000000)
+
