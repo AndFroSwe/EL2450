@@ -32,3 +32,22 @@ grid on;
 filename = strcat('.\images\',filename)
 print(filename,  '-dpng')
 
+%% Task 4
+% Plot the schedule
+sch = []; % Schedules
+sch_small = Schedule.signals.values(:,1)';
+sch_med = Schedule.signals.values(:,2)';
+sch_big = Schedule.signals.values(:,3)';
+sch = [sch_small; sch_med; sch_big];
+
+% % Plot all in same plot
+% figure
+% hold on
+% grid on
+% for i = 1:3
+%     plot(time, sch(i,:))
+% end
+% title('Schedule for pendulums with 6 ms computation time')
+% xlabel('t [s]')
+% legend('Small pendulum', 'Medium pendulum', 'Big pendulum')
+% 
