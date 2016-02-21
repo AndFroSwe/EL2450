@@ -17,7 +17,7 @@ n*(2^(1/n)-1)
 % Sätt init_pend_three med executiontime och schedulingPolicy
 % Se till att du printar med rätt namn
 
-filename = 'Task_5_rm_performance'; 
+filename = 'Task_3_edf_performance'; 
 
 sim('inv_pend_three');
 
