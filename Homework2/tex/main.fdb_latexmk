@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1456052341 "main.tex" "main.pdf" "main" 1456052342
+["pdflatex"] 1456066703 "main.tex" "main.pdf" "main" 1456066704
   "../Matlab/HW2_sources_Windows64bit/images/Task_3_dm_performance.png" 1455631142 38594 68512f09b0b91ee3c27a5bbb5589928b ""
   "../Matlab/HW2_sources_Windows64bit/images/Task_3_edf_performance.png" 1456051805 38651 da0139dd699d2f25e5be65b3de500a7b ""
   "../Matlab/HW2_sources_Windows64bit/images/Task_3_sch_6ms_edf.png" 1456051805 13876 f4ee6118d1ce88b2ba3b44d852376ae4 ""
@@ -68,8 +68,8 @@
   "/usr/share/texmf/web2c/texmf.cnf" 1392645748 31083 1dfd8bf685ce0009c40532fedf8a7c53 ""
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1453627736 125797 10ae33d9b592499963eb2e83203bb65c ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1453627732 722335 33856e3469ca1e481db8d2d3f936cc9b ""
-  "main.aux" 1456052342 2871 5866d98151c13a22df594e863cecb96d ""
-  "main.tex" 1456052340 11122 520a673ca9b944b88152da7999d93658 ""
+  "main.aux" 1456066704 3288 13f6e5d9dd73d11f815044358b39159c ""
+  "main.tex" 1456066701 13202 ce9d21e5f61138b8cb3ba62b9bd1b74c ""
   (generated)
   "main.pdf"
   "main.log"

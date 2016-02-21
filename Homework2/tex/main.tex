@@ -290,7 +290,7 @@ differences with respect to control performance?
 		\Gamma_0(\tau_A) = I\int_0^{h-\tau_k} \! \, \mathrm{d}s = (h-\tau_k)I
 	\end{equation}
 	\begin{equation}
-		\Gamma_1(\tau_A) = I\int_{h-\tau_k}^{h} \! \, \mathrm{d}s = -\tau_kI
+		\Gamma_1(\tau_A) = I\int_{h-\tau_k}^{h} \! \, \mathrm{d}s = \tau_kI
 	\end{equation}
 	Defining $z(kh) = [x^T(kh), u^T((k-1)h]^T$ as the augumented state vector, the augmented closed-loop system is
 	\begin{equation}
@@ -305,31 +305,91 @@ differences with respect to control performance?
 		\end{bmatrix}
 		=
 	\begin{bmatrix}
-		1-(h-\tau_A)I & -\tau_AI \\
+		1-(h-\tau_A)IK & \tau_AI \\
 		-K & 0
 	\end{bmatrix}
 	.
 	\end{equation}
 	Which results in:
 	\begin{equation}
+        \label{eq:closedloop}
 		z((k+1)h) = 
-	\begin{bmatrix}
-		1-(h-\tau_A)I & -\tau_AI \\
-		-K & 0
-	\end{bmatrix}
+        \begin{bmatrix}
+            1-(h-\tau_A)I & \tau_AI \\
+            -K & 0
+        \end{bmatrix}
 		z(kh).
 	\end{equation}
 
 }
 \q % 2
 {
-	Calculate stuff
+	Calculate tha stability region analytically as a function of $Kh$ and
+    $\frac{\tau}{h}$. Plot the stability region and comment on intresting values
+    of $h$.
 }
 {
-	Present stuff
+	If the poles of the system are given by the equation
+    \begin{equation}
+        \label{eq:poles}
+        0=z^2 + a_1z + a_2, 
+    \end{equation}
+    where (\ref{eq:poles}) is the denominator of the pulse-transfer function,
+    then the sytem is stable if the poles $p_1$ and $p_2$ are confined within
+    the unit circle. According to the Jury criterion, this is fulfilled when
+    \begin{equation}
+        \label{eq:j1}
+        a_2 < 1,
+    \end{equation}
+    \begin{equation}
+        \label{eq:j2}
+        a_2 > -1 + a_1
+    \end{equation}
+    and
+    \begin{equation}
+        \label{eq:j3}
+        a_2 > -1 - a_1
+    \end{equation}
+    are fulfilled. The poles of (\ref{eq:closedloop}) are the eigenvalues of
+    $\widetilde{\phi}$, as given by the equation
+    \begin{equation}
+        \label{eq:eigenvalues}
+        0=\text{det}(\lambda I - \widetilde{\phi}).
+    \end{equation}
+    Applying (\ref{eq:eigen}) for (\ref{eq:closedloop}) yields the
+    characteristic equation
+    \begin{equation}
+        \label{eq:chareq}
+        0=\lambda^2 + \lambda(KIh - KI\tau -1) + K\tau I.
+    \end{equation}
+    Comparing (\ref{eq:poles}) and (\ref{eq:eigenvalues}) one can identify the
+    parameters
+    \begin{equation}
+        \label{eq:a1}
+        a_1 = KIh - KI\tau -1
+    \end{equation}
+    and
+    \begin{equation}
+        \label{eq:a2}
+        a_2 = K\tau I.
+    \end{equation}
+    Combining (\ref{eq:j2}) and (\ref{eq:j3}) yields the criterion
+    \begin{equation}
+        \label{eq:a2abs}
+        |a_1| < 1+ a_2.
+    \end{equation}
+    Finally, the stability criterion becomes
+    \begin{equation}
+        \text{max}\left \{ \frac{1}{2} - \frac{1}{KIh}, 0 \right \} <
+        \frac{\tau}{h} < \text{min} \left \{\frac{1}{KIh}, 1 \right \}.
+    \end{equation}
 }
 
 %% DISCRETE EVENT SYSTEMS %% SEXUAL DELAYS %%
+\section{Discrete Event Systems}
+\label{sec:discrete_event_systems}
+% Reset the task counter
+\setcounter{qcounter}{0}
 
 \q % 1
 {
