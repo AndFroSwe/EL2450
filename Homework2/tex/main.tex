@@ -330,22 +330,66 @@ differences with respect to control performance?
 }
 
 %% DISCRETE EVENT SYSTEMS %% SEXUAL DELAYS %%
-
+\section{Discrete Event Systems}
+\label{sec:discrete_event_systems}
+% Reset the task counter
+\setcounter{qcounter}{0}
 \q % 1
 {
-	Construct and draw the DES that models $M_1$, $M_2$ and $B$
+	Construct and draw the DES that models $M_1$, $M_2$ and the $Buffer$
 }
 {
-	Easy
+
+	In Figure~\ref{fig:task41_Chart}  the three systems can be seen.
+	\begin{figure}[H]
+    		\centering
+        	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/task41_Chart.png}
+        	\caption{Statechart of the three parallel systems.}
+        	\label{fig:task41_Chart}
+    \end{figure}	
 }
 
 \q % 2
 {
-	Construct and draw the DES that models $M_1$, $M_2$ and $B$
+	Construct and draw the complete DES that models $M_1$, $M_2$ and the $Buffer$ that models all behaviours of the system.
 }
 {
-	Easy
+
+	In Figure~\ref{fig:task42_Chart} the full statechart can be seen. As all behaviours were not defined assumptions were made that only one state may change at a time, and therefore $PROCESSING$ triggers $FULL$ without changing its state.
+	
+	\begin{figure}[H]
+    		\centering
+        	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/task42_Chart.png}
+        	\caption{Full statechart of all possible events and transition.}
+        	\label{fig:task42_Chart}
+    \end{figure}	
 }
 
+\q % 3
+{
+	Construct and draw the DES that models $M_1$, $M_2$ and $B$ with additional rules.
+}
+{
+
+	In Figure~\ref{fig:task43_Chart} the full statechart with the added rules can be seen. 
+	
+	\begin{figure}[H]
+    		\centering
+        	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/task43_Chart.png}
+        	\caption{Statechart of all possible events and transition with added rules.}
+        	\label{fig:task43_Chart}
+    \end{figure}	
+}
+
+\q % 4
+{
+	Adding the ability to enable or disable the events $START$ and $REPAIR$ describe this.
+}
+{
+
+	Add two additional parallel pair of states with the states $START$ $ENABLED$ and $START$ $DISABLED$ for the first and $REPAIR$ $ENABLED$ and $REPAIR$ $DISABLED$ for the second. 
+	
+	Add guards on all transitions initiated by the events $START$ and $REPAIR$ which requires the associated parallel statemachine to be in its enabled state.
+}
 
 \end{document}
