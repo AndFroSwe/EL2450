@@ -17,7 +17,7 @@ n*(2^(1/n)-1)
 % Sätt init_pend_three med executiontime och schedulingPolicy
 % Se till att du printar med rätt namn
 
-filename = 'Task_5_rm_performance'; 
+filename = 'Task_3_edf_performance'; 
 
 sim('inv_pend_three');
 
@@ -32,22 +32,11 @@ grid on;
 filename = strcat('.\images\',filename)
 print(filename,  '-dpng')
 
-%% Task 4
-% Plot the schedule
-sch = []; % Schedules
-sch_small = Schedule.signals.values(:,1)';
-sch_med = Schedule.signals.values(:,2)';
-sch_big = Schedule.signals.values(:,3)';
-sch = [sch_small; sch_med; sch_big];
-
-% % Plot all in same plot
-% figure
-% hold on
-% grid on
-% for i = 1:3
-%     plot(time, sch(i,:))
-% end
-% title('Schedule for pendulums with 6 ms computation time')
-% xlabel('t [s]')
-% legend('Small pendulum', 'Medium pendulum', 'Big pendulum')
-% 
+%% Taskset 2
+for K = 0:0.1:2
+x1 = 1/k*h)
+x2 = 1/2-1/k*h
+end
+ezplot(x1)
+hold on
+ezplot(x2)
