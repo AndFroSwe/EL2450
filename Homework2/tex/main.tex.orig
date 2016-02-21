@@ -390,7 +390,10 @@ differences with respect to control performance?
 \label{sec:discrete_event_systems}
 % Reset the task counter
 \setcounter{qcounter}{0}
+<<<<<<< HEAD
 
+=======
+>>>>>>> d9c4bd1fb7e7127c7247b11b7b04517b42c0165c
 \q % 1
 {
 	Construct and draw the DES that models $M_1$, $M_2$ and the $Buffer$
