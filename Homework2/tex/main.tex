@@ -356,7 +356,7 @@ differences with respect to control performance?
         \label{eq:eigenvalues}
         0=\text{det}(\lambda I - \widetilde{\phi}).
     \end{equation}
-    Applying (\ref{eq:eigen}) for (\ref{eq:closedloop}) yields the
+    Applying (\ref{eq:eigenvalues}) for (\ref{eq:closedloop}) yields the
     characteristic equation
     \begin{equation}
         \label{eq:chareq}
@@ -384,6 +384,22 @@ differences with respect to control performance?
         \frac{\tau}{h} < \text{min} \left \{\frac{1}{KIh}, 1 \right \}.
     \end{equation}
 }
+
+\q % 3 
+{
+	Simulate an example of NCS.
+}
+{
+	In Figure~\ref{fig:NET_timedelays} the system is simulated with three different time delays. The system becomes unstable approximately above a delay of 0.04s.
+
+	\begin{figure}[H]
+    		\centering
+        	\includegraphics[width=1\linewidth]{../Matlab/HW2_sources_Windows64bit/images/NET_timedelays.png}
+        	\caption{Statechart of the three parallel systems.}
+        	\label{fig:NET_timedelays}
+    \end{figure}	
+}
+
 
 %% DISCRETE EVENT SYSTEMS %% SEXUAL DELAYS %%
 \section{Discrete Event Systems}

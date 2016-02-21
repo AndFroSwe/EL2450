@@ -30,13 +30,27 @@ xlabel('Time [s]')
 ylabel('\theta [rad]')
 grid on;
 filename = strcat('.\images\',filename)
-print(filename,  '-dpng')
+%print(filename,  '-dpng')
 
-%% Taskset 2
+%% Plotta stability area
+
+
+x1 = [];
+x2 = [];
+c = 1;
+%max{0.5-1/klh} < t/h < min{1/klh}
+K = 0:0.1:2;
 for K = 0:0.1:2
-x1 = 1/k*h)
-x2 = 1/2-1/k*h
+    x1(c) = 1/(K*h)
+    x2(c) = 1/2-1/(K*h)
+    c = c+1;
 end
-ezplot(x1)
+plot([0:0.1:2], x1)
 hold on
-ezplot(x2)
+plot([0:0.1:2],x2)
+
+
+%% Hitta instabil delay
+close all; clear all;clc;
+sim('inv_pend_delay');
+time = 
