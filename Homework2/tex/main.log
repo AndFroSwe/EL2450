@@ -1,7 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  21 FEB 2016 20:25
+This is pdfTeX, Version 3.14159265-2.6-1.40.16 (MiKTeX 2.9) (preloaded format=pdflatex 2016.1.14)  25 FEB 2016 15:41
 entering extended mode
-**C:/Users/Martin/matlab/el2450/Homework2/tex/main.tex
-(C:/Users/Martin/matlab/el2450/Homework2/tex/main.tex
+**C:/Users/Martin/matlab/vb/el2450/Homework2/tex/main.tex
+(C:/Users/Martin/matlab/vb/el2450/Homework2/tex/main.tex
 LaTeX2e <2015/10/01> patch level 2
 Babel <3.9m> and hyphenation patterns for 69 languages loaded.
 ("C:\Users\Martin\AppData\Local\Programs\MiKTeX 2.9\tex\latex\base\article.cls"
@@ -627,12 +627,12 @@ it/10 REPAIR$
 _sources_Windows64bit/images/task43_Chart.png>] [11] (main.aux) ) 
 Here is how much of TeX's memory you used:
  2520 strings out of 493634
- 35562 string characters out of 3134831
+ 35571 string characters out of 3134831
  98283 words of memory out of 3000000
  5885 multiletter control sequences out of 15000+200000
  5609 words of font info for 21 fonts, out of 3000000 for 9000
  1025 hyphenation exceptions out of 8191
- 27i,7n,23p,313b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 27i,7n,23p,316b,230s stack positions out of 5000i,500n,10000p,200000b,50000s
 <C:/Users/Mart
 in/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmbx10.pfb>
 <C:/Users/Martin/AppData/Local/Programs/MiKTeX 2.9/fonts/type1/public/amsfonts/
