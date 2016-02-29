@@ -33,11 +33,9 @@
 \author{
   Martin Favre \\ 19920130-0010 \\ mfavre@kth.se 
   \and 
-  First name2 Last name2 \\ person number \\ email
+  Adam Lang \\ 19861110-3956 \\ adamlang@kth.se
   \and
-  First name3 Last name3 \\ person number \\ email
-  \and
-  First name4 Last name4 \\ person number \\ email
+  Andreas Fröderberg \\ 19880730-7577 \\ andfro@kth.se
   \and
   }
 %\date{2010-10-10}             % If you want to set the date yourself.
@@ -332,7 +330,25 @@ Solution to the task
 
 \section*{Task 18}
 
-Solution to the task
+The hybrid automation is defined as,
+
+\begin{equation}
+    H = (Q,X,Init,f,D,E,G,R).
+\end{equation}
+We can model the controller with the following parameters,
+\begin{align*}
+    &Q=(Rotation,Translation)=(q_1,q_2) \\
+    &X=\mathbb{R}^3 \\
+    &Init = Q \times \{ x \in \mathbb{R}^3 :x_0\wedge y_0 \wedge
+    \theta_0\} \\
+    &f(q_1,s)=(0,0,R/Lu_{\Psi}) \\
+    &f(q_2,s)=(Ru_{\omega}cos\theta,Ru_{\omega}sing\theta,0)\\
+    &D(q_1)=\{s\in \mathbb{R}^3:\theta \le\} \\
+    &E = \{(q_1,q_2), (q_2,q_1)\} \\
+    &G_1(q_1,q_2)=\{\theta\in\mathbb{R}:\theta\leq r_1\} \\
+    &G_1(q_2,q_1)=\{\theta\in\mathbb{R}:\theta\geq r_2\} \\
+    &R(q_1,q_2,s)=R(q_2,q_1,s)=\{s\}
+\end{align*}
 
 \section*{Task 19}
 
