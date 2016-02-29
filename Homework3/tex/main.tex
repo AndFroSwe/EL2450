@@ -226,23 +226,90 @@ The eigenvalues are
 \section*{Task 9}
 
  	The equation 
-
 	\begin{equation}
 		d_0[k] = K_\omega(cos(\frac{\theta[k]\pi}{180}))*(x_0-x[k]) + (sin(\frac{\theta[k]\pi}{180}))*(y_0-y[k])
 	\end{equation}
-
+ 	describes how $d_0$ changes with time.
 \section*{Task 10}
-
-Solution to the task
+In Figure~\ref{fig:task10_stepplot} the performance of the controller is shown. Figure~\ref{fig:task10_stepplot} shows that the controller is able to maintain its starting position.
+\begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.5]{../matlab/images/task10_stepplot.png}
+        \caption{Simulated position response when setting start to a different position.}
+        \label{fig:task10_stepplot}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.5]{../matlab/images/task10_stillplot.png}
+        \caption{Simulated position response when attempting to stand still.}
+        \label{fig:task10_stillplot}
+    \end{figure}
 
 \section*{Task 11}
+In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be seen. In Figure~\ref{fig:task11_d0plot} $d_0$ can be seen.
 
-Solution to the task
+\begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.5]{../matlab/images/task11_angleplot.png}
+        \caption{Simulated angular response.}
+        \label{fig:task11_angleplot}
+    \end{figure}
+    
+    \begin{figure}[H]
+        \centering
+        \includegraphics[scale = 0.5]{../matlab/images/task11_d0plot.png}
+        \caption{Simulated position response.}
+        \label{fig:task11_d0plot}
+    \end{figure}
 
 \section*{Task 12}
-
-Solution to the task
-
+ 	Given
+	\begin{equation}
+		u_\omega[k]= K_\omega((cos(\theta_g))(x_g-x[k]) + (sin(\theta_g))(y_g-y[k]))
+	\end{equation}
+	together with
+	\begin{equation}
+		x[k+1] = x[k]R\tau_scos(\theta[k])u_\omega
+	\end{equation}
+	\begin{equation}
+		y[k+1] = y[k]R\tau_ssin(\theta[k])u_\omega
+	\end{equation}
+	gives
+	\begin{equation}
+		x[k+1] = x[k]R\tau_scos(\theta[k])K_\omega((cos(\theta_g))(x_g-x[k]) + (sin(\theta_g))(y_g-y[k]))
+		 \label{eq:xkp1}
+	\end{equation}
+	\begin{equation}
+		y[k+1] = y[k]R\tau_ssin(\theta[k])K_\omega((cos(\theta_g))(x_g-x[k]) + (sin(\theta_g))(y_g-y[k]))
+		 \label{eq:ykp1}
+	\end{equation}
+	Looking at the separate stability criteria in both Equation~\ref{eq:xkp1} and~\ref{eq:ykp1} gives
+	\begin{equation}
+		\lambda-(1-\tau_sRK_{\omega}cos^2(\theta[k])) = 0
+	\end{equation}
+	\begin{equation}
+		\lambda-(1-\tau_sRK_{\omega}sin^2(\theta[k])) = 0
+	\end{equation}
+	which in turn gives
+	\begin{equation}
+		\left| (1-\tau_sRK_{\omega}cos^2(\theta[k])) \right | < 1
+	\end{equation}
+	\begin{equation}
+		\left| (1-\tau_sRK_{\omega}sin^2(\theta[k])) \right | < 1
+	\end{equation}
+	which in turn gives
+	\begin{equation}
+		K_\omega < \frac{2}{\tau_sRcos^2\theta[k]}
+	\end{equation}
+	\begin{equation}
+		K_\omega < \frac{2}{\tau_sRsin^2\theta[k]}.
+	\end{equation}
+  	Assuing the worst possible case for theta gives
+	\begin{equation}
+		0 < K_\omega < \frac{2}{\tau_sR\theta[k]}.
+	\end{equation}
+	A more effective $K_\omega$ is chosen manually through multiple simulations.
 \section*{Task 13}
 
 Solution to the task
