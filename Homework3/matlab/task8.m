@@ -11,3 +11,12 @@ forward_y = indata(:,3);
 forward_theta = indata(:,4);
 
 plot(forward_t, forward_theta)
+ylabel('angle \theta [degrees]')
+xlabel('time [s]')
+print ('.\images\task8_angleplot', '-dpng')
+close all;
+plot(forward_t, forward_x, forward_t, forward_y)
+xlabel('time [s]')
+ylabel('distance [m]')
+legend('x', 'y')
+print ('.\images\task8_posplot', '-dpng')
