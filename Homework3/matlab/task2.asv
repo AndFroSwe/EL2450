@@ -50,11 +50,9 @@ end
 
 L = 0; %uPhi = 0
 
-%Removing all the zeroes and too high values
 indLow = find(R<0.5);
-R = R(indLow);
-indHigh = find(R>0.0001);
-R = R(indHigh);
+
+indHigh(
 
 %plot(forward_t, xdot);
 xdotmean = mean(xdot, 'omitnan');
