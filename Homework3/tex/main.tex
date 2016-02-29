@@ -69,35 +69,6 @@ Here are some additional guidelines how to write a homework report.
  \item There is plenty of material available how to use Latex. Use a search engine of your choice to learn more.
 \end{itemize}
 
-Here are some examples how to use Latex:
-\begin{itemize}
- \item An equation with a reference \eqref{eq_sample} to it
- \begin{equation}
-  \dot{x} = \frac{3}{4} x. \label{eq_sample}
- \end{equation}
- \item A multi-line equations with a reference to it
- \begin{align*}
-  \hat{x} &= x - y\\
-  \alpha &= x + \gamma.
- \end{align*}
- \item An equation in text: $\Phi = \int\limits_{0}^{h} \mathrm{e}^{A\tau} d \tau$.
- \item An image
- \begin{center}
-  \includegraphics[width = 0.8\textwidth]{Phase_portrait_with_regionmark}
- \end{center}
- \item A table
- 
- \begin{tabular}{@{\vrule height 10.5pt depth4pt  width0pt}|c|c|c|c|}
-    \hline
-     $-2.46$ & $0$ & $-1.73$ & $0$ \\ \hline
-     $0$ & $-2.553$ & $0$ & $2.774$ \\ \hline
-     $0$ & $6.172$ & $-10$ & $7.333$ \\ \hline
-     $1.767$ & $-0.357$ & $5.714$ & $-6.074$ \\ \hline
-  \end{tabular}
-  \item A citation \cite{Oetiker:2008:TheNotSoShortIntroductiontoLaTeXe}
-  \item Display something exactly as it is written: \verb|\frac{1}{2}_|
-  \item Basic formating: \textbf{bold}, \textit{italics}, \texttt{typewriter}
-\end{itemize}
 
 
 
@@ -190,9 +161,33 @@ L is determined by the mean value of all $\dot{\theta}$
 Do math
 
 \section*{Task 7}
-
-K  $ >\frac{L}{ {R\tau}_s}$ 
-Fyller i ekv senare
+ 	Given
+	\begin{equation}
+		\dot{\theta} = \frac{Ru_\Psi}{L}
+		 \label{eq:thetadot}
+	\end{equation}
+	and
+	\begin{equation}
+		u_\Psi{[k]} = K_{\Psi}({\theta}^R  - {\theta}[k]).
+	\end{equation}
+	With Eueler forward equation~\ref{eq:thetadot} gives
+	\begin{equation}
+		\theta[k+h] = \dot{\theta}[k]\tau_s + \theta[k]
+	\end{equation}
+	\begin{equation}
+		\theta[k+h] = \frac{RK\tau_s({\theta}^R  - {\theta}[k])}{L} + \theta[k]
+	\end{equation}
+	\begin{equation}
+		\theta[k+h] =\theta[k](1-\frac{RK\tau_s}{L}) + \frac{RK_p\theta^R\tau_s}{L}
+	\end{equation}
+The eigenvalues are
+	\begin{equation}
+		\lambda = \left|{(1-\frac{RK\tau_s}{L})}\right| < 1
+	\end{equation}
+	which gives that 
+	\begin{equation}
+		0 < K < \frac{2L}{R\tau_s}
+	\end{equation}
 
 \section*{Task 8}
 
