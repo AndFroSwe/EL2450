@@ -4,6 +4,7 @@ float dy = 0;
 float dx = 0;
 float goaltheta = 0;
 float desiredtheta = 0;
+int c_state = 0;
 float d0 = 0;
 float dp = 0;
 float dg = 0;
