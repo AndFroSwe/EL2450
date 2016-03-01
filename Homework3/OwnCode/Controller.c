@@ -30,7 +30,7 @@ if(desiredtheta > 180) desiredtheta -= 360;
 if(desiredtheta < -180) desiredtheta += 360;
 
 //Controller for rotation
-K_rot = 1.5f*L/R;
+K_rot = 1.0f*L/R;
 K_trans = 5.0f;
 K_p = 5.0f;
 p = 1.0f;
@@ -43,9 +43,21 @@ dp = sin(goaltheta*M_PI/180)*(x+p*cos(theta*M_PI/180) -x0) -
   cos(goaltheta*M_PI/180)*(y+p*sin(theta*M_PI/180) -y0);
 
 //u_rot = dp*K_p;
-u_trans = 0;//dg*K_trans;
+u_trans = dg*K_trans;
 u_rot = K_rot*desiredtheta;
 
+if(abs(u_rot) > 30){
+  u_trans = 0;
+ }else{
+  u_rot = 0;
+ }
+
+dy = yg-y;
+dx = xg-x;
+if(abs(dy) < 0.1f && abs(dx) < 0.1f){
+  u_trans = 0;
+  u_rot = 0;
+ }
 
 //u_trans = K_trans*d0;
 left += round(u_trans);
@@ -61,11 +73,11 @@ Serial.print("\n;");
 Serial.print("goaltheta=(degree);\n");
 Serial.print(goaltheta, DEC);
 Serial.print(";\n");
-Serial.print("theta;\n");
-Serial.print(theta, DEC);
+Serial.print("urot;\n");
+Serial.print(u_rot, DEC);
 Serial.print(";\n");
-Serial.print("cos");
-Serial.print(cos(theta*M_PI/180), DEC);
+Serial.print("u_trans");
+Serial.print(u_trans, DEC);
 Serial.print(";\n");
 Serial.print("sin");
 Serial.print(sin(theta*M_PI/180), DEC);
