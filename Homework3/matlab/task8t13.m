@@ -71,3 +71,17 @@ plot(t, d0)
 xlabel('time [s]')
 ylabel('distance [m]')
 print ('.\images\task11_d0plot', '-dpng')
+
+%% Task 13
+close all; clear all; clc;
+
+indata = dlmread('logtask13.txt', ';');
+t = indata(:,1); % time
+x = indata(:,2);
+y = indata(:,3);
+
+plot(t, x, t, y);
+legend('x','y')
+xlabel('time [s]')
+ylabel('position [m]')
+print ('.\images\task13_positionplot', '-dpng')
