@@ -43,46 +43,8 @@
 \maketitle                     % Generates the title
 
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% Instructions regarding the report
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-\section*{Instructions and Help}
-
-\textbf{Please remove this part and the sample references before submitting your homework.}
-
-Read the general homework instructions available on the course homepage before starting to write the report.
-
-Here are some additional guidelines how to write a homework report.
-\begin{itemize}
- \item Fill in name and personal number of all group members.
- \item Do not copy the task descriptions and use the structure below.
- \item Do not include code unless the task explicitly states so.
- \item Motivate your answers well and how you derived them, but be concise.
- \item The number of points is not necessarily related to much you need to write for task.
- \item Put references in the end if any.
- \item Do not include plots from the Simulink scope (color on black background) but export the data to Matlab for plotting.
- \item Include graphics directly in the text and not in a Figure environment, as you normally would. That makes it easier to correct the report.
- \item There is plenty of material available how to use Latex. Use a search engine of your choice to learn more.
-\end{itemize}
-
-
-
-
 \section*{Task 1}
 
-Given the equations 
-%	\begin{equation} % Didn't really need these here
-%		\dot{x} = \frac{R}{2}(u_l+u_r)cos\theta
-%	\end{equation}
-%	\begin{equation}
-%		\dot{y} = \frac{R}{2}(u_l+u_r)sin\theta
-%	\end{equation}
-%	\begin{equation}
-%		\dot{\theta} = \frac{R}{L}(u_r-u_l)
-%	\end{equation}
 
 Given the equations 
 	\begin{equation}
@@ -93,12 +55,6 @@ Given the equations
 	\end{equation}
 	
 If $u_\omega$ and $u_\Psi$ is given $u_r$ and $u_l$ can be calculated as
-%	\begin{equation}    %Partial steps
-%		u_l = u_r-u_\Psi
-%	\end{equation}
-%	\begin{equation}
-%		u_r = 2u_\omega - u_l
-%	\end{equation}
 	\begin{equation}
 		u_r = u_\omega + \frac{u_\Psi}{2}
 	\end{equation}
@@ -207,8 +163,10 @@ The eigenvalues are
 	\end{equation}
 
 \section*{Task 8}
- 	The simulated task chosen was to rotate from $\theta = 0$ to $\theta = 90$. The angular response can be seen in Figure~\ref{fig:task8_angleplot}. The position's response can be seen inFigure~\ref{fig:task8_posplot} and shows that the position does not change. 
-    \begin{figure}[H]
+    The simulated task chosen was to rotate from $\theta = 0$ to $\theta = 90$.
+    The angular response can be seen in Figure~\ref{fig:task8_angleplot}. The
+    position's response can be seen inFigure~\ref{fig:task8_posplot} and shows
+    that the position does not change.  \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task8_angleplot.png}
         \caption{Simulated rotation resonse.}
@@ -229,8 +187,9 @@ The eigenvalues are
 	\end{equation}
  	describes how $d_0$ changes with time.
 \section*{Task 10}
-In Figure~\ref{fig:task10_stepplot} the performance of the controller is shown. Figure~\ref{fig:task10_stepplot} shows that the controller is able to maintain its starting position.
-\begin{figure}[H]
+In Figure~\ref{fig:task10_stepplot} the performance of the controller is shown.
+Figure~\ref{fig:task10_stepplot} shows that the controller is able to maintain
+its starting position.  \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task10_stepplot.png}
         \caption{Simulated position response when setting start to a different position.}
