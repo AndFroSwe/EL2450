@@ -51,10 +51,9 @@ Given the equations
 		u_\omega = \frac{u_r + u_l}{2}
 	\end{equation}
 	\begin{equation}
-		u_\Psi = u_r-u_l.
+		u_\Psi = u_r-u_l,
 	\end{equation}
-	
-If $u_\omega$ and $u_\Psi$ is given $u_r$ and $u_l$ can be calculated as
+and $u_\omega$ and $u_\Psi$, then $u_r$ and $u_l$ can be calculated as
 	\begin{equation}
 		u_r = u_\omega + \frac{u_\Psi}{2}
 	\end{equation}
@@ -64,36 +63,43 @@ If $u_\omega$ and $u_\Psi$ is given $u_r$ and $u_l$ can be calculated as
 	
 \section*{Task 2}
 
-Using the generated data from Forward.csv and Rotate.csv R and L is determined. Data recieved is time $[\mu$$s]$, position x $[m]$, position y $[m]$ and rotation $\theta$$[^{\circ}]$. %#JobbigasteTecknet2016
+Using the generated data from Forward.csv and Rotate.csv, it is possible
+to determine R and L. The data that is recieved, is time $[\mu$$s]$,
+position x $[m]$, position y $[m]$ and rotation $\theta$$[^{\circ}]$.
+%#JobbigasteTecknet2016
 
-$\dot{x}$, $\dot{y}$ and $\dot{\theta}$ is calculated discretely. R is determined by the mean value of all $\dot{x}$ and $\dot{y}$ with the equations
+$\dot{x}$, $\dot{y}$ and $\dot{\theta}$ is calculated discretely. With
+$R_1$ and $R_2$ and the input $\dot{x}$ and $\dot{y}$
+as,
 	\begin{equation}
 		R_1 = \frac{\dot{x}}{cos(\theta)u_\omega}
 	\end{equation}
 	\begin{equation}
 		R_2 = \frac{\dot{y}}{sin(\theta)u_\omega}
 	\end{equation}
+We can calculate $R$ as the mean value,
 	\begin{equation}
 		R = \frac{R_1 + R_2}{2}. % Övertydligt
 	\end{equation}
-L is determined by the mean value of all $\dot{\theta}$
+L is determined simularily by calculating the mean values of from all
+$\dot{\theta}$ with,
 	\begin{equation}
 		L =  \frac{R}{\dot{\theta}}u_\Phi
 	\end{equation}
         Calculating these mean values will result in
 	\begin{align*}
-          &R = 5.2\ \si{\milli\meter/\ang{1}} \\
-          &L = 25.5\ \si{\milli\meter}
+          &R = 5.2\ \si{\milli\meter} \\
+          &L = 25.5\ \si{\milli\meter/\ang{1}}
 	\end{align*}
 
 \section*{Task 3}
-        Asymptotic stability means that the for starting points close to the
+        Asymptotic stability means that starting points close to the
         equilibrium point will push the system towards the same equilibrium point.
         Since this is the case for our system, we can say that is it
         asymptotically stable.
 	Zeno behaviour is defined as an infinite amount of state
-        transitions in a finite amount of time. This is not valid here
-        since 
+        transitions in a finite amount of time. This is not valid in
+        this case since 
         \begin{equation}
           \lim_{l \to \infty}\sum\limits_{l=1}^\infty t_i(s_i) \neq k
         \end{equation}
@@ -108,10 +114,11 @@ L is determined by the mean value of all $\dot{\theta}$
     \end{figure}
 
 \section*{Task 4}
-        The system is asymptotically stable and does not exhibit Zeno
-        behaviour. In Figure~\ref{fig:task3_plot} the systems
-        transitions approach infinite transitions per time unit but does
-        not actually reach infinity.
+        Using the same definition as Task 3, we can say that the system
+        is asymptotically stable and in fact does exhibit Zeno
+        behaviour. In figure \ref{fig:task3_plot} the systems state
+        transitions approach infinite transitions in a finite amount of
+        time. 
 	\begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task4_plot.png}
@@ -151,7 +158,7 @@ Do math
 		\theta[k+h] = \frac{RK\tau_s({\theta}^R  - {\theta}[k])}{L} + \theta[k]
 	\end{equation}
 	\begin{equation}
-		\theta[k+h] =\theta[k](1-\frac{RK\tau_s}{L}) + \frac{RK_p\theta^R\tau_s}{L}
+R2 = R2 + R(1,i)^2;		\theta[k+h] =\theta[k](1-\frac{RK\tau_s}{L}) + \frac{RK_p\theta^R\tau_s}{L}
 	\end{equation}
 The eigenvalues are
 	\begin{equation}
@@ -180,7 +187,7 @@ The eigenvalues are
     \end{figure}
 
 \section*{Task 9}
-
+plot(x,y)
  	The equation 
 	\begin{equation}
 		d_0[k] = K_\omega(cos(\frac{\theta[k]\pi}{180}))*(x_0-x[k]) + (sin(\frac{\theta[k]\pi}{180}))*(y_0-y[k])
@@ -188,7 +195,7 @@ The eigenvalues are
  	describes how $d_0$ changes with time.
 \section*{Task 10}
 In Figure~\ref{fig:task10_stepplot} the performance of the controller is shown.
-Figure~\ref{fig:task10_stepplot} shows that the controller is able to maintain
+Figure~\ref{fig:task10_stepplot} plot(x,y)shows that the controller is able to maintain
 its starting position.  \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task10_stepplot.png}
@@ -264,12 +271,12 @@ In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be see
 	\end{equation}
   	Assuing the worst possible case for theta gives
 	\begin{equation}
-		0 < K_\omega < \frac{2}{\tau_sR\theta[k]}.
+		0 < K_\oplot(x,y)mega < \frac{2}{\tau_sR\theta[k]}.
 	\end{equation}
 	A more effective $K_\omega$ is chosen manually through multiple simulations.
 \section*{Task 13}
 
-In Figure~\ref{fig:task13_positionplot} the position response can be seen.
+ In figure \ref{fig:task13_positionplot} the position response can be seen.
 
 \begin{figure}[H]
         \centering
@@ -323,7 +330,6 @@ the domains, $D$ as,
 \end{align*}
 the edges, $E$ as,
 \begin{align*}
-
     &E = \{(q_1,q_2), (q_2,q_3), (q_3, q_1)\},
 \end{align*}
 the guards, $G$ as,
@@ -340,17 +346,39 @@ and the resets, $R$ as,
 
 
 \section*{Task 19}
+  The state transitions can be seen in figure \ref{fig:task19_trans}
+  where state 0 is rotating, state 1 is translation and state 2 is
+  standstill. 
 
-Solution to the task
+\begin{center}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[scale = 0.5]{../matlab/images/task19_trans.png}
+      \caption{State transitions for the controller between state 1, 2
+      and 3}
+      \label{fig:task19_trans}
+    \end{figure}
+\end{center}
 
-\section*{Task 20}
+This is when driving 1 $\rightarrow$ 3 $\rightarrow$ 6 $\rightarrow$ 5
+$\rightarrow$ 8 $\rightarrow$ 1. This can also be seen in the plot in
+figure \ref{fig:task13_positionplot} where the performance of the robot
+can be seen.
 
-Solution to the task
+\begin{center}
+    \begin{figure}[H]
+      \centering
+      \includegraphics[scale=0.5]{../matlab/images/task19_cont.png}
+      \caption{Control performance for the robot}
+      \label{fig:task19_cont}
+    \end{figure}
+\end{center}
 
 \section*{Task 21}
 
-Solution to the task
-
+The difficulty comes from the delay between the computer and the
+robot. There is a certain delay between when the user presses the button
+and the robot responds. 
 \section*{Task 22}
 G
 Solution to the task

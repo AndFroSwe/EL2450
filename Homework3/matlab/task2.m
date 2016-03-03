@@ -9,6 +9,7 @@ forward_t = indata(:,1); % time
 forward_x = indata(:,2);
 forward_y = indata(:,3);
 forward_theta = indata(:,4);
+clear indata;
 
 indata = dlmread('Rotate.cvs', ';');
 rotate_t = indata(:,1);
@@ -29,7 +30,7 @@ for i = 1:length(forward_t)
     t0 = forward_t(i);
     x0 = forward_x(i);
     xdot(i) = (x0-x1)/(t0-t1);
-    R(i) = xdot(i)/(uw*cosd(forward_theta(i)))*10^6; %*10^6 conv from ms
+    R(i) = xdot(i)/(uw*cosd(forward_theta(i)))*10^6; %*10^6 conv from m
     t1 = t0;
     x1 = x0;
 end
@@ -43,7 +44,7 @@ for i = 1:length(forward_t)
     t0 = forward_t(i);
     y0 = forward_y(i);
     ydot(i) = (y0-y1)/(t0-t1);
-    R(Rlen +i) = ydot(i)/(uw*sind(forward_theta(i)));
+    R(Rlen +i) = ydot(i)/(uw*sind(forward_theta(i)))*10^6;
     t1 = t0;
     y1 = y0;
 end
@@ -56,10 +57,17 @@ R = R(indLow);
 indHigh = find(R>0.0001);
 R = R(indHigh);
 
+R2 = R(1,1);
+
+for i = 2:length(R)
+    R2 = R2 + R(1,i)^2;
+end
+rmean = sqrt(R2/length(R));
+
 %plot(forward_t, xdot);
 xdotmean = mean(xdot, 'omitnan');
 ydotmean = mean(ydot, 'omitnan');
-rmean = mean(R, 'omitnan');
+%rmean = mean(R, 'omitnan');
 
 fprintf ('In forward mode: \n')
 fprintf ('Uw = %d\nUphi = %d\n', uw,up); 
@@ -89,7 +97,7 @@ for i = 1:length(rotate_t)
 end
 
 
-rmean = mean(R, 'omitnan');
+%rmean = mean(R, 'omitnan');
 lmean = mean(L, 'omitnan');
 fprintf ('\nIn rotate mode: \n')
 fprintf ('Uw = %d\nUphi = %d\n', uw,up); 
