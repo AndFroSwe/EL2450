@@ -140,18 +140,24 @@ $\dot{\theta}$ with,
 
 Euler forward is a forward difference, in the $z$-transform written as
 \begin{equation}
-s = \frac{z-1}{T_s},
+s = \frac{z-1}{\tau_s},
 \end{equation}
 where $s$ denotes the Laplace transform and the $z$-transform represents a time shift forward in the discrete domain. Applied to the dynamics of the $x$ variable, one yields
 \begin{equation}
-\frac{z-1}{T_s}x=Ru_\omega cos(\theta)
+\frac{z-1}{\tau_s}x=Ru_\omega cos(\theta)
 \end{equation}
 which with similar calculations for all state variables yields the complete discrete system dynamics
-\begin{align*}
-x[k+h] = x[k] + T_s R u_\omega cos(\theta [k])	\\
-y[k+h] = y[k] + T_s R u_\omega sin(\theta [k]) \\
-\theta[k+h] = \theta [k] + \frac{T_s R}{L} u_\psi.
-\end{align*}
+\begin{equation}
+x[k+h] = x[k] + \tau_s R u_\omega cos(\theta [k])	\\
+\end{equation}
+\begin{equation}
+y[k+h] = y[k] + \tau_s R u_\omega sin(\theta [k]) \\
+\end{equation}
+\begin{equation}
+\label{thetadynamics}
+\theta[k+h] = \theta [k] + \frac{\tau_s R}{L} u_\psi.
+\end{equation}
+
 
 \section*{Task 7}
  	Given
@@ -300,8 +306,38 @@ In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be see
 
 \section*{Task 14}
 
-Solution to the task
-
+With the approximation given,
+\begin{equation}
+\label{eq:simplification}
+d_p[k] = p(\theta[k] - \theta^g),
+\end{equation}
+one can time apply a time shift of one sampling time $\tau_s$ which will yield
+\begin{equation}
+\label{eq:timeshift}
+d_p[k + \tau_s] = p(\theta[k + \tau_s] - \theta^g).
+\end{equation}
+Using the controller 
+\begin{equation}
+u_\psi[k] = K_\psi d_p[k]
+\end{equation}
+and pluggin into (\ref{thetadynamics}) and (\ref{eq:timeshift}) one gets
+\begin{equation}
+d_p[k + \tau_s] = \frac{p R K_\psi \tau_s}{L} d_p[k] + p(\theta[k] - \theta^g).
+\end{equation}
+Using (\ref{eq:simplification}) one yields the expression for the dynamics of the controller,
+\begin{equation}
+\label{eq:dp}
+d_p[k+\tau_s] = \left ( 1 + \frac{p R K_\psi \tau_s}{L} \right ) d_p[k].
+\end{equation}
+The stability criterion for (\ref{eq:dp}) is given by the equation
+\begin{equation}
+\left | 1 + \frac{p R K_\psi \tau_s}{L} \right | < 1
+\end{equation}
+the place the pole inside the unit circle.
+Allowing negative values, the values of $K_\psi$ for which the controller is stable are then bound by
+\begin{equation}
+-\frac{2L}{p R \tau_s} < K_\psi < 0.
+\end{equation}
 \section*{Task 15}
 
 Solution to the task
