@@ -138,7 +138,20 @@ $\dot{\theta}$ with,
 
 \section*{Task 6}
 
-Do math
+Euler forward is a forward difference, in the $z$-transform written as
+\begin{equation}
+s = \frac{z-1}{T_s},
+\end{equation}
+where $s$ denotes the Laplace transform and the $z$-transform represents a time shift forward in the discrete domain. Applied to the dynamics of the $x$ variable, one yields
+\begin{equation}
+\frac{z-1}{T_s}x=Ru_\omega cos(\theta)
+\end{equation}
+which with similar calculations for all state variables yields the complete discrete system dynamics
+\begin{align*}
+x[k+h] = x[k] + T_s R u_\omega cos(\theta [k])	\\
+y[k+h] = y[k] + T_s R u_\omega sin(\theta [k]) \\
+\theta[k+h] = \theta [k] + \frac{T_s R}{L} u_\psi.
+\end{align*}
 
 \section*{Task 7}
  	Given
@@ -269,10 +282,10 @@ In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be see
 	\begin{equation}
 		K_\omega < \frac{2}{\tau_sRsin^2\theta[k]}.
 	\end{equation}
-  	Assuing the worst possible case for theta gives
-	\begin{equation}
-		0 < K_\oplot(x,y)mega < \frac{2}{\tau_sR\theta[k]}.
-	\end{equation}
+  	Assuming the worst possible case for theta gives
+	%\begin{equation}
+	%	0 < K_\plot(x,y)mega < \frac{2}{\tau_sR\theta[k]}.
+	%\end{equation}
 	A more effective $K_\omega$ is chosen manually through multiple simulations.
 \section*{Task 13}
 
