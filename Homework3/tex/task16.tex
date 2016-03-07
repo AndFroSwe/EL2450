@@ -1,0 +1,11 @@
+It is theoretically possible to have a controller that adjusts the robot
+correctly if we are in continous time. Since we now are dealing with
+descrete time it gets harder to adjust the robot perfectly. We would now
+need some type of adjusting, non-uniform quantizer and sampler to get
+the precision needed for our type of distances. This would have to
+increse quantizing and sampling period the closer to $d_p[k]$ we would
+get.
+
+In reallity would this be very hard to do with all the disturbances that
+exists in the real world implementation in the robot. The most likely
+scenario would be a robot that oscillates around $d_p[k]=0$.
