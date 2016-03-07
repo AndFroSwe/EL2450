@@ -88,7 +88,7 @@ $\dot{\theta}$ with,
 	\end{equation}
         Calculating these mean values will result in
 	\begin{align*}
-          &R = 5.2\ \si{\milli\meter} \\
+          &R = 5.2\\
           &L = 25.5\ \si{\milli\meter/\ang{1}}
 	\end{align*}
 
@@ -231,11 +231,12 @@ For asymptotic stability, the pole should reside within the unit circle, leading
 \end{equation}
 in turn giving the values for which the system is stable,
 \begin{equation}
-0 < K_\omega < \sqrt{\frac{2}{\tau_s R (cos(\theta) + sin(\theta))}}
+0 < K_\omega < \sqrt{\frac{2}{\tau_s R (cos(\theta) + sin(\theta))}}.
 \end{equation}
+The implementation in the controller is then done with a value of $K_\omega$ that is more conservative than the theoretical boundary, around 0.5-0.7 of the calculated value.
 \section*{Task 10}
 In Figure~\ref{fig:task10_stepplot} the performance of the controller is shown.
-Figure~\ref{fig:task10_stepplot} plot(x,y)shows that the controller is able to maintain
+Figure~\ref{fig:task10_stepplot} shows that the controller is able to maintain its starting position. 
 its starting position.  \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task10_stepplot.png}
@@ -249,10 +250,9 @@ its starting position.  \begin{figure}[H]
         \caption{Simulated position response when attempting to stand still.}
         \label{fig:task10_stillplot}
     \end{figure}
-
+This could be possible because in theory the controller does not move in translational modes while turning.
 \section*{Task 11}
 In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be seen. In Figure~\ref{fig:task11_d0plot} $d_0$ can be seen.
-
 \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task11_angleplot.png}
@@ -266,54 +266,32 @@ In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be see
         \caption{Simulated position response.}
         \label{fig:task11_d0plot}
     \end{figure}
-
+They evolve the same as when both controllers are engaged. This is most likely because in the simulation, the rotation is ideal and the position never leaves the origin. 
 \section*{Task 12}
- 	Given
-	\begin{equation}
-		u_\omega[k]= K_\omega((cos(\theta_g))(x_g-x[k]) + (sin(\theta_g))(y_g-y[k]))
-	\end{equation}
-	together with
-	\begin{equation}
-		x[k+1] = x[k]R\tau_scos(\theta[k])u_\omega
-	\end{equation}
-	\begin{equation}
-		y[k+1] = y[k]R\tau_ssin(\theta[k])u_\omega
-	\end{equation}
-	gives
-	\begin{equation}
-		x[k+1] = x[k]R\tau_scos(\theta[k])K_\omega((cos(\theta_g))(x_g-x[k]) + (sin(\theta_g))(y_g-y[k]))
-		 \label{eq:xkp1}
-	\end{equation}
-	\begin{equation}
-		y[k+1] = y[k]R\tau_ssin(\theta[k])K_\omega((cos(\theta_g))(x_g-x[k]) + (sin(\theta_g))(y_g-y[k]))
-		 \label{eq:ykp1}
-	\end{equation}
-	Looking at the separate stability criteria in both Equation~\ref{eq:xkp1} and~\ref{eq:ykp1} gives
-	\begin{equation}
-		\lambda-(1-\tau_sRK_{\omega}cos^2(\theta[k])) = 0
-	\end{equation}
-	\begin{equation}
-		\lambda-(1-\tau_sRK_{\omega}sin^2(\theta[k])) = 0
-	\end{equation}
-	which in turn gives
-	\begin{equation}
-		\left| (1-\tau_sRK_{\omega}cos^2(\theta[k])) \right | < 1
-	\end{equation}
-	\begin{equation}
-		\left| (1-\tau_sRK_{\omega}sin^2(\theta[k])) \right | < 1
-	\end{equation}
-	which in turn gives
-	\begin{equation}
-		K_\omega < \frac{2}{\tau_sRcos^2\theta[k]}
-	\end{equation}
-	\begin{equation}
-		K_\omega < \frac{2}{\tau_sRsin^2\theta[k]}.
-	\end{equation}
-  	Assuming the worst possible case for theta gives
-	%\begin{equation}
-	%	0 < K_\plot(x,y)mega < \frac{2}{\tau_sR\theta[k]}.
-	%\end{equation}
-	A more effective $K_\omega$ is chosen manually through multiple simulations.
+Given
+\begin{equation}
+d_g[k] = cos(\theta_g) (x_g - x[k]) + sin(\theta_g) (y_g - y[k])
+\end{equation}
+for the line follower, $d_g[k]$ is time shifted one step. The Euler forward equations (\ref{eq:xsystem}) and (\ref{eq:ysystem}) are substituted into the expression along with the controller
+\begin{equation}
+u_\omega[k] = K_\omega d_g[k]
+\end{equation} 
+yielding
+\begin{equation}
+d_g[k+1] = cos(\theta_g)(x_g - x[k] - \tau_s R K_\omega d_g[k] cos(\theta_g)) + sin(\theta_g)(y_g - y[k] - \tau_s R K_\omega d_g[k] sin(\theta_g)).
+\end{equation}
+Rewriting and using the  Pythagorean identity gives the final expression,
+\begin{equation}
+d_p[k+\tau_s] = (1 - \tau_s R K_\omega) d_p[k].
+\end{equation}
+With the criterion that the pole should be inside the unit circle, or
+\begin{equation}
+\left| 1 - \tau_s R K_\omega \right| < 1,
+\end{equation}
+gives the stability boundary for $K_\omega$,
+\begin{equation}
+0 < K_\omega < \frac{2}{\tau_s R}.
+\end{equation}
 \section*{Task 13}
 
  In figure \ref{fig:task13_positionplot} the position response can be seen.
@@ -324,7 +302,7 @@ In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be see
         \caption{Simulated position response.}
         \label{fig:task13_positionplot}
     \end{figure}
-
+It is possible to reach the goal value, hinted by the fact that the system can be made asymptotically stable.
 \section*{Task 14}
 
 With the approximation given,
