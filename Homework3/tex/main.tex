@@ -117,22 +117,21 @@ $\dot{\theta}$ with,
         Using the same definition as Task 3, we can say that the system
         is asymptotically stable and in fact does exhibit Zeno
         behaviour. In figure \ref{fig:task3_plot} the systems state
-        transitions approach infinite transitions in a finite amount of
-        time. 
+        transitions approach infinite transitions in a finite amount of time. 
 	\begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task4_plot.png}
-        \caption{Response of rot1 simulink model.}
+        \caption{Response of rot2 simulink model.}
         \label{fig:task4_plot}
     \end{figure}
-
+Even though this behaviour is asymptotically stable, it is not practical since a physical system is limited in time and cannot switch infinitely many times.
 \section*{Task 5}
 
-	The system is stable, but not asymptotically, and does not exhibit Zeno behaviour. In Figure~\ref{fig:task5_plot} the systems transitions per time unit reaches a constant value.
+	The system is asymptotically stable, and does not exhibit Zeno behaviour. In Figure~\ref{fig:task5_plot} the systems transitions per time unit reaches a constant value. This is because of the added ZOH block in the model which limits the response time of the system to once per sampling time of the ZOH, in this case 0.01 s.
 	\begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5, width=1\linewidth]{../matlab/images/task5_plot.png}
-        \caption{Response of rot1 simulink model.}
+        \caption{Response of rot3 simulink model.}
         \label{fig:task5_plot}
     \end{figure}
 
@@ -169,7 +168,7 @@ y[k+h] = y[k] + \tau_s R u_\omega sin(\theta [k]) \\
 	\begin{equation}
 		u_\Psi{[k]} = K_{\Psi}({\theta}^R  - {\theta}[k]).
 	\end{equation}
-	With Eueler forward equation~\ref{eq:thetadot} gives
+	With Euler forward equation (~\ref{eq:thetadot}) gives
 	\begin{equation}
 		\theta[k+h] = \dot{\theta}[k]\tau_s + \theta[k]
 	\end{equation}
@@ -204,7 +203,7 @@ The eigenvalues are
         \caption{Simulated position response.}
         \label{fig:task8_posplot}
     \end{figure}
-
+As can be seen, it is possible to maintain the angle at the desired value, as suggested by the fact that the poles of the system can be placed within the unit circle. When there is no translational movement, there are no disturbances in the angular controller, which allows for this exact controll.
 \section*{Task 9}
 plot(x,y)
  	The equation 
