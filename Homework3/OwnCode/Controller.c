@@ -50,7 +50,7 @@ if(goaltheta == 90){
 dp = sin(goaltheta*M_PI/180)*(x+p*cos(theta*M_PI/180) -x0) -
   cos(goaltheta*M_PI/180)*(y+p*sin(theta*M_PI/180) -y0);
 
-u_rot = dp*K_p;
+u_rot = 0;//dp*K_p;
 u_trans = dg*K_trans;
 //u_rot = 0;//K_rot*desiredtheta;
 if(c_state == 0){
