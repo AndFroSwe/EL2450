@@ -35,7 +35,7 @@
   \and 
   Adam Lang \\ 19861110-3956 \\ adamlang@kth.se
   \and
-  Andreas Fr�derberg \\ 19880730-7577 \\ andfro@kth.se
+  Andreas Fr\"oderberg \\ 19880730-7577 \\ andfro@kth.se
   \and
   }
 %\date{2010-10-10}             % If you want to set the date yourself.
@@ -425,40 +425,26 @@ can be seen.
 
 The difficulty comes from the delay between the computer and the
 robot. There is a certain delay between when the user presses the button
-and the robot responds. 
+and the robot responds.
+
 \section*{Task 22}
-The controller worked as it should in the simulations but did not work when implemented in the physical system. More precisely, the rotational controller worked when implemented but when the system switched state to the line following part, it did not work. The simulation results when following the track have been presented in Figure~\ref{fig:task19_cont} and for the sake of completeness, the experimental results are displayed, though they do not contribute to the controller evaluation. The group hypothesize that the controller might be flawed but working during ideal conditions but when subjected to real life disturbances, the low robustness of the controll renders the system unstable and unusable.
+The controller worked as it should in the simulations but did not work
+when implemented in the physical system. More precisely, the rotational
+controller worked when implemented but when the system switched state to
+the line following part, it did not work. The simulation results when
+following the track have been presented in Figure~\ref{fig:task19_cont}
+and for the sake of completeness, the experimental results are
+displayed in Figure~\ref{fig:task22}, though they do not contribute to the controller evaluation.
+The group hypothesize that the controller might be flawed but working
+during ideal conditions but when subjected to real life disturbances,
+the low robustness of the control renders the system unstable and
+unusable.
 
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-% The bibliography
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-%\bibliography{Bibliography_template} %Read the bibliography from a separate file
-
-\begin{thebibliography}{99}
-\bibitem[Khalil(2002)]{Khalil:2002:Nonlinear-systems:vh}
-Hassan~K Khalil.
-\newblock \emph{Nonlinear systems}.
-\newblock Prentice Hall, Upper Saddle river, 3. edition, 2002.
-\newblock ISBN 0-13-067389-7.
-
-\bibitem[Oetiker et~al.(2008)Oetiker, Partl, Hyna, and
-  Schlegl]{Oetiker:2008:TheNotSoShortIntroductiontoLaTeXe}
-Tobias Oetiker, Hubert Partl, Irene Hyna, and Elisabeth Schlegl.
-\newblock \emph{The Not So Short Introduction to \LaTeXe}.
-\newblock Oetiker, OETIKER+PARTNER AG, Aarweg 15, 4600 Olten, Switzerland,
-  2008.
-\newblock http://www.ctan.org/info/lshort/.
-
-\bibitem[Sastry(1999)]{Sastry:1999:Nonlinear-systems:-analysis-stability-and-c%
-ontrol:xr}
-Shankar Sastry.
-\newblock \emph{Nonlinear systems: analysis, stability, and control},
-  volume~10.
-\newblock Springer, New York, N.Y., 1999.
-\newblock ISBN 0-387-98513-1.
-\end{thebibliography}
-
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.6]{../matlab/images/task22.png}
+    \caption{The results for the robot during the lab}
+    \label{task22}
+\end{figure}
 
 \end{document}      % End of the document
