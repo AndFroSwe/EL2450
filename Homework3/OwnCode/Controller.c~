@@ -85,6 +85,10 @@ Serial.print(";\n");
         c_state = 2;
     }
 }
+
+Serial.print("OWN:");
+Serial.print(c_state);
+Serail.print("\n;");
 if(c_state == 2){
     u_rot = 0;
     u_trans = 0;
@@ -99,7 +103,6 @@ right+= round(u_rot/2);
 //Debugprints to MainWindow.
 Serial.print(d0, DEC);
 Serial.print("\n;");
-
 Serial.print("goaltheta=(degree);\n");
 Serial.print(goaltheta, DEC);
 Serial.print(";\n");
