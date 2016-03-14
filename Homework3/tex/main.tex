@@ -1,9 +1,10 @@
 %\documentclass[a4paper,twocolumn]{article} % Document type
 %       Compiler: pdflatex
 % TODO: Task 2
-% TODO: Task 3
+% TODO: Task 3. Improved description of asymptotic stability. OBS! Still needs
+% theoretical basis on why it is asymptotically stable.
 % TODO: Task 4
-% TODO: Task 5
+% TODO: Task 5. FIXED
 % TODO: Task 9
 % TODO: Task 10
 % TODO: Task 11
@@ -104,47 +105,54 @@ $\dot{\theta}$ with,
 	\end{align*}
 
 \section*{Task 3}
-        Asymptotic stability means that starting points close to the
-        equilibrium point will push the system towards the same equilibrium point.
-        Since this is the case for our system, we can say that is it
-        asymptotically stable.
-	Zeno behaviour is defined as an infinite amount of state
-        transitions in a finite amount of time. This is not valid in
-        this case since 
-        \begin{equation}
-          \lim_{l \to \infty}\sum\limits_{l=1}^\infty t_i(s_i) \neq k
-        \end{equation}
-        where $s$ is a state transition, $t(s)$ is the function of the time 
-        for each state transitions and k is a constant.
-        This can also be seen in Figure \ref{fig:task3_plot}.
-        \begin{figure}[H]
-        \centering
-        \includegraphics[scale=0.5]{../matlab/images/task3_plot.png}
-        \caption{Response of rot1 simulink model.}
-        \label{fig:task3_plot}
-    \end{figure}
+Asymptotic stability means that for starting points close to an
+equilibrium point, the system will asymptotically approach the equilibrium point
+and stay there as the number of time units passed approach infinity. In a
+practical sense, this means that the eigenvalues of the system are all confined
+within the unit circle. Since this is the case for our system, we can say that
+is it asymptotically stable.  Zeno behaviour is defined as an infinite amount of
+state transitions in a finite amount of time. This is not valid in this case
+since 
+\begin{equation}
+  \lim_{l \to \infty}\sum\limits_{l=1}^\infty t_i(s_i) \neq k
+\end{equation}
+where $s$ is a state transition, $t(s)$ is the function of the time 
+for each state transitions and k is a constant.
+This can also be seen in Figure \ref{fig:task3_plot}.
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{../matlab/images/task3_plot.png}
+    \caption{Response of rot1 simulink model.}
+    \label{fig:task3_plot}
+\end{figure}
 
 \section*{Task 4}
-        Using the same definition as Task 3, we can say that the system
-        is asymptotically stable and in fact does exhibit Zeno
-        behaviour. In figure \ref{fig:task3_plot} the systems state
-        transitions approach infinite transitions in a finite amount of time. 
-	\begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.5]{../matlab/images/task4_plot.png}
-        \caption{Response of rot2 simulink model.}
-        \label{fig:task4_plot}
-    \end{figure}
-Even though this behaviour is asymptotically stable, it is not practical since a physical system is limited in time and cannot switch infinitely many times.
+Using the same definition as Task 3, we can say that the system
+is asymptotically stable and in fact does exhibit Zeno
+behaviour. In figure \ref{fig:task3_plot} the systems state
+transitions approach infinite transitions in a finite amount of time. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5]{../matlab/images/task4_plot.png}
+    \caption{Response of rot2 simulink model.}
+    \label{fig:task4_plot}
+\end{figure}
+Even though this behaviour is asymptotically stable, it is not practical since a
+physical system is limited in time and cannot switch infinitely many times.
 \section*{Task 5}
-
-	The system is asymptotically stable, and does not exhibit Zeno behaviour. In Figure~\ref{fig:task5_plot} the systems transitions per time unit reaches a constant value. This is because of the added ZOH block in the model which limits the response time of the system to once per sampling time of the ZOH, in this case 0.01 s.
-	\begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.5, width=1\linewidth]{../matlab/images/task5_plot.png}
-        \caption{Response of rot3 simulink model.}
-        \label{fig:task5_plot}
-    \end{figure}
+The system system reaches an oscillating state where is stable, though no
+asymptotically. The system does not have infinately many switches within a
+finite time frame as in Task 4 and does as such  not exhibit Zeno behaviour. In
+Figure~\ref{fig:task5_plot} the systems transitions per time unit reaches a
+constant value. This is because of the added ZOH block in the model which limits
+the response time of the system to once per sampling time of the ZOH, in this
+case 0.01 s. 
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale = 0.5, width=1\linewidth]{../matlab/images/task5_plot.png}
+    \caption{Response of rot3 simulink model.}
+    \label{fig:task5_plot}
+\end{figure}
 
 \section*{Task 6}
 
