@@ -8,7 +8,7 @@
 % TODO: Task 9 FIXED
 % TODO: Task 10
 % TODO: Task 11
-% TODO: Task 15
+% TODO: Task 15 FIXED
 % TODO: Task 18
 % TODO: Task 21
 % TODO: Task 22
@@ -355,15 +355,22 @@ d_p[k+\tau_s] = \left ( 1 + \frac{p R K_\psi \tau_s}{L} \right ) d_p[k].
 \end{equation}
 The stability criterion for (\ref{eq:dp}) is given by the equation
 \begin{equation}
+    \label{eq:stability_task14}
 \left | 1 + \frac{p R K_\psi \tau_s}{L} \right | < 1
 \end{equation}
 the place the pole inside the unit circle.
-Allowing negative values, the values of $K_\psi$ for which the controller is stable are then bound by
+Allowing negative values, the values of $K_\psi$ for which the controller is
+stable are then bound by
 \begin{equation}
 -\frac{2L}{p R \tau_s} < K_\psi < 0.
 \end{equation}
 \section*{Task 15}
-Looking at the simplification (\ref{eq:simplification}), the value of $p$ works like a proportional value in a P-controller. Thus, a higher $p$ makes the system faster but too large a value of $p$ may render the system unstable or cause overshoot.
+Looking at the simplification (\ref{eq:simplification}), the value of $p$ works
+like a proportional value in a P-controller. Thus, a higher $p$ makes the system
+faster but too large a value of $p$ may render the system unstable or cause
+overshoot. The explanation to this can be viewed in (\ref{eq:stability_task14})
+where a larger $p$ gives a smaller absolute permissable $K_\psi$ before the
+system becomes unstable.
 
 \section*{Task 16}
 
