@@ -5,7 +5,7 @@
 % theoretical basis on why it is asymptotically stable.
 % TODO: Task 4
 % TODO: Task 5. FIXED
-% TODO: Task 9
+% TODO: Task 9 FIXED
 % TODO: Task 10
 % TODO: Task 11
 % TODO: Task 15
@@ -224,33 +224,39 @@ The eigenvalues are
         \caption{Simulated position response.}
         \label{fig:task8_posplot}
     \end{figure}
-As can be seen, it is possible to maintain the angle at the desired value, as suggested by the fact that the poles of the system can be placed within the unit circle. When there is no translational movement, there are no disturbances in the angular controller, which allows for this exact control.
+As can be seen, it is possible to maintain the angle at the desired value, as
+suggested by the fact that the poles of the system can be placed within the unit
+circle. When there is no translational movement, there are no disturbances in
+the angular controller, which allows for this exact control.
 \section*{Task 9}
 The equation 
-	\begin{equation}
-		\label{eq:omegasystem}
-		d_0[k] = K_\omega(cos(\theta[k])(x_0-x[k]) + sin(\theta[k])(y_0-y[k]))
-	\end{equation}
- 	describes how $d_0$ depends on the angle desired angle and the current position. Using the given condition that $\theta[k] = \text{const.} := \theta$ and the controller in the task,
+\begin{equation}
+    \label{eq:omegasystem}
+    d_0[k] = cos(\theta[k])(x_0-x[k]) + sin(\theta[k])(y_0-y[k])
+\end{equation}
+describes how $d_0$ depends on the angle desired angle and the current
+position. Using the given condition that $\theta[k] = \text{const.} :=
+\theta$ and the controller in the task,
 \begin{equation}
 \label{eq:omegacontroller}
  	u_\omega [k] = K_\omega d_0 [k]
 \end{equation} 	 
 one can find the time dynamics of the system. Firstly, a unit time shift is employed, yielding
 \begin{equation}
-		d_0[k+\tau_s] = K_\omega(cos(\theta)(x_0-x[k]-x[k+\tau_s]) + sin(\theta)(y_0-y[k] - y[k+\tau_s)).
+        d_0[k+\tau_s] = cos(\theta)(x_0-x[k+\tau_s]) + sin(\theta)(y_0-
+        y[k+\tau_s]).  
 \end{equation}
 Using equation (\ref{eq:xsystem}) and (\ref{eq:ysystem}) along with (\ref{eq:omegacontroller}), an expression for $d_0[k+1]$ can be reached,
 \begin{equation}
-d_0[k+1] = \left( 1 - K_\omega^2 \tau_s R (cos(\theta) + sin(\theta)) \right) d_0[k].
+d_0[k+1] = \left( 1 - \tau_s R K_\omega \right )d[k + \tau_s] .
 \end{equation}
 For asymptotic stability, the pole should reside within the unit circle, leading to the criterion
 \begin{equation}
-\left|1 - K_\omega^2 \tau_s R (cos(\theta) + sin(\theta)) \right| <1,
+\left| ( 1 - \tau_s R K_\omega \right| <1,
 \end{equation}
 in turn giving the values for which the system is stable,
 \begin{equation}
-0 < K_\omega < \sqrt{\frac{2}{\tau_s R (cos(\theta) + sin(\theta))}}.
+0 < K_\omega < \frac{2}{R \tau_s}.
 \end{equation}
 The implementation in the controller is then done with a value of $K_\omega$ that is more conservative than the theoretical boundary, around 0.5-0.7 of the calculated value.
 \section*{Task 10}
