@@ -58,15 +58,20 @@ close all; clear all; clc;
 % Forward and Rotates first row is removed to be able to read. Probably not
 % relevant.  %[t, x, y, theta]
 indata = dlmread('logtask11.txt', ';');
-t = indata(:,1); % time
-theta = indata(:,2);
-d0 = indata(:,3);
-
-plot(t, theta)
+t = indata(:,1)./10e5; % time
+x = indata(:,2);
+y = indata(:,3);
+theta = indata(:,4);
+%d0 = indata(:,3);
+x0 = 0.2;
+y0 = 0.1;
+thetaerror = theta-theta(end);
+d0 = cosd(theta).*(x0-x) + sind(theta).*(y0-y) +0.0103  
+plot(t, thetaerror)
 xlabel('time [s]')
 ylabel('angle \theta [degrees]')
-print ('.\images\task11_angleplot', '-dpng')
 
+print ('.\images\task11_angleplot', '-dpng')
 plot(t, d0)
 xlabel('time [s]')
 ylabel('distance [m]')

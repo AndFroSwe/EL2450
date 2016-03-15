@@ -7,8 +7,8 @@
 % read it and added why it is asymptotically stable.
 % TODO: Task 5. FIXED
 % TODO: Task 9 FIXED
-% TODO: Task 10
-% TODO: Task 11
+% TODO: Task 10 FIXED
+% TODO: Task 11 FIXED
 % TODO: Task 15 FIXED
 % TODO: Task 18
 % TODO: Task 21
@@ -260,39 +260,33 @@ in turn giving the values for which the system is stable,
 0 < K_\omega < \frac{2}{R \tau_s}.
 \end{equation}
 The implementation in the controller is then done with a value of $K_\omega$ that is more conservative than the theoretical boundary, around 0.5-0.7 of the calculated value.
+
 \section*{Task 10}
-In Figure~\ref{fig:task10_stepplot} the performance of the controller is shown.
-Figure~\ref{fig:task10_stepplot} shows that the controller is able to maintain its starting position. 
-its starting position.  \begin{figure}[H]
-        \centering
-        \includegraphics[scale = 0.5]{../matlab/images/task10_stepplot.png}
-        \caption{Simulated position response when setting start to a different position.}
-        \label{fig:task10_stepplot}
-    \end{figure}
-    
+In Figure~\ref{fig:task10_stillplot} the performance of the controller is shown. 
     \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task10_stillplot.png}
-        \caption{Simulated position response when attempting to stand still.}
+        \caption{Simulated position response when attempting to recover starting position $x = 1$ $y = 1$.}
         \label{fig:task10_stillplot}
     \end{figure}
-This could be possible because in theory the controller does not move in translational modes while turning.
+The robot is set on position $x = y = 0$ and is is issued the instruction to recover starting position $x = y = 1$ with $\theta = 0$. It can generally not reach the starting position as the angle of the robot cannot be controlled by the $d_0$ algorithm.
+
 \section*{Task 11}
 In Figure~\ref{fig:task11_angleplot} the error $\theta^R - \theta[k]$ can be seen. In Figure~\ref{fig:task11_d0plot} $d_0$ can be seen.
 \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task11_angleplot.png}
-        \caption{Simulated angular response.}
+        \caption{Simulated angular error response.}
         \label{fig:task11_angleplot}
     \end{figure}
     
     \begin{figure}[H]
         \centering
         \includegraphics[scale = 0.5]{../matlab/images/task11_d0plot.png}
-        \caption{Simulated position response.}
+        \caption{Simulated $d_0$ response.}
         \label{fig:task11_d0plot}
     \end{figure}
-They evolve the same as when both controllers are engaged. This is most likely because in the simulation, the rotation is ideal and the position never leaves the origin. 
+The robot is set on position $x = y = 0$ goal is set to $x = y = 0$ and is is issued the instruction to recover starting position $x = y = 1$. The controller removes the error on both $d_0$ and $\theta$.
 \section*{Task 12}
 Given
 \begin{equation}
