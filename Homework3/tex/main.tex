@@ -1,6 +1,6 @@
 %\documentclass[a4paper,twocolumn]{article} % Document type
 %       Compiler: pdflatex
-% TODO: Task 2
+% TODO: Task 2 FIXED
 % TODO: Task 3. Improved description of asymptotic stability. OBS! Still needs
 % theoretical basis on why it is asymptotically stable.
 % TODO: Task 4 Moved "is it practical" to above the picture so the Hoeff can
@@ -77,32 +77,23 @@ and $u_\omega$ and $u_\Psi$, then $u_r$ and $u_l$ can be calculated as
 \section*{Task 2}
 
 Using the generated data from Forward.csv and Rotate.csv, it is possible
-to determine R and L. The data that is recieved, is time $[\mu$$s]$,
+to determine R and L. The data that is recieved is time $[\mu$$s]$,
 position x $[m]$, position y $[m]$ and rotation $\theta$$[^{\circ}]$.
 %#JobbigasteTecknet2016
 
-$\dot{x}$, $\dot{y}$ and $\dot{\theta}$ is calculated discretely. With
-$R_1$ and $R_2$ and the input $\dot{x}$ and $\dot{y}$
-as,
+$\dot{x}$, $\dot{y}$ and $\dot{\theta}$ is calculated discretely.
+$R$ is calculated as,
 	\begin{equation}
-		R_1 = \frac{\dot{x}}{cos(\theta)u_\omega}
+		R = \frac{\dot{x}}{cos(\theta)u_\omega}.
 	\end{equation}
-	\begin{equation}
-		R_2 = \frac{\dot{y}}{sin(\theta)u_\omega}
-	\end{equation}
-We can calculate $R$ as the mean value,
-	\begin{equation}
-		R = \frac{R_1 + R_2}{2}. % Övertydligt
-	\end{equation}
-L is determined simularily by calculating the mean values of from all
-$\dot{\theta}$ with,
+L is then determined by 
 	\begin{equation}
 		L =  \frac{R}{\dot{\theta}}u_\Phi
 	\end{equation}
-        Calculating these mean values will result in
+        Calculating these values will result in
 	\begin{align*}
-          &R = 5.2\\
-          &L = 25.5\ \si{\milli\meter/\ang{1}}
+          &R = 0.00104\\
+          &L = 0.00517 
 	\end{align*}
 
 \section*{Task 3}
